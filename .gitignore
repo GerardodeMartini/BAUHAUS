@@ -10,6 +10,7 @@ venv/
 *.sqlite3
 _backup_*/
 scratch/
+static/images/empresas/_original/
 *.log
 *.pdf
 
