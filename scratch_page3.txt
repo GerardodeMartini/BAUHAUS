@@ -1,0 +1,42 @@
+--- TEXT BLOCKS PAGE 3 ---
+bbox: (233.1, 152.8, 532.4, 202.1) -> Relevamiento y evaluación de patologías, estructurales y de 
+superﬁcies, propuesta de productos, sistemas, esquemas y 
+procedimientos, planes de MTO programado, planiﬁcación de 
+trabajos.
+bbox: (75.9, 31.7, 162.5, 58.3) -> Servicios
+bbox: (233.1, 125.8, 446.2, 155.6) -> Asesoramiento técnico
+bbox: (233.1, 246.8, 535.4, 284.1) -> Todos los trabajos son realizados y respaldados por procesos de 
+calidad, elaborados y redactados, acorde a las necesidades de 
+nuestros clientes.
+bbox: (233.1, 216.8, 433.1, 246.6) -> Programa de Calidad
+bbox: (233.1, 418.0, 535.4, 455.3) -> Contamos con personal caliﬁcado y equipamiento para realizar 
+trabajos de mantenimiento y pintura en altura. Descensos con 
+silleta y arnes.
+bbox: (233.1, 391.0, 420.6, 420.8) -> Alpinismo Industrial
+bbox: (233.1, 584.7, 537.8, 621.9) -> Pintura de Estructuras, Tanques y Plantas. Sistemas anticorrosivos,  
+Epoxidicos, Poliuretánicos, PRFV, ERFV, Ignifugados, Aislación 
+térmicas, Bombas Airless.
+bbox: (233.1, 556.7, 512.9, 586.5) -> Aplicación de Recubrimientos
+bbox: (233.1, 675.4, 535.4, 712.7) -> Realizamos trabajos en espacios conﬁnados, ambientes explosivos 
+con programas de seguridad y equipamiento acorde a las 
+necesidades.
+bbox: (233.1, 647.1, 424.9, 676.9) -> Espacios Conﬁnados
+bbox: (233.1, 506.1, 501.5, 543.3) -> Pisos Epoxy y Poliuretánicos, Rehabilitación, Reparaciones.
+Demarcaciones y Señalización.  Antideslizantes, Reﬂectivos
+Pisos autonivelantes.
+bbox: (233.1, 477.4, 510.8, 507.2) -> Pisos Epoxy - Demarcaciones
+bbox: (233.1, 337.7, 532.6, 375.0) -> Contamos con un departamento integrado por personal 
+certiﬁcado dedicado al trabajo seguro y responsable, con una 
+mirada integral del ambiente.
+bbox: (233.1, 306.7, 528.3, 336.5) -> Higiene, Seguridad y Ambiente
+bbox: (118.2, 743.4, 495.6, 759.3) -> Un servicio integral y diferenciado, cercano para nuestros clientes.
+bbox: (131.4, 88.1, 451.4, 108.0) -> • Servicios de Aplicación de Recubrimientos •
+
+--- IMAGES PAGE 3 ---
+Img 1 (xref 45): rects=[Rect(54.4521484375, 129.06578063964844, 238.45301818847656, 208.9478759765625)]
+Img 2 (xref 46): rects=[Rect(74.6259765625, 217.2015380859375, 213.61985778808594, 295.45294189453125)]
+Img 3 (xref 47): rects=[Rect(73.373046875, 443.4691162109375, 215.04025268554688, 632.3587036132812)]
+Img 4 (xref 48): rects=[Rect(73.6787109375, 334.99554443359375, 214.56735229492188, 522.8470458984375)]
+Img 5 (xref 49): rects=[Rect(73.1962890625, 612.0267333984375, 215.05177307128906, 801.1673583984375)]
+Img 6 (xref 50): rects=[Rect(73.20703125, 298.6400146484375, 215.0400390625, 393.24261474609375)]
+Img 7 (xref 51): rects=[Rect(51.41015625, 532.7689208984375, 215.2555389404297, 641.9253540039062)]

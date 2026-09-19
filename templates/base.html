@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    <meta name="description" content="{% block meta_desc %}Especialistas en recubrimientos poliuretánicos, epoxi y membranas de alta resistencia para aplicadores y la gran industria.{% endblock %}">
+    
+    <!-- Google Fonts: Rethink Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Paleta oficial Bauhaus Brand Book (Pág. 8)
+                        brandWhite: '#ffffff',
+                        brandGray: '#e2e4e7',
+                        brandGrayLight: '#f6f7f9',
+                        brandDark: '#000c1b',
+                        brandYellow: '#e7b924',
+                        brandYellowLight: '#FEF9E7',
+                        brandYellowBorder: '#f4d574',
+                        brandBlue: '#4081c1',
+                        brandBlueHover: '#326ca6',
+                        brandBlueLight: '#eef4fb',
+                        brandRed: '#b11617',
+                        brandRedHover: '#961112',
+                        brandRedLight: '#fae8e8',
+                        brandGreen: '#25d366',
+                    },
+                    fontFamily: {
+                        sans: ['"Rethink Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-[#ffffff] text-black min-h-screen flex flex-col font-sans">
+
+    <!-- Header / Navbar Oficial Bauhaus -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-[#e2e4e7] sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                <!-- Logo Oficial -->
+                <div class="flex-shrink-0 flex items-center py-2">
+                    <a href="{% url 'catalog:home' %}" class="flex items-center group">
+                        <img src="{% static 'images/logo para inicio.png' %}" alt="Bauhaus Centro Técnico" class="h-12 md:h-16 w-auto object-contain transition-all duration-300 transform group-hover:scale-105">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation (Todos los textos en negro) -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="{% url 'catalog:home' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Home</a>
+                    <a href="{% url 'catalog:aplicadores' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Aplicadores</a>
+                    <a href="{% url 'catalog:industria' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Industria</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-black focus:outline-none" aria-label="Toggle Menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Textos en negro) -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white border-b border-[#e2e4e7]">
+            <a href="{% url 'catalog:home' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Home</a>
+            <a href="{% url 'catalog:aplicadores' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Aplicadores</a>
+            <a href="{% url 'catalog:industria' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Industria</a>
+        </div>
+    </header>
+
+    <!-- Banner de Anuncios: Textos en negro -->
+    <aside class="bg-[#FEF9E7] border-b border-[#f4d574] text-black py-2.5 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-black">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#e7b924] text-black uppercase tracking-wide">
+                Aviso
+            </span>
+            <span class="text-black font-semibold">Asesoramiento técnico personalizado en obra y envíos a todo el país • Consultá por promociones del mes</span>
+        </div>
+    </aside>
+
+    <!-- Django Messages System -->
+    {% if messages %}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        {% for message in messages %}
+        <div class="p-4 rounded-lg flex items-center justify-between {% if message.tags == 'success' %}bg-emerald-50 text-emerald-800 border border-emerald-200{% else %}bg-amber-50 text-amber-800 border border-amber-200{% endif %} shadow-sm">
+            <div class="flex items-center space-x-3">
+                {% if message.tags == 'success' %}
+                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                {% else %}
+                <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                {% endif %}
+                <span class="text-sm font-medium">{{ message }}</span>
+            </div>
+            <button class="text-slate-400 hover:text-slate-600 focus:outline-none" onclick="this.parentElement.remove()">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main class="flex-grow text-black">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer Oficial Bauhaus: Todos los textos en negro -->
+    <footer class="bg-[#f6f7f9] text-black pt-16 pb-10 border-t border-[#e2e4e7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Info Corporativa -->
+                <div class="space-y-4 col-span-1 md:col-span-2">
+                    <img src="{% static 'images/logo para inicio.png' %}" alt="Bauhaus Pinturas Industriales Logo" class="h-12 md:h-14 w-auto object-contain">
+                    <p class="text-sm text-black max-w-sm mt-3 leading-relaxed font-medium">
+                        Distribuidor oficial y directo de fábrica de recubrimientos epoxi, membranas y poliuretánicos de alta performance. Asesoramiento técnico en obra y despacho a nivel país.
+                    </p>
+                </div>
+                <!-- Navegacion footer -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Navegación</h3>
+                    <ul class="space-y-2.5 text-sm font-medium">
+                        <li><a href="{% url 'catalog:home' %}" class="text-black hover:underline transition duration-200">Home</a></li>
+                        <li><a href="{% url 'catalog:aplicadores' %}" class="text-black hover:underline transition duration-200">Aplicadores</a></li>
+                        <li><a href="{% url 'catalog:industria' %}" class="text-black hover:underline transition duration-200">Industria</a></li>
+                    </ul>
+                </div>
+                <!-- Contacto footer -->
+                <div>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Contacto & Centro Técnico</h3>
+                    <ul class="space-y-2.5 text-sm text-black font-medium">
+                        <li class="flex items-start space-x-2">
+                            <span>📍</span> 
+                            <span>Av. Recta Martinolli 8197<br>Córdoba, Argentina</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span>📞</span> 
+                            <div>
+                                <a href="https://wa.me/5493516325978" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 632 5978 (Sebastián Affonso)</a>
+                                <a href="https://wa.me/5493518561179" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 856 1179 (Juan Cupertino)</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span>✉️</span> 
+                            <div>
+                                <a href="mailto:bauhaustecnico@gmail.com" class="text-black hover:underline transition duration-200 block">bauhaustecnico@gmail.com</a>
+                                <a href="mailto:bauhauscentrotecnico@gmail.com" class="text-black hover:underline transition duration-200 block">bauhauscentrotecnico@gmail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-[#e2e4e7] pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-black">
+                <p class="text-black font-medium">&copy; 2026 Bauhaus Centro Técnico & Pinturas Industriales. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="text-black hover:underline font-medium">Políticas de Privacidad</a>
+                    <a href="#" class="text-black hover:underline font-medium">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493516325978?text=Hola!%20Necesito%20asesoramiento%20técnico%20sobre%20recubrimientos." target="_blank" class="fixed bottom-6 right-6 z-50 bg-brandGreen text-white p-4 rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group" aria-label="Contacto WhatsApp">
+        <span class="absolute right-full mr-3 bg-slate-800 text-white text-xs font-bold py-1.5 px-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">¿Consultas técnicas? Escríbenos</span>
+        <svg class="w-7 h-7 flex-shrink-0 fill-current aspect-square" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

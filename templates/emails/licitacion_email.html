@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Cotización / Licitación Recibida</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; padding: 40px 0;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <!-- Header -->
+        <tr>
+            <td style="background-color: #0f172a; padding: 30px; text-align: center;">
+                <h1 style="color: #ffffff; margin: 0; font-size: 20px; letter-spacing: 1px; font-weight: bold;">
+                    PINTURERÍA TÉCNICA INDUSTRIAL
+                </h1>
+                <p style="color: #0284c7; margin: 5px 0 0 0; font-size: 12px; font-weight: bold; text-transform: uppercase;">
+                    Notificación de Licitación / Cotización
+                </p>
+            </td>
+        </tr>
+        <!-- Content -->
+        <tr>
+            <td style="padding: 40px 30px;">
+                <p style="font-size: 16px; line-height: 1.5; color: #334155; margin-top: 0;">
+                    Se ha registrado una nueva solicitud a través del formulario técnico industrial de la web. A continuación se detallan los datos enviados por la empresa:
+                </p>
+                
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top: 25px; border-collapse: collapse;">
+                    <tr>
+                        <td width="35%" style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">Razón Social:</td>
+                        <td width="65%" style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">{{ licitacion.nombre_empresa }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">CUIT:</td>
+                        <td style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">{{ licitacion.cuit }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">Email:</td>
+                        <td style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">
+                            <a href="mailto:{{ licitacion.email }}" style="color: #0284c7; text-decoration: none;">{{ licitacion.email }}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">Teléfono:</td>
+                        <td style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">{{ licitacion.telefono }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">Tipo de Cliente:</td>
+                        <td style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">{{ get_tipo_cliente_display }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-size: 14px; font-weight: bold; color: #475569; border-bottom: 1px solid #f1f5f9;">Fecha de Registro:</td>
+                        <td style="padding: 10px 0; font-size: 14px; color: #0f172a; border-bottom: 1px solid #f1f5f9;">{{ licitacion.fecha|date:"d/m/Y H:i" }}</td>
+                    </tr>
+                </table>
+
+                <h3 style="font-size: 14px; color: #475569; margin-top: 30px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">Mensaje / Requerimiento:</h3>
+                <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px; font-size: 14px; line-height: 1.6; color: #334155; white-space: pre-line;">
+                    {{ licitacion.mensaje }}
+                </div>
+                
+                {% if licitacion.archivo_adjunto %}
+                <p style="font-size: 13px; color: #64748b; margin-top: 20px;">
+                    📎 <strong>Nota:</strong> Se ha adjuntado un archivo pliego/presupuesto técnico enviado por el cliente. Lo encontrarás adjunto a este correo electrónico.
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td style="background-color: #f1f5f9; padding: 20px; text-align: center; border-top: 1px solid #e2e8f0;">
+                <p style="margin: 0; font-size: 11px; color: #94a3b8;">
+                    Este correo electrónico fue generado automáticamente por la plataforma web corporativa.<br>
+                    © 2026 Pinturería Técnica Industrial. Todos los derechos reservados.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

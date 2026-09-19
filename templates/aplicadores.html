@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Aplicadores{% endblock %}
+
+{% block content %}
+<!-- Section Header Comercial Claro (Sin degradé) -->
+<section class="bg-white text-black py-16 md:py-20 border-b border-stone-200/80 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+        <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-[#f6f7f9] text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
+            Beneficios para Aplicadores
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight max-w-4xl mx-auto text-black">Venta Directa de Fábrica & Logística Prioritaria</h1>
+        <p class="text-sm sm:text-base text-black max-w-2xl mx-auto font-medium leading-relaxed">
+            Acceso preferencial por volumen de obra, cuentas corrientes comerciales a medida y soporte de especificación técnica en el sitio para garantizar la calidad del servicio.
+        </p>
+
+        <!-- Grilla de Beneficios Clara -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6">
+            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
+                <span class="text-2xl block">💰</span>
+                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Descuentos por Volumen</h3>
+                <p class="text-xs text-black font-normal leading-relaxed">Escala de precios adaptada a los requerimientos de tu obra comercial o residencial.</p>
+            </div>
+            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
+                <span class="text-2xl block">💳</span>
+                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Financiación Directa</h3>
+                <p class="text-xs text-black font-normal leading-relaxed">Apertura de cuenta corriente comercial según el avance físico y plazos de tu proyecto.</p>
+            </div>
+            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
+                <span class="text-2xl block">⏱️</span>
+                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Logística Express</h3>
+                <p class="text-xs text-black font-normal leading-relaxed">Despacho en 24 horas directo a corralón, depósito o a pie de obra en cualquier provincia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catálogo Comercial Simplificado -->
+<section class="py-24 bg-[#f6f7f9] text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-black">Distribución Mayorista</span>
+            <h2 class="text-3xl font-extrabold text-black uppercase tracking-tight">Línea de Productos Comerciales</h2>
+            <p class="text-sm text-black font-medium">Sistemas de recubrimientos en formatos prácticos y alto rendimiento para aplicadores profesionales.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for producto in productos %}
+            <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+                <div>
+                    <div class="relative aspect-[16/10] bg-slate-200 overflow-hidden">
+                        {% if producto.imagen_principal %}
+                        <img src="{{ producto.imagen_principal.url }}" alt="{{ producto.nombre }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-550">
+                        {% else %}
+                        <div class="w-full h-full bg-slate-300 flex items-center justify-center text-black text-xs">Sin Imagen</div>
+                        {% endif %}
+                    </div>
+                    <div class="p-8 space-y-3">
+                        <span class="text-[10px] font-bold text-black uppercase tracking-wider">{{ producto.categoria.nombre }}</span>
+                        <h3 class="text-lg font-bold text-black pt-1 uppercase tracking-wide">{{ producto.nombre }}</h3>
+                        <p class="text-xs text-black leading-relaxed font-normal line-clamp-3">{{ producto.descripcion_breve }}</p>
+                    </div>
+                </div>
+
+                <div class="p-8 pt-0">
+                    <div class="border-t border-slate-100 pt-6 space-y-4">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-400">Presentación:</span>
+                            <span class="font-bold text-slate-700">{{ producto.presentacion|default:"Consultar" }}</span>
+                        </div>
+                        <a href="https://wa.me/5493516325978?text=Hola!%20Deseo%20cotizar%20precios%20por%20cantidad%20para%20el%20producto%20{{ producto.nombre }}" target="_blank" class="w-full py-3 rounded-lg bg-brandTerracotta text-white font-bold text-[10px] uppercase tracking-wider text-center flex items-center justify-center space-x-2 hover:bg-brandCopper transition shadow-lg shadow-brandTerracotta/10">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.015 14.12 1 11.48 1c-5.437 0-9.863 4.373-9.867 9.801-.001 1.73.473 3.41 1.373 4.888l-.989 3.605 3.698-.958zm12.39-5.14c-.318-.16-1.88-.93-2.171-1.036-.29-.106-.503-.16-.714.16-.21.32-.818 1.037-1 1.248-.182.21-.363.24-.68.08-1.566-.718-2.73-1.247-3.821-3.13-.287-.497.287-.46.822-1.53.087-.17.043-.32-.021-.48-.064-.16-.503-1.22-.69-1.673-.182-.44-.382-.377-.52-.383-.135-.005-.29-.006-.446-.006-.156 0-.41.06-.625.3-.215.24-.82.801-.82 1.953s.835 2.26 1.021 2.5c.186.24 1.647 2.534 3.99 3.558 1.758.769 2.456.905 3.327.776.545-.08 1.88-.77 2.144-1.517.264-.746.264-1.386.185-1.517-.078-.13-.289-.21-.607-.37z"/></svg>
+                            <span>Cotizar por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="bg-white rounded-2xl p-8 border border-slate-150 text-center col-span-full py-16">
+                <p class="text-sm text-slate-500">No hay productos disponibles para aplicadores actualmente.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Galería de Casos Reales (Obras cotidianas) -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-brandTerracotta">Obras de Aplicadores</span>
+            <h2 class="text-3xl font-extrabold text-brandDark uppercase tracking-tight">Registro de Aplicaciones</h2>
+            <p class="text-sm text-slate-500 font-light">Casos cotidianos de impermeabilización de terrazas, pisos comerciales y tratamientos mecánicos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for proyecto in proyectos %}
+            <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-350 aspect-[4/3] bg-slate-950">
+                {% if proyecto.imagen_despues %}
+                <img src="{{ proyecto.imagen_despues.url }}" alt="{{ proyecto.titulo }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60">
+                {% else %}
+                <div class="absolute inset-0 flex items-center justify-center text-slate-500 text-xs">Sin Imagen</div>
+                {% endif %}
+                <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/25 to-transparent p-6 flex flex-col justify-end">
+                    <span class="text-[9px] font-bold text-brandTerracotta uppercase tracking-widest">{{ proyecto.categoria_trabajo }}</span>
+                    <h3 class="text-white text-base font-bold mt-1 uppercase tracking-wide">{{ proyecto.titulo }}</h3>
+                    <p class="text-slate-300 text-xs mt-2 font-light line-clamp-2 leading-relaxed">{{ proyecto.descripcion_corta }}</p>
+                    <span class="text-slate-400 text-[10px] mt-3 block">📍 {{ proyecto.cliente_ubicacion }}</span>
+                </div>
+            </div>
+            {% empty %}
+            <div class="bg-brandGray rounded-2xl p-8 border border-slate-200/60 text-center col-span-full py-16">
+                <p class="text-sm text-slate-500">Aún no se han subido registros de obras cotidianas.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
