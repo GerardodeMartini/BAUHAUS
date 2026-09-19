@@ -68,8 +68,9 @@ def registrar_licitacion(request):
                     "Tu solicitud fue registrada en el sistema, pero ocurrió un problema al enviar la notificación. Nos contactaremos pronto."
                 )
             
-            # Redirigir de vuelta a la página de industria (o donde prefiera el usuario)
-            return redirect("catalog:industria")
+            # Redirigir de vuelta a la página de origen o donde prefiera el usuario
+            next_url = request.POST.get("next") or "catalog:industria"
+            return redirect(next_url)
     else:
         form = LicitacionContactoForm()
     

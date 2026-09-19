@@ -62,6 +62,7 @@
                     <a href="{% url 'catalog:home' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Home</a>
                     <a href="{% url 'catalog:aplicadores' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Aplicadores</a>
                     <a href="{% url 'catalog:industria' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Industria</a>
+                    <a href="{% url 'catalog:home' %}#contacto" class="text-sm font-semibold text-black hover:underline transition duration-200">Contacto</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -80,6 +81,7 @@
             <a href="{% url 'catalog:home' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Home</a>
             <a href="{% url 'catalog:aplicadores' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Aplicadores</a>
             <a href="{% url 'catalog:industria' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Industria</a>
+            <a href="{% url 'catalog:home' %}#contacto" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Contacto</a>
         </div>
     </header>
 
@@ -98,70 +100,87 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
         {% for message in messages %}
         <div class="p-4 rounded-lg flex items-center justify-between {% if message.tags == 'success' %}bg-emerald-50 text-emerald-800 border border-emerald-200{% else %}bg-amber-50 text-amber-800 border border-amber-200{% endif %} shadow-sm">
-            <div class="flex items-center space-x-3">
-                {% if message.tags == 'success' %}
-                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                {% else %}
-                <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                {% endif %}
-                <span class="text-sm font-medium">{{ message }}</span>
-            </div>
-            <button class="text-slate-400 hover:text-slate-600 focus:outline-none" onclick="this.parentElement.remove()">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
+            <span class="text-sm font-semibold">{{ message }}</span>
+            <button onclick="this.parentElement.remove()" class="text-slate-400 hover:text-slate-600 font-bold">&times;</button>
         </div>
         {% endfor %}
     </div>
     {% endif %}
 
     <!-- Main Content -->
-    <main class="flex-grow text-black">
+    <main class="flex-grow">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer Oficial Bauhaus: Todos los textos en negro -->
+    <!-- Footer Oficial Bauhaus: Todos los textos en negro (Estructura Canva: Info | Botones | Redes & Dirección | Maps) -->
     <footer class="bg-[#f6f7f9] text-black pt-16 pb-10 border-t border-[#e2e4e7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Info Corporativa -->
-                <div class="space-y-4 col-span-1 md:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+                <!-- 1. Info Corporativa (Canva: info) -->
+                <div class="space-y-4 lg:col-span-3">
                     <img src="{% static 'images/logo para inicio.png' %}" alt="Bauhaus Pinturas Industriales Logo" class="h-12 md:h-14 w-auto object-contain">
-                    <p class="text-sm text-black max-w-sm mt-3 leading-relaxed font-medium">
+                    <p class="text-xs sm:text-sm text-black leading-relaxed font-medium">
                         Distribuidor oficial y directo de fábrica de recubrimientos epoxi, membranas y poliuretánicos de alta performance. Asesoramiento técnico en obra y despacho a nivel país.
                     </p>
                 </div>
-                <!-- Navegacion footer -->
-                <div>
+
+                <!-- 2. Navegación (Canva: inicio / botones) -->
+                <div class="lg:col-span-2 lg:pl-4">
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Navegación</h3>
-                    <ul class="space-y-2.5 text-sm font-medium">
+                    <ul class="space-y-2.5 text-xs sm:text-sm font-medium">
                         <li><a href="{% url 'catalog:home' %}" class="text-black hover:underline transition duration-200">Home</a></li>
                         <li><a href="{% url 'catalog:aplicadores' %}" class="text-black hover:underline transition duration-200">Aplicadores</a></li>
                         <li><a href="{% url 'catalog:industria' %}" class="text-black hover:underline transition duration-200">Industria</a></li>
+                        <li><a href="{% url 'catalog:home' %}#contacto" class="text-black hover:underline transition duration-200">Contacto</a></li>
                     </ul>
                 </div>
-                <!-- Contacto footer -->
-                <div>
-                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Contacto & Centro Técnico</h3>
-                    <ul class="space-y-2.5 text-sm text-black font-medium">
+
+                <!-- 3. Dirección y Redes (Canva: info-direccion / instagram / linkedin) -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Contacto & Redes</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm text-black font-medium">
                         <li class="flex items-start space-x-2">
                             <span>📍</span> 
-                            <span>Av. Recta Martinolli 8197<br>Córdoba, Argentina</span>
+                            <span>Av. Recta Martinolli 8197, Córdoba, Argentina</span>
                         </li>
                         <li class="flex items-start space-x-2">
                             <span>📞</span> 
-                            <div>
-                                <a href="https://wa.me/5493516325978" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 632 5978 (Sebastián Affonso)</a>
-                                <a href="https://wa.me/5493518561179" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 856 1179 (Juan Cupertino)</a>
+                            <div class="space-y-0.5">
+                                <a href="https://wa.me/5493516325978" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 632 5978 (Sebastián)</a>
+                                <a href="https://wa.me/5493518561179" target="_blank" class="text-black hover:underline transition duration-200 block">+54 9 351 856 1179 (Juan)</a>
                             </div>
                         </li>
                         <li class="flex items-start space-x-2">
                             <span>✉️</span> 
-                            <div>
-                                <a href="mailto:bauhaustecnico@gmail.com" class="text-black hover:underline transition duration-200 block">bauhaustecnico@gmail.com</a>
-                                <a href="mailto:bauhauscentrotecnico@gmail.com" class="text-black hover:underline transition duration-200 block">bauhauscentrotecnico@gmail.com</a>
-                            </div>
+                            <a href="mailto:bauhaustecnico@gmail.com" class="text-black hover:underline transition duration-200 block">bauhaustecnico@gmail.com</a>
                         </li>
                     </ul>
+                    <!-- Redes Sociales: Instagram & LinkedIn -->
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://www.instagram.com/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-black hover:underline">
+                            <span>📷</span> Instagram
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-black hover:underline">
+                            <span>💼</span> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Mapa (Canva: maps) -->
+                <div class="lg:col-span-3 space-y-2">
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Ubicación</h3>
+                    <div class="rounded-xl overflow-hidden border border-[#e2e4e7] h-40 bg-stone-200 shadow-sm">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Av.+Recta+Martinolli+8197,+C%C3%B3rdoba,+Argentina&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.google.com/?q=Av.+Recta+Martinolli+8197,+C%C3%B3rdoba" target="_blank" class="text-[11px] font-bold text-black hover:underline inline-block">
+                        Abrir en Google Maps →
+                    </a>
                 </div>
             </div>
 

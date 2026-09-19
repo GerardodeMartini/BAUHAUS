@@ -1,118 +1,520 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Aplicadores{% endblock %}
 
 {% block content %}
-<!-- Section Header Comercial Claro (Sin degradé) -->
-<section class="bg-white text-black py-16 md:py-20 border-b border-stone-200/80 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-[#f6f7f9] text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
-            Beneficios para Aplicadores
+<!-- 1. Banner Aplicador (Estructura Canva: banner aplicador) -->
+<aside class="bg-[#FEF9E7] text-black py-3 px-4 text-center border-b border-[#f4d574]">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-medium">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#e7b924] text-black uppercase tracking-wider">
+            Canal Profesionales
         </span>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight max-w-4xl mx-auto text-black">Venta Directa de Fábrica & Logística Prioritaria</h1>
-        <p class="text-sm sm:text-base text-black max-w-2xl mx-auto font-medium leading-relaxed">
-            Acceso preferencial por volumen de obra, cuentas corrientes comerciales a medida y soporte de especificación técnica en el sitio para garantizar la calidad del servicio.
-        </p>
+        <span class="text-black font-semibold">
+            Beneficios Exclusivos para Aplicadores • Descuentos por Volumen de Obra, Cuentas Corrientes y Logística Prioritaria
+        </span>
+    </div>
+</aside>
 
-        <!-- Grilla de Beneficios Clara -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6">
-            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
-                <span class="text-2xl block">💰</span>
-                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Descuentos por Volumen</h3>
-                <p class="text-xs text-black font-normal leading-relaxed">Escala de precios adaptada a los requerimientos de tu obra comercial o residencial.</p>
+<!-- 2. Hero Section (Estructura Canva: Banner Oscuro Aplicador) -->
+<section class="relative bg-[#000c1b] text-white py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[480px] flex items-center justify-center">
+    <div class="absolute inset-0 z-0 opacity-35">
+        <img src="{% static 'images/hero_bg_p1.jpg' %}" alt="Recubrimientos para Aplicadores" class="w-full h-full object-cover object-center">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#000c1b]/85 via-[#000c1b]/70 to-[#000c1b]/95 z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-white/10 text-[#e7b924] border border-[#e7b924]/30 uppercase tracking-[0.25em]">
+                • VENTA DIRECTA & SOPORTE EN OBRA •
+            </span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-white drop-shadow-sm">
+                Especialistas en <br class="hidden sm:inline">
+                <span class="text-[#e7b924]">Recubrimientos Técnicos</span>
+            </h1>
+            <div class="space-y-1">
+                <p class="text-xs sm:text-sm md:text-base text-gray-200 font-semibold tracking-wide">
+                    Control de Corrosión • Pisos Industriales
+                </p>
+                <p class="text-xs sm:text-sm md:text-base text-gray-300 font-medium tracking-wide">
+                    Impermeabilización de Alto Desempeño • Protección contra Químicos
+                </p>
             </div>
-            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
-                <span class="text-2xl block">💳</span>
-                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Financiación Directa</h3>
-                <p class="text-xs text-black font-normal leading-relaxed">Apertura de cuenta corriente comercial según el avance físico y plazos de tu proyecto.</p>
-            </div>
-            <div class="p-6 bg-[#FAF9F6] rounded-2xl border border-stone-200/80 shadow-sm text-center space-y-2">
-                <span class="text-2xl block">⏱️</span>
-                <h3 class="text-black font-bold uppercase tracking-wide text-xs">Logística Express</h3>
-                <p class="text-xs text-black font-normal leading-relaxed">Despacho en 24 horas directo a corralón, depósito o a pie de obra en cualquier provincia.</p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contacto-aplicador" class="px-8 py-3.5 rounded-full bg-[#e7b924] text-black text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md">
+                    Abrir Cuenta Comercial
+                </a>
+                <a href="#productos" class="px-8 py-3.5 rounded-full bg-white/10 text-white border border-white/30 text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-white/20 transition-all duration-200">
+                    Ver Productos para Aplicadores
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Catálogo Comercial Simplificado -->
-<section class="py-24 bg-[#f6f7f9] text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-[0.2em] text-black">Distribución Mayorista</span>
-            <h2 class="text-3xl font-extrabold text-black uppercase tracking-tight">Línea de Productos Comerciales</h2>
-            <p class="text-sm text-black font-medium">Sistemas de recubrimientos en formatos prácticos y alto rendimiento para aplicadores profesionales.</p>
+<!-- 3. Bloque: Productos para ofrecerle (4 Categorías con foto y descripción) -->
+<section id="productos" class="py-20 bg-white border-b border-[#e2e4e7] text-black scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-[#f6f7f9] text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
+                • CATÁLOGO PROFESIONAL •
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                Productos para ofrecerle
+            </h2>
+            <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                Recubrimientos en presentaciones mayoristas diseñados para garantizar máximo rendimiento por m² y rentabilidad en cada proyecto.
+            </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for producto in productos %}
-            <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1">
+        <!-- 4 Columnas de Productos para Aplicadores -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- 1. Control de Corrosión -->
+            <div class="bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-md hover:border-black transition-all flex flex-col justify-between group">
                 <div>
-                    <div class="relative aspect-[16/10] bg-slate-200 overflow-hidden">
-                        {% if producto.imagen_principal %}
-                        <img src="{{ producto.imagen_principal.url }}" alt="{{ producto.nombre }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-550">
-                        {% else %}
-                        <div class="w-full h-full bg-slate-300 flex items-center justify-center text-black text-xs">Sin Imagen</div>
+                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
+                        <img src="{% static 'media/portfolio/tanque_industrial.jpg' %}" onerror="this.src='/media/portfolio/tanque_industrial.jpg'" alt="Control de Corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
+                            01
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-black uppercase tracking-wide">
+                            Control de Corrosión
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Convertidores de óxido rápidos, fondos anticorrosivos epoxi poliamida y esmaltes poliuretánicos alifáticos para estructuras, tinglados y rejas.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20anticorrosivos%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                        Cotizar por volumen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. Pisos Industriales -->
+            <div class="bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-md hover:border-black transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
+                        <img src="{% static 'media/portfolio/piso_autonivelante.jpg' %}" onerror="this.src='/media/portfolio/piso_autonivelante.jpg'" alt="Pisos Industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
+                            02
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-black uppercase tracking-wide">
+                            Pisos Industriales
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Pinturas epoxi de alto tránsito para talleres y cocheras, primers de anclaje, masillas epoxídicas para bacheo y morteros autonivelantes.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20pisos%20epoxi%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                        Cotizar por volumen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. Impermeabilización de alto desempeño -->
+            <div class="bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-md hover:border-black transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
+                        <img src="{% static 'media/portfolio/despues/membrane_roof_obracompleta.png' %}" onerror="this.src='/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Impermeabilización de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
+                            03
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-black uppercase tracking-wide">
+                            Impermeabilización
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Membranas líquidas de poliuretano, acrílicos fibrados transitables, vendas de refuerzo y selladores elásticos de poliuretano para juntas de dilatación.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20membranas%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                        Cotizar por volumen →
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Protección contra agentes químicos -->
+            <div class="bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-md hover:border-black transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
+                        <img src="{% static 'media/servicios/aplicacion_recubrimientos.jpg' %}" onerror="this.src='/media/servicios/aplicacion_recubrimientos.jpg'" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
+                            04
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-black uppercase tracking-wide">
+                            Protección Química
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Esmaltes epoxi sanitarios lavables para cocinas comerciales, laboratorios, clínicas y bateas de contención con resistencia a detergentes y desinfectantes.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20epoxis%20sanitarios%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                        Cotizar por volumen →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 4. Bloque: Espacio para mostrar soluciones (Estructura Canva: espacio para mostrar soluciones) -->
+<section class="py-20 bg-[#f6f7f9] border-b border-[#e2e4e7] text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-white text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
+                • TÉCNICA Y SISTEMAS •
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                Espacio para mostrar soluciones
+            </h2>
+            <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                Asesoramiento práctico para resolver las patologías más frecuentes en obra de manera ágil y definitiva.
+            </p>
+        </div>
+
+        <!-- 3 Soluciones Clave -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#FEF9E7] border border-[#f4d574] flex items-center justify-center text-xl">
+                    🧹
+                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Preparación Mecánica de Superficies
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Te asesoramos en el perfil de rugosidad óptimo (CSP), apertura de poro y tratamiento de humedad residual antes de la aplicación de epoxis.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#eef4fb] border border-[#4081c1]/30 flex items-center justify-center text-xl">
+                    📐
+                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Tratamiento de Juntas y Fisuras
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Sellado elástico y duradero de juntas de dilatación con cordón de respaldo y masillas de poliuretano de alta adherencia y elasticidad.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#fae8e8] border border-[#b11617]/25 flex items-center justify-center text-xl">
+                    ⚡
+                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Sistemas de Rápida Puesta en Servicio
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Esquemas de secado ultra rápido para locales comerciales, garajes y plantas que necesitan habilitar el tránsito en 24 horas.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- 5. Bloque: Por qué elegirnos (Envíos, Asesoramiento + Mapa Argentina con puntos de distribución) -->
+<section class="py-20 bg-white border-b border-[#e2e4e7] text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-[#FEF9E7] text-black border border-[#f4d574] uppercase tracking-[0.2em]">
+                • VENTAJAS COMPETITIVAS •
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                Por qué elegirnos
+            </h2>
+            <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                Acompañamiento técnico personalizado y logística prioritaria para que nunca se detenga el ritmo de tu obra.
+            </p>
+        </div>
+
+        <!-- Layout 2 Columnas: 3 Diferenciales (Izq) + Mapa Argentina Puntos Distribución (Der) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Columna Izquierda (7 cols): Requerimientos | Logística | Acompañamiento -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- 1. Requerimientos -->
+                <div class="p-6 bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] flex items-start gap-4">
+                    <span class="p-3 bg-white rounded-xl border border-[#e2e4e7] text-2xl">💰</span>
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-black">
+                            Requerimientos & Precios Mayoristas
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Escalas de precios preferenciales para el gremio aplicador, cotizaciones directas de fábrica y apertura de cuentas corrientes a medida según el avance de obra.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Logística -->
+                <div class="p-6 bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] flex items-start gap-4">
+                    <span class="p-3 bg-white rounded-xl border border-[#e2e4e7] text-2xl">🚚</span>
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-black">
+                            Logística & Despacho Prioritario
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Envíos rápidos y seguros a todo el país. Despachamos en 24 hs directamente a tu taller, depósito o a pie de obra para evitar demoras innecesarias.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. Acompañamiento -->
+                <div class="p-6 bg-[#f6f7f9] rounded-2xl border border-[#e2e4e7] flex items-start gap-4">
+                    <span class="p-3 bg-white rounded-xl border border-[#e2e4e7] text-2xl">🤝</span>
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-black">
+                            Acompañamiento & Soporte en Obra
+                        </h3>
+                        <p class="text-xs text-black font-medium leading-relaxed">
+                            Cálculo exacto de rendimientos por m², recomendaciones de mezcla y presencia de nuestros asesores técnicos en obra para respaldar tu trabajo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Columna Derecha (5 cols): Mapa Argentina con puntos de distribución -->
+            <div class="lg:col-span-5">
+                <div class="p-8 bg-[#000c1b] text-white rounded-3xl border border-[#e7b924] shadow-md space-y-6">
+                    <div class="space-y-2">
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#e7b924] text-black uppercase tracking-wider">
+                            Cobertura Nacional
+                        </span>
+                        <h3 class="text-xl font-bold uppercase tracking-wide text-white">
+                            Puntos de Distribución
+                        </h3>
+                        <p class="text-xs text-gray-300 leading-relaxed font-light">
+                            Llegamos a todas las provincias con transporte seguro y seguimiento logístico continuo.
+                        </p>
+                    </div>
+
+                    <!-- Lista de Centros y Nodos de Distribución -->
+                    <div class="space-y-3 border-t border-white/10 pt-4">
+                        <div class="flex items-center justify-between text-xs py-1.5 border-b border-white/5">
+                            <span class="font-bold text-[#e7b924]">📍 Casa Central & Showroom:</span>
+                            <span class="text-gray-200">Córdoba Capital</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs py-1.5 border-b border-white/5">
+                            <span class="font-bold text-white">📍 Zona Centro & Litoral:</span>
+                            <span class="text-gray-300">Santa Fe • Rosario • Entre Ríos</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs py-1.5 border-b border-white/5">
+                            <span class="font-bold text-white">📍 Región Cuyo:</span>
+                            <span class="text-gray-300">Mendoza • San Juan • San Luis</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs py-1.5 border-b border-white/5">
+                            <span class="font-bold text-white">📍 Norte Argentino (NOA/NEA):</span>
+                            <span class="text-gray-300">Tucumán • Salta • Chaco</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs py-1.5">
+                            <span class="font-bold text-white">📍 Región Sur & Patagonia:</span>
+                            <span class="text-gray-300">Neuquén • Río Negro • Chubut</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Quiero%20consultar%20el%20costo%20de%20envío%20a%20mi%20localidad." target="_blank" class="w-full py-3 rounded-xl bg-[#e7b924] text-black text-xs font-extrabold uppercase tracking-wider text-center block hover:bg-[#d6a81b] transition">
+                        Consultar Envíos a tu Ciudad →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- 6. Bloque: Marcas que trabajamos (Estructura Canva: 4 marcas arriba, 3 abajo) -->
+<section class="py-20 bg-[#f6f7f9] border-b border-[#e2e4e7] text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
+        
+        <div class="space-y-3">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-white text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
+                • MARCAS LÍDERES •
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                Marcas que trabajamos
+            </h2>
+            <p class="text-xs sm:text-sm text-black max-w-2xl mx-auto font-medium leading-relaxed">
+                Materiales homologados con garantía oficial de fábrica para asegurar la reputación de tu trabajo.
+            </p>
+        </div>
+
+        <!-- Grilla de Logos de Marcas (4 arriba y 3 abajo centradas, según Canva) -->
+        <div class="space-y-6 max-w-5xl mx-auto">
+            <!-- Fila 1: 4 marcas -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+            </div>
+
+            <!-- Fila 2: 3 marcas centradas -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center max-w-3xl mx-auto">
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/sika.png' %}" alt="Sika" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+                <div class="h-20 flex items-center justify-center p-3 bg-white rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md hover:border-black transition-all group">
+                    <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol" class="max-h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 7. Bloque: Frase para que nos contacten + Formulario de Contacto (Estructura Canva) -->
+<section id="contacto-aplicador" class="py-20 bg-white border-b border-[#e2e4e7] text-black scroll-mt-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="text-center space-y-3">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-[#FEF9E7] text-black border border-[#f4d574] uppercase tracking-[0.2em]">
+                • ALTA DE APLICADORES •
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                ¿Sos aplicador o profesional independiente? Contactanos
+            </h2>
+            <p class="text-sm sm:text-base text-black max-w-2xl mx-auto font-medium leading-relaxed">
+                Abrí tu cuenta comercial, solicitá tu lista de precios mayorista o pedí cotización de insumos para tu próximo presupuesto.
+            </p>
+        </div>
+
+        <!-- Formulario Contenedor -->
+        <div class="bg-[#f6f7f9] p-8 sm:p-10 rounded-3xl border border-[#e2e4e7] shadow-sm">
+            <form action="{% url 'contacts:registrar_licitacion' %}" method="POST" enctype="multipart/form-data" class="space-y-6">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{% url 'catalog:aplicadores' %}#contacto-aplicador">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-1.5">
+                        <label for="{{ form.nombre_empresa.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                            Nombre y Apellido / Nombre Fantasía *
+                        </label>
+                        {{ form.nombre_empresa }}
+                        {% if form.nombre_empresa.errors %}
+                        <p class="text-xs text-red-600 mt-1">{{ form.nombre_empresa.errors.0 }}</p>
                         {% endif %}
                     </div>
-                    <div class="p-8 space-y-3">
-                        <span class="text-[10px] font-bold text-black uppercase tracking-wider">{{ producto.categoria.nombre }}</span>
-                        <h3 class="text-lg font-bold text-black pt-1 uppercase tracking-wide">{{ producto.nombre }}</h3>
-                        <p class="text-xs text-black leading-relaxed font-normal line-clamp-3">{{ producto.descripcion_breve }}</p>
+
+                    <div class="space-y-1.5">
+                        <label for="{{ form.cuit.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                            CUIT o DNI *
+                        </label>
+                        {{ form.cuit }}
+                        {% if form.cuit.errors %}
+                        <p class="text-xs text-red-600 mt-1">{{ form.cuit.errors.0 }}</p>
+                        {% endif %}
                     </div>
                 </div>
 
-                <div class="p-8 pt-0">
-                    <div class="border-t border-slate-100 pt-6 space-y-4">
-                        <div class="flex justify-between items-center text-xs">
-                            <span class="text-slate-400">Presentación:</span>
-                            <span class="font-bold text-slate-700">{{ producto.presentacion|default:"Consultar" }}</span>
-                        </div>
-                        <a href="https://wa.me/5493516325978?text=Hola!%20Deseo%20cotizar%20precios%20por%20cantidad%20para%20el%20producto%20{{ producto.nombre }}" target="_blank" class="w-full py-3 rounded-lg bg-brandTerracotta text-white font-bold text-[10px] uppercase tracking-wider text-center flex items-center justify-center space-x-2 hover:bg-brandCopper transition shadow-lg shadow-brandTerracotta/10">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.588 2.015 14.12 1 11.48 1c-5.437 0-9.863 4.373-9.867 9.801-.001 1.73.473 3.41 1.373 4.888l-.989 3.605 3.698-.958zm12.39-5.14c-.318-.16-1.88-.93-2.171-1.036-.29-.106-.503-.16-.714.16-.21.32-.818 1.037-1 1.248-.182.21-.363.24-.68.08-1.566-.718-2.73-1.247-3.821-3.13-.287-.497.287-.46.822-1.53.087-.17.043-.32-.021-.48-.064-.16-.503-1.22-.69-1.673-.182-.44-.382-.377-.52-.383-.135-.005-.29-.006-.446-.006-.156 0-.41.06-.625.3-.215.24-.82.801-.82 1.953s.835 2.26 1.021 2.5c.186.24 1.647 2.534 3.99 3.558 1.758.769 2.456.905 3.327.776.545-.08 1.88-.77 2.144-1.517.264-.746.264-1.386.185-1.517-.078-.13-.289-.21-.607-.37z"/></svg>
-                            <span>Cotizar por WhatsApp</span>
-                        </a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-1.5">
+                        <label for="{{ form.email.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                            Correo Electrónico *
+                        </label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                        <p class="text-xs text-red-600 mt-1">{{ form.email.errors.0 }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="space-y-1.5">
+                        <label for="{{ form.telefono.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                            Teléfono / WhatsApp *
+                        </label>
+                        {{ form.telefono }}
+                        {% if form.telefono.errors %}
+                        <p class="text-xs text-red-600 mt-1">{{ form.telefono.errors.0 }}</p>
+                        {% endif %}
                     </div>
                 </div>
-            </div>
-            {% empty %}
-            <div class="bg-white rounded-2xl p-8 border border-slate-150 text-center col-span-full py-16">
-                <p class="text-sm text-slate-500">No hay productos disponibles para aplicadores actualmente.</p>
-            </div>
-            {% endfor %}
+
+                <div class="space-y-1.5">
+                    <label for="{{ form.tipo_cliente.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                        Tipo de Perfil *
+                    </label>
+                    {{ form.tipo_cliente }}
+                </div>
+
+                <div class="space-y-1.5">
+                    <label for="{{ form.mensaje.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                        Detalle de los Materiales o Consulta *
+                    </label>
+                    {{ form.mensaje }}
+                    {% if form.mensaje.errors %}
+                    <p class="text-xs text-red-600 mt-1">{{ form.mensaje.errors.0 }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="space-y-1.5">
+                    <label for="{{ form.archivo_adjunto.id_for_label }}" class="block text-xs font-bold uppercase tracking-wider text-black">
+                        Adjuntar Lista de Materiales o Cómputo (Opcional)
+                    </label>
+                    {{ form.archivo_adjunto }}
+                    <p class="text-[11px] text-gray-500 font-medium">Formatos aceptados: PDF, JPG, PNG, DOC (Hasta 10 MB)</p>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p class="text-xs text-gray-500 font-medium">
+                        * Asesoramiento comercial directo y personalizado vía WhatsApp o llamada.
+                    </p>
+                    <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-black text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-gray-800 hover:shadow-lg transition-all duration-200">
+                        Enviar Consulta Comercial →
+                    </button>
+                </div>
+            </form>
         </div>
+
     </div>
 </section>
 
-<!-- Galería de Casos Reales (Obras cotidianas) -->
-<section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
-            <span class="text-xs font-bold uppercase tracking-[0.2em] text-brandTerracotta">Obras de Aplicadores</span>
-            <h2 class="text-3xl font-extrabold text-brandDark uppercase tracking-tight">Registro de Aplicaciones</h2>
-            <p class="text-sm text-slate-500 font-light">Casos cotidianos de impermeabilización de terrazas, pisos comerciales y tratamientos mecánicos.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for proyecto in proyectos %}
-            <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-350 aspect-[4/3] bg-slate-950">
-                {% if proyecto.imagen_despues %}
-                <img src="{{ proyecto.imagen_despues.url }}" alt="{{ proyecto.titulo }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-60">
-                {% else %}
-                <div class="absolute inset-0 flex items-center justify-center text-slate-500 text-xs">Sin Imagen</div>
-                {% endif %}
-                <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/25 to-transparent p-6 flex flex-col justify-end">
-                    <span class="text-[9px] font-bold text-brandTerracotta uppercase tracking-widest">{{ proyecto.categoria_trabajo }}</span>
-                    <h3 class="text-white text-base font-bold mt-1 uppercase tracking-wide">{{ proyecto.titulo }}</h3>
-                    <p class="text-slate-300 text-xs mt-2 font-light line-clamp-2 leading-relaxed">{{ proyecto.descripcion_corta }}</p>
-                    <span class="text-slate-400 text-[10px] mt-3 block">📍 {{ proyecto.cliente_ubicacion }}</span>
-                </div>
-            </div>
-            {% empty %}
-            <div class="bg-brandGray rounded-2xl p-8 border border-slate-200/60 text-center col-span-full py-16">
-                <p class="text-sm text-slate-500">Aún no se han subido registros de obras cotidianas.</p>
-            </div>
-            {% endfor %}
+<!-- 8. Bloque: FOTO P/ APLICADOR (Banner fotográfico panorámico de aplicación, según Canva) -->
+<section class="relative h-72 sm:h-96 md:h-[460px] w-full overflow-hidden bg-black">
+    <img src="{% static 'media/servicios/6_aplicacion_recubrimientos.jpg' %}" onerror="this.src='/media/servicios/6_aplicacion_recubrimientos.jpg'" alt="Aplicadores Profesionales Bauhaus" class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent flex items-end">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white">
+            <span class="inline-block px-3 py-1 bg-[#e7b924] text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full mb-2">
+                Gremio Profesional
+            </span>
+            <p class="text-xl sm:text-2xl md:text-3xl font-extrabold uppercase tracking-tight">
+                El Respaldo Técnico que tus Obras Necesitan
+            </p>
         </div>
     </div>
 </section>
