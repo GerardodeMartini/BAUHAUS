@@ -58,11 +58,23 @@
                 </div>
 
                 <!-- Desktop Navigation (Todos los textos en negro) -->
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="{% url 'catalog:home' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Home</a>
-                    <a href="{% url 'catalog:aplicadores' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Aplicadores</a>
-                    <a href="{% url 'catalog:industria' %}" class="text-sm font-semibold text-black hover:underline transition duration-200">Industria</a>
-                    <a href="{% url 'catalog:home' %}#contacto" class="text-sm font-semibold text-black hover:underline transition duration-200">Contacto</a>
+                <nav class="hidden md:flex space-x-5 items-center">
+                    <a href="{% url 'catalog:home' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-sm font-semibold text-black transition duration-200">
+                        <span class="group-hover:underline decoration-2 underline-offset-4">Home</span>
+                        <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+                    </a>
+                    <a href="{% url 'catalog:aplicadores' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-sm font-semibold text-black transition duration-200">
+                        <span class="group-hover:underline decoration-2 underline-offset-4">Aplicadores</span>
+                        <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_2.png' %}" alt="">
+                    </a>
+                    <a href="{% url 'catalog:industria' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-sm font-semibold text-black transition duration-200">
+                        <span class="group-hover:underline decoration-2 underline-offset-4">Industria</span>
+                        <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_3.png' %}" alt="">
+                    </a>
+                    <a href="{% url 'catalog:home' %}#contacto" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-sm font-semibold text-black transition duration-200">
+                        <span class="group-hover:underline decoration-2 underline-offset-4">Contacto</span>
+                        <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+                    </a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -78,10 +90,22 @@
 
         <!-- Mobile Navigation Menu (Textos en negro) -->
         <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white border-b border-[#e2e4e7]">
-            <a href="{% url 'catalog:home' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Home</a>
-            <a href="{% url 'catalog:aplicadores' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Aplicadores</a>
-            <a href="{% url 'catalog:industria' %}" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Industria</a>
-            <a href="{% url 'catalog:home' %}#contacto" class="block px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50">Contacto</a>
+            <a href="{% url 'catalog:home' %}" class="nav-dynamic-link flex items-center justify-between px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50 group">
+                <span class="group-hover:underline decoration-2 underline-offset-4">Home</span>
+                <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+            </a>
+            <a href="{% url 'catalog:aplicadores' %}" class="nav-dynamic-link flex items-center justify-between px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50 group">
+                <span class="group-hover:underline decoration-2 underline-offset-4">Aplicadores</span>
+                <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_2.png' %}" alt="">
+            </a>
+            <a href="{% url 'catalog:industria' %}" class="nav-dynamic-link flex items-center justify-between px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50 group">
+                <span class="group-hover:underline decoration-2 underline-offset-4">Industria</span>
+                <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_3.png' %}" alt="">
+            </a>
+            <a href="{% url 'catalog:home' %}#contacto" class="nav-dynamic-link flex items-center justify-between px-3 py-2 rounded-lg text-base font-semibold text-black hover:bg-stone-50 group">
+                <span class="group-hover:underline decoration-2 underline-offset-4">Contacto</span>
+                <img class="random-hover-icon w-5 h-5 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+            </a>
         </div>
     </header>
 
@@ -115,12 +139,12 @@
     </main>
 
     <!-- Footer Oficial Bauhaus: Todos los textos en negro (Estructura Canva: Info | Botones | Redes & Dirección | Maps) -->
-    <footer class="bg-[#f6f7f9] text-black pt-16 pb-10 border-t border-[#e2e4e7]">
+    <footer class="bg-[#f6f7f9] text-black pt-8 md:pt-10 pb-10 border-t border-[#e2e4e7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
                 <!-- 1. Info Corporativa (Canva: info) -->
-                <div class="space-y-4 lg:col-span-3">
-                    <img src="{% static 'images/logo para inicio.png' %}" alt="Bauhaus Pinturas Industriales Logo" class="h-12 md:h-14 w-auto object-contain">
+                <div class="space-y-4 lg:col-span-3 flex flex-col items-center text-center">
+                    <img src="{% static 'images/logo_circular_bauhaus.png' %}" alt="Bauhaus Pinturas Industriales Logo" class="h-24 md:h-28 w-auto object-contain">
                     <p class="text-xs sm:text-sm text-black leading-relaxed font-medium">
                         Distribuidor oficial y directo de fábrica de recubrimientos epoxi, membranas y poliuretánicos de alta performance. Asesoramiento técnico en obra y despacho a nivel país.
                     </p>
@@ -130,10 +154,30 @@
                 <div class="lg:col-span-2 lg:pl-4">
                     <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Navegación</h3>
                     <ul class="space-y-2.5 text-xs sm:text-sm font-medium">
-                        <li><a href="{% url 'catalog:home' %}" class="text-black hover:underline transition duration-200">Home</a></li>
-                        <li><a href="{% url 'catalog:aplicadores' %}" class="text-black hover:underline transition duration-200">Aplicadores</a></li>
-                        <li><a href="{% url 'catalog:industria' %}" class="text-black hover:underline transition duration-200">Industria</a></li>
-                        <li><a href="{% url 'catalog:home' %}#contacto" class="text-black hover:underline transition duration-200">Contacto</a></li>
+                        <li>
+                            <a href="{% url 'catalog:home' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-black transition duration-200">
+                                <span class="group-hover:underline decoration-2 underline-offset-4">Home</span>
+                                <img class="random-hover-icon w-4 h-4 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog:aplicadores' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-black transition duration-200">
+                                <span class="group-hover:underline decoration-2 underline-offset-4">Aplicadores</span>
+                                <img class="random-hover-icon w-4 h-4 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_2.png' %}" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog:industria' %}" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-black transition duration-200">
+                                <span class="group-hover:underline decoration-2 underline-offset-4">Industria</span>
+                                <img class="random-hover-icon w-4 h-4 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_3.png' %}" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'catalog:home' %}#contacto" class="nav-dynamic-link group inline-flex items-center gap-1.5 text-black transition duration-200">
+                                <span class="group-hover:underline decoration-2 underline-offset-4">Contacto</span>
+                                <img class="random-hover-icon w-4 h-4 object-contain opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none" src="{% static 'images/icono_hover_1.png' %}" alt="">
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -212,6 +256,46 @@
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Botón Flotante SOLO PARA HOST LOCAL para alternar con Próximamente -->
+    <div id="dev-back-proximamente" class="hidden fixed bottom-6 left-6 z-50">
+        <a href="/proximamente/" class="bg-[#000c1b] text-white border-2 border-[#e7b924] py-2 px-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 shadow-xl hover:bg-[#e7b924] hover:text-black transition">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>← Ver Próximamente</span>
+        </a>
+    </div>
+    <script>
+        if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+            const devBack = document.getElementById('dev-back-proximamente');
+            if (devBack) devBack.classList.remove('hidden');
+        }
+    </script>
+
+    <!-- Script: Rotación aleatoria de los 3 logos Bauhaus en enlaces de navegación -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iconUrls = [
+                "{% static 'images/icono_hover_1.png' %}",
+                "{% static 'images/icono_hover_2.png' %}",
+                "{% static 'images/icono_hover_3.png' %}"
+            ];
+
+            const navLinks = document.querySelectorAll('.nav-dynamic-link');
+            navLinks.forEach(link => {
+                const img = link.querySelector('.random-hover-icon');
+                if (!img) return;
+
+                link.addEventListener('mouseenter', function() {
+                    const currentSrc = img.getAttribute('src') || '';
+                    const candidates = iconUrls.filter(u => !currentSrc.endsWith(u.split('/').pop()));
+                    const selected = candidates.length > 0 
+                        ? candidates[Math.floor(Math.random() * candidates.length)]
+                        : iconUrls[Math.floor(Math.random() * iconUrls.length)];
+                    img.src = selected;
+                });
+            });
         });
     </script>
 </body>
