@@ -4,13 +4,13 @@
 {% block title %}Industria{% endblock %}
 
 {% block top_banner %}
-<!-- Banner Industria (Estructura Canva: banner industria) -->
-<aside class="bg-[#000c1b] text-white py-3 px-4 text-center border-b border-[#e7b924]">
+<!-- Banner Industria (Brand Book Pág. 8: Gris fondos/contenedores #e2e4e7, Negro textos #000c1b, Amarillo destacados #e7b924) -->
+<aside class="bg-[#e2e4e7] border-b border-[#d1d5db] text-[#000c1b] py-3 px-4 text-center">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-medium">
-        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#e7b924] text-black uppercase tracking-wider">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#e7b924] text-[#000c1b] uppercase tracking-wider">
             División Industria
         </span>
-        <span class="text-gray-200 font-semibold">
+        <span class="text-[#000c1b] font-medium">
             Suministro Certificado para Obras de Gran Envergadura • Licitaciones y Cotización Corporativa
         </span>
     </div>
@@ -19,40 +19,71 @@
 
 {% block content %}
 
-<!-- 2. Hero Section (Estructura Canva: Banner Oscuro de Industria) -->
-<section class="relative bg-[#000c1b] text-white py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[480px] flex items-center justify-center">
-    <div class="absolute inset-0 z-0 opacity-35">
-        <img src="{% static 'images/hero_bg_p1.jpg' %}" alt="Recubrimientos Industriales" class="w-full h-full object-cover object-center">
+<!-- 2. Hero Section (Estructura Canva: Banner Industria) -->
+<section class="relative bg-white text-[#000c1b] py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[520px] flex items-center justify-center">
+    <!-- Carrusel de Portada de 3 Imágenes con Transición Automática cada 10s -->
+    <div class="absolute inset-0 z-0 overflow-hidden" id="hero-carousel-ind">
+        <!-- Slide 1 -->
+        <div class="hero-slide-ind absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100">
+            <img src="{% static 'images/hero/hero_1.jpg' %}" alt="Recubrimientos Industriales - Portada 1" class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide-ind absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/hero_2.jpg' %}" alt="Recubrimientos Industriales - Portada 2" class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide-ind absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/hero_3.jpg' %}" alt="Recubrimientos Industriales - Portada 3" class="w-full h-full object-cover object-center">
+        </div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-[#000c1b]/85 via-[#000c1b]/70 to-[#000c1b]/95 z-0"></div>
+    <!-- Overlay claro blanco para legibilidad del texto según Manual de Marca -->
+    <div class="absolute inset-0 bg-white/85 z-0 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-4xl mx-auto space-y-6">
-            <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-white/10 text-[#e7b924] border border-[#e7b924]/30 uppercase tracking-[0.25em]">
-                • INGENIERÍA DE RECUBRIMIENTOS •
-            </span>
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-white drop-shadow-sm">
+            <!-- Título Principal (Rethink Sans ExtraBold en Negro #000c1b) -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
                 Especialistas en <br class="hidden sm:inline">
-                <span class="text-[#e7b924]">Recubrimientos Técnicos</span>
+                <span class="text-[#000c1b]">Recubrimientos Técnicos</span>
             </h1>
+
+            <!-- Especialidades (Subtítulo en Celeste #4081c1 y Negro #000c1b según Brand Book Pág. 8) -->
             <div class="space-y-1">
-                <p class="text-xs sm:text-sm md:text-base text-gray-200 font-semibold tracking-wide">
+                <p class="text-xs sm:text-sm md:text-base text-[#4081c1] font-bold tracking-wide uppercase">
                     Control de Corrosión • Pisos Industriales
                 </p>
-                <p class="text-xs sm:text-sm md:text-base text-gray-300 font-medium tracking-wide">
-                    Impermeabilización de Alto Desempeño • Protección contra Químicos
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-medium tracking-wide">
+                    Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
                 </p>
             </div>
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#visita-tecnica" class="px-8 py-3.5 rounded-full bg-[#e7b924] text-black text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md">
+
+            <!-- Botones Principales (Amarillo #e7b924 + Blanco con borde Negro #000c1b) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#e7b924] text-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md text-center">
                     ¿Tenés un proyecto en mente?
                 </a>
-                <a href="#obras" class="px-8 py-3.5 rounded-full bg-white/10 text-white border border-white/30 text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-white/20 transition-all duration-200">
+                <a href="#obras" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
                     Ver Obras Industriales
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Script del Carrusel (cambio suave cada 10 segundos) -->
+    <script>
+        (function() {
+            const slides = document.querySelectorAll('#hero-carousel-ind .hero-slide-ind');
+            if (!slides || slides.length < 2) return;
+            let current = 0;
+            setInterval(() => {
+                slides[current].classList.remove('opacity-100', 'scale-100');
+                slides[current].classList.add('opacity-0', 'scale-105', 'pointer-events-none');
+                current = (current + 1) % slides.length;
+                slides[current].classList.remove('opacity-0', 'scale-105', 'pointer-events-none');
+                slides[current].classList.add('opacity-100', 'scale-100');
+            }, 10000);
+        })();
+    </script>
 </section>
 
 <!-- 3. Bloque: En qué nos especializamos (4 Categorías con fotos y descripción) -->

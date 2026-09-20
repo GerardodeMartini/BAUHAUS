@@ -5,42 +5,70 @@
 
 {% block content %}
 <!-- 1. Hero Section (Estructura Canva: Banner Principal con Título, Subtítulo y Botones) -->
-<section class="relative bg-[#000c1b] text-white py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[500px] flex items-center justify-center">
-    <!-- Imagen de fondo con overlay oscuro equilibrado -->
-    <div class="absolute inset-0 z-0 opacity-40">
-        <img src="{% static 'images/hero_bg_p1.jpg' %}" alt="Especialistas en recubrimientos técnicos" class="w-full h-full object-cover object-center">
+<section class="relative bg-white text-[#000c1b] py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[520px] flex items-center justify-center">
+    <!-- Carrusel de Portada de 3 Imágenes con Transición Automática cada 10s -->
+    <div class="absolute inset-0 z-0 overflow-hidden" id="hero-carousel-home">
+        <!-- Slide 1 -->
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100">
+            <img src="{% static 'images/hero/hero_1.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 1" class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/hero_2.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 2" class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/hero_3.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 3" class="w-full h-full object-cover object-center">
+        </div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-[#000c1b]/80 via-[#000c1b]/60 to-[#000c1b]/90 z-0"></div>
+    <!-- Overlay claro blanco para legibilidad del texto según Manual de Marca -->
+    <div class="absolute inset-0 bg-white/85 z-0 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-4xl mx-auto space-y-6">
-            <!-- Título Principal -->
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-white drop-shadow-sm">
+            <!-- Título Principal (Rethink Sans ExtraBold en Negro #000c1b) -->
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
                 Especialistas en <br class="hidden sm:inline">
-                <span class="text-[#e7b924]">Recubrimientos Técnicos</span>
+                <span class="text-[#000c1b]">Recubrimientos Técnicos</span>
             </h1>
 
-            <!-- Especialidades según Canva -->
+            <!-- Especialidades (Subtítulo en Celeste #4081c1 y Negro #000c1b según Brand Book Pág. 8) -->
             <div class="space-y-1">
-                <p class="text-xs sm:text-sm md:text-base text-gray-200 font-semibold tracking-wide">
+                <p class="text-xs sm:text-sm md:text-base text-[#4081c1] font-bold tracking-wide uppercase">
                     Control de Corrosión • Pisos Industriales
                 </p>
-                <p class="text-xs sm:text-sm md:text-base text-gray-300 font-medium tracking-wide">
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-medium tracking-wide">
                     Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
                 </p>
             </div>
             
-            <!-- Botones Principales (Estructura Canva: SOY APLICADOR | SOY INDUSTRIA) -->
+            <!-- Botones Principales (Amarillo #e7b924 + Blanco con borde Negro #000c1b) -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                <a href="{% url 'catalog:aplicadores' %}" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#e7b924] text-black text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                <a href="{% url 'catalog:aplicadores' %}" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#e7b924] text-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md text-center">
                     Soy Aplicador
                 </a>
-                <a href="{% url 'catalog:industria' %}" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-black text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-gray-100 hover:scale-105 transition-all duration-200 shadow-md text-center">
+                <a href="{% url 'catalog:industria' %}" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
                     Soy Industria
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Script del Carrusel (cambio suave cada 10 segundos) -->
+    <script>
+        (function() {
+            const slides = document.querySelectorAll('#hero-carousel-home .hero-slide-home');
+            if (!slides || slides.length < 2) return;
+            let current = 0;
+            setInterval(() => {
+                slides[current].classList.remove('opacity-100', 'scale-100');
+                slides[current].classList.add('opacity-0', 'scale-105', 'pointer-events-none');
+                current = (current + 1) % slides.length;
+                slides[current].classList.remove('opacity-0', 'scale-105', 'pointer-events-none');
+                slides[current].classList.add('opacity-100', 'scale-100');
+            }, 10000);
+        })();
+    </script>
 </section>
 
 <!-- 2. Bloque: Foto del Local (Izq) + Quiénes Somos (Der) -->
@@ -84,9 +112,6 @@
             
             <!-- Columna Izquierda: Nota sobre algo - espacio de blog -->
             <div class="space-y-6">
-                <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full text-[10px] font-bold bg-white text-black border border-[#e2e4e7] uppercase tracking-[0.2em]">
-                    • BLOG TÉCNICO •
-                </span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight text-black leading-tight">
                     Claves para la correcta preparación de superficies y pisos epoxi
                 </h2>
