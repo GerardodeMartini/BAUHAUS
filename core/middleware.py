@@ -28,12 +28,10 @@ class ModoProximamenteMiddleware:
             if not is_local:
                 return render(request, 'proximamente.html', {'is_local': False})
 
-            # Si es el host local de trabajo:
-            # En la raíz '/' mostramos Próximamente (con barra de navegación local para cambiar de página)
-            if request.path == '/' or request.path == '/proximamente/':
+            # En local, sólo si se entra explícitamente a /proximamente/
+            if request.path == '/proximamente/':
                 return render(request, 'proximamente.html', {'is_local': True})
 
-            # En /inicio/, /aplicadores/, /industria/ dejamos pasar para que veas los cambios
             return self.get_response(request)
 
         return self.get_response(request)

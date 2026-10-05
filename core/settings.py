@@ -3,11 +3,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
 
-# Cargar variables de entorno
-load_dotenv()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Cargar variables de entorno desde la raíz del proyecto
+load_dotenv(BASE_DIR / '.env', override=True)
 
 # Security config
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-fallback-key-for-local-dev-1234567')
@@ -134,12 +134,13 @@ else:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 DEFAULT_FROM_EMAIL = os.getenv('EMAIL_SENDER', 'onboarding@resend.dev')
-EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER', 'ventas@dominio.com.ar')
+EMAIL_RECEIVER = os.getenv('EMAIL_RECEIVER', 'ventas@bauhaus.ar')
 
 # ==============================================================================
 # SEGURIDAD Y PRODUCCIÓN (Se activan automáticamente cuando DEBUG = False)
 # ==============================================================================
 if not DEBUG:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT', 'True') == 'True'
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True

@@ -27,24 +27,22 @@
                 class="w-full h-full object-cover object-center">
         </div>
     </div>
-    <!-- Overlay claro blanco para legibilidad del texto según Manual de Marca -->
-    <div class="absolute inset-0 bg-white/85 z-0 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-4xl mx-auto space-y-6">
             <!-- Título Principal (Rethink Sans ExtraBold en Negro #000c1b) -->
             <h1
-                class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
+                class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
                 Especialistas en <br class="hidden sm:inline">
                 <span class="text-[#000c1b]">Recubrimientos Técnicos</span>
             </h1>
 
-            <!-- Especialidades (Subtítulo en Celeste #4081c1 y Negro #000c1b según Brand Book Pág. 8) -->
+            <!-- Especialidades (Ambas líneas unificadas en negro y misma tipografía) -->
             <div class="space-y-1">
-                <p class="text-xs sm:text-sm md:text-base text-[#4081c1] font-bold tracking-wide uppercase">
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-semibold tracking-wide">
                     Control de Corrosión • Pisos Industriales
                 </p>
-                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-medium tracking-wide">
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-semibold tracking-wide">
                     Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
                 </p>
             </div>
@@ -52,7 +50,7 @@
             <!-- Botones Principales (Amarillo #e7b924 + Blanco con borde Negro #000c1b) -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
                 <a href="{% url 'catalog:aplicadores' %}"
-                    class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#e7b924] text-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                    class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
                     Soy Aplicador
                 </a>
                 <a href="{% url 'catalog:industria' %}"
@@ -108,12 +106,6 @@
                         Analizamos las necesidades de cada obra para optimizar tiempos y garantizar una inversión
                         eficiente mediante especificaciones precisas, protocolos de calidad y respaldo en sitio.
                     </p>
-                </div>
-                <div class="pt-2">
-                    <a href="#contacto"
-                        class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#000c1b] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-black hover:scale-105 transition-all duration-200 shadow-md">
-                        Conocé más sobre nosotros →
-                    </a>
                 </div>
             </div>
 
@@ -177,7 +169,7 @@
         <!-- Encabezado con destaque oficial -->
         <div class="space-y-3">
             <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
-                Marcas que trabajamos
+                Marcas que comercializamos
             </h2>
             <p class="text-xs sm:text-sm text-[#000c1b] max-w-2xl mx-auto font-medium leading-relaxed">
                 Representamos y distribuimos directamente las marcas más prestigiosas y homologadas del mercado
@@ -241,7 +233,7 @@
         <!-- Encabezado -->
         <div class="space-y-3">
             <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
-                Confían en Nosotros
+                Empresas que nos eligen
             </h2>
             <p class="text-xs sm:text-sm text-black max-w-2xl mx-auto font-medium leading-relaxed">
                 Grandes firmas y constructoras eligen nuestro asesoramiento técnico y calidad de materiales para sus
@@ -302,26 +294,22 @@
 <section id="contacto" class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b] scroll-mt-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
-        <!-- Frase para que nos contacten & texto explicativo -->
-        <div class="text-center space-y-3">
+        <!-- Frase para que nos contacten -->
+        <div class="text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
                 ¿Tenés un proyecto en mente? Contactanos
             </h2>
-            <p class="text-sm sm:text-base text-[#000c1b] max-w-2xl mx-auto font-medium leading-relaxed">
-                Dejanos tus datos o consultanos directamente y un asesor técnico responderá tu solicitud en menos de 24
-                hs para brindarte la mejor solución y cotización a medida.
-            </p>
         </div>
 
         <!-- Formulario Simplificado Directo a WhatsApp (Tarjeta Blanca Sólida) -->
         <div class="bg-white p-8 sm:p-10 rounded-3xl border border-black/10 shadow-xl max-w-2xl mx-auto">
-            <form id="whatsapp-form" onsubmit="enviarWhatsApp(event)" class="space-y-6">
+            <form id="whatsapp-form" onsubmit="event.preventDefault();" class="space-y-6">
                 <!-- Nombre -->
                 <div class="space-y-1.5">
                     <label for="wa-nombre" class="block text-xs font-bold uppercase tracking-wider text-black">
-                        Tu Nombre *
+                        Tu Nombre
                     </label>
-                    <input type="text" id="wa-nombre" required placeholder="Ej: Juan Pérez"
+                    <input type="text" id="wa-nombre" placeholder="Ej: Juan Pérez"
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-white text-black text-base sm:text-sm">
                 </div>
 
@@ -350,59 +338,56 @@
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-white text-black text-base sm:text-sm resize-none"></textarea>
                 </div>
 
-                <!-- Botón Principal a WhatsApp -->
-                <button type="submit"
-                    class="w-full py-4 px-6 rounded-2xl bg-brandGreen text-white text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-emerald-600 hover:scale-[1.01] active:scale-95 transition-all duration-200 shadow-md">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z" />
-                    </svg>
-                    <span>Iniciar Consulta por WhatsApp →</span>
-                </button>
-            </form>
-
-            <!-- Asesores Directos -->
-            <div class="mt-8 pt-6 border-t border-[#e2e4e7] space-y-3">
-                <p class="text-xs font-bold uppercase tracking-wider text-black text-center">
-                    O comunicate directamente con nuestros asesores técnicos:
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    <a href="https://wa.me/5493516325978?text=Hola%20Sebastián,%20te%20contacto%20desde%20la%20página%20web."
-                        target="_blank"
-                        class="p-3.5 bg-white rounded-xl border border-[#e2e4e7] hover:border-black transition flex items-center justify-between group">
-                        <div>
-                            <p class="text-xs font-bold text-black">Sebastián Affonso</p>
-                            <p class="text-[11px] text-gray-500 font-medium">+54 9 351 632 5978</p>
-                        </div>
-                        <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat →</span>
-                    </a>
-                    <a href="https://wa.me/5493518561179?text=Hola%20Juan,%20te%20contacto%20desde%20la%20página%20web."
-                        target="_blank"
-                        class="p-3.5 bg-white rounded-xl border border-[#e2e4e7] hover:border-black transition flex items-center justify-between group">
-                        <div>
-                            <p class="text-xs font-bold text-black">Juan Cupertino</p>
-                            <p class="text-[11px] text-gray-500 font-medium">+54 9 351 856 1179</p>
-                        </div>
-                        <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat →</span>
-                    </a>
+                <!-- Asesores Directos -->
+                <div class="pt-4 border-t border-[#e2e4e7] space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-wider text-black text-center">
+                        Comunicate directamente con nuestros asesores técnicos:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <a href="https://wa.me/5493516325978?text=Hola%20Sebasti%C3%A1n,%20te%20contacto%20desde%20la%20p%C3%A1gina%20web."
+                            onclick="contactarAsesor(event, '5493516325978', 'Sebastián')"
+                            target="_blank"
+                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
+                            <div>
+                                <p class="text-sm font-bold text-black">Sebastián</p>
+                                <p class="text-xs text-gray-500 font-medium">+54 9 351 632 5978</p>
+                            </div>
+                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
+                        </a>
+                        <a href="https://wa.me/5493518561179?text=Hola%20Juan,%20te%20contacto%20desde%20la%20p%C3%A1gina%20web."
+                            onclick="contactarAsesor(event, '5493518561179', 'Juan')"
+                            target="_blank"
+                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
+                            <div>
+                                <p class="text-sm font-bold text-black">Juan</p>
+                                <p class="text-xs text-gray-500 font-medium">+54 9 351 856 1179</p>
+                            </div>
+                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <script>
-            function enviarWhatsApp(e) {
-                e.preventDefault();
-                const nombre = document.getElementById('wa-nombre').value.trim();
-                const tema = document.getElementById('wa-tema').value;
-                const mensaje = document.getElementById('wa-mensaje').value.trim();
+            function contactarAsesor(e, telefono, asesor) {
+                if (e) e.preventDefault();
+                const nombre = document.getElementById('wa-nombre')?.value.trim();
+                const tema = document.getElementById('wa-tema')?.value;
+                const mensaje = document.getElementById('wa-mensaje')?.value.trim();
 
-                let texto = `Hola! Mi nombre es *${nombre}*.\n`;
-                texto += `Quisiera consultar sobre: *${tema}*.\n`;
+                let texto = `Hola ${asesor}, te contacto desde la página web de Bauhaus.`;
+                if (nombre) {
+                    texto += `\nMi nombre es *${nombre}*.`;
+                }
+                if (tema) {
+                    texto += `\nConsulta sobre: *${tema}*.`;
+                }
                 if (mensaje) {
-                    texto += `Detalle: ${mensaje}\n`;
+                    texto += `\nDetalle: ${mensaje}`;
                 }
 
-                const url = `https://wa.me/5493516325978?text=${encodeURIComponent(texto)}`;
+                const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
                 window.open(url, '_blank');
             }
         </script>

@@ -36,35 +36,22 @@
             <img src="{% static 'images/hero/hero_3.jpg' %}" alt="Recubrimientos Industriales - Portada 3" class="w-full h-full object-cover object-center">
         </div>
     </div>
-    <!-- Overlay claro blanco para legibilidad del texto según Manual de Marca -->
-    <div class="absolute inset-0 bg-white/85 z-0 pointer-events-none"></div>
-
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-4xl mx-auto space-y-6">
             <!-- Título Principal (Rethink Sans ExtraBold en Negro #000c1b) -->
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]">
                 Especialistas en <br class="hidden sm:inline">
                 <span class="text-[#000c1b]">Recubrimientos Técnicos</span>
             </h1>
 
-            <!-- Especialidades (Subtítulo en Celeste #4081c1 y Negro #000c1b según Brand Book Pág. 8) -->
+            <!-- Especialidades (Ambas líneas unificadas en negro y misma tipografía) -->
             <div class="space-y-1">
-                <p class="text-xs sm:text-sm md:text-base text-[#4081c1] font-bold tracking-wide uppercase">
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-semibold tracking-wide">
                     Control de Corrosión • Pisos Industriales
                 </p>
-                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-medium tracking-wide">
+                <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-semibold tracking-wide">
                     Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
                 </p>
-            </div>
-
-            <!-- Botones Principales (Amarillo #e7b924 + Blanco con borde Negro #000c1b) -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-                <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#e7b924] text-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#d6a81b] hover:scale-105 transition-all duration-200 shadow-md text-center">
-                    ¿Tenés un proyecto en mente?
-                </a>
-                <a href="#obras" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
-                    Ver Obras Industriales
-                </a>
             </div>
         </div>
     </div>
@@ -107,9 +94,6 @@
                 <div>
                     <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
                         <img src="{% static 'media/portfolio/tanque_industrial.jpg' %}" onerror="this.src='/media/portfolio/tanque_industrial.jpg'" alt="Control de Corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
-                            01
-                        </span>
                     </div>
                     <div class="p-6 space-y-3">
                         <h3 class="text-lg font-bold text-black uppercase tracking-wide">
@@ -120,9 +104,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
+                <div class="p-6 pt-0 text-center">
                     <a href="#visita-tecnica" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Consultar especificación →
+                        Pedir cotización →
                     </a>
                 </div>
             </div>
@@ -132,9 +116,6 @@
                 <div>
                     <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
                         <img src="{% static 'media/portfolio/piso_autonivelante.jpg' %}" onerror="this.src='/media/portfolio/piso_autonivelante.jpg'" alt="Pisos Industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
-                            02
-                        </span>
                     </div>
                     <div class="p-6 space-y-3">
                         <h3 class="text-lg font-bold text-black uppercase tracking-wide">
@@ -145,9 +126,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
+                <div class="p-6 pt-0 text-center">
                     <a href="#visita-tecnica" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Consultar especificación →
+                        Pedir cotización →
                     </a>
                 </div>
             </div>
@@ -157,9 +138,6 @@
                 <div>
                     <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
                         <img src="{% static 'media/portfolio/despues/membrane_roof_obracompleta.png' %}" onerror="this.src='/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Impermeabilización de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
-                            03
-                        </span>
                     </div>
                     <div class="p-6 space-y-3">
                         <h3 class="text-lg font-bold text-black uppercase tracking-wide">
@@ -170,9 +148,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
+                <div class="p-6 pt-0 text-center">
                     <a href="#visita-tecnica" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Consultar especificación →
+                        Pedir cotización →
                     </a>
                 </div>
             </div>
@@ -182,9 +160,6 @@
                 <div>
                     <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
                         <img src="{% static 'media/servicios/aplicacion_recubrimientos.jpg' %}" onerror="this.src='/media/servicios/aplicacion_recubrimientos.jpg'" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 text-white text-[10px] font-extrabold uppercase tracking-wider">
-                            04
-                        </span>
                     </div>
                     <div class="p-6 space-y-3">
                         <h3 class="text-lg font-bold text-black uppercase tracking-wide">
@@ -195,9 +170,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 pt-0">
+                <div class="p-6 pt-0 text-center">
                     <a href="#visita-tecnica" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Consultar especificación →
+                        Pedir cotización →
                     </a>
                 </div>
             </div>
@@ -286,54 +261,306 @@
     </div>
 </section>
 
-<!-- 5. Bloque: Trayectoria y Registro (Obras Industriales) - Fondo Amarillo Bauhaus -->
-<section id="obras" class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<!-- 5. Bloque: Trayectoria y Registro (Obras Industriales) - Formato Portada con Fondo Mosaico Sin Degradé ni Cajas Borrosas -->
+<section id="obras" class="relative bg-white text-[#000c1b] py-20 md:py-28 border-b border-[#e2e4e7] overflow-hidden min-h-[580px] md:min-h-[640px] flex items-center justify-center">
+    
+    <!-- Carrusel de Fondos Mosaico por Obra (Imágenes 100% nítidas y visibles a pantalla completa, sin filtros ni degradé) -->
+    <div class="absolute inset-0 z-0 overflow-hidden" id="obras-carousel-container">
         
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
-                Trayectoria y Registro
-            </h2>
-            <p class="text-xs sm:text-sm text-[#000c1b] font-medium leading-relaxed">
-                Registro de proyectos industriales finalizados con especificaciones técnicas rigurosas y durabilidad garantizada.
-            </p>
+        <!-- Obra 1: Pisos Industriales & Epoxi -->
+        <div class="obra-slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" data-obra="0">
+            <img src="{% static 'images/obras/mosaico_pisos.jpg' %}" alt="Mosaico Obra Pisos Industriales" class="w-full h-full object-cover object-center">
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for proyecto in proyectos %}
-            <div class="bg-white rounded-2xl overflow-hidden border border-black/10 shadow-sm hover:shadow-md hover:border-black transition-all flex flex-col justify-between group">
-                <div>
-                    <div class="aspect-[16/10] bg-gray-200 overflow-hidden relative">
-                        {% if proyecto.imagen_despues %}
-                        <img src="{{ proyecto.imagen_despues.url }}" alt="{{ proyecto.titulo }}" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        {% else %}
-                        <div class="w-full h-full bg-gray-300 flex items-center justify-center text-xs font-bold text-black">Obra Industrial Bauhaus</div>
-                        {% endif %}
-                        <span class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
-                            Obra Finalizada
-                        </span>
-                    </div>
-                    <div class="p-6 space-y-2.5">
-                        <span class="text-[10px] font-bold text-black uppercase tracking-widest block">{{ proyecto.categoria_trabajo }}</span>
-                        <h3 class="text-base font-bold text-black uppercase tracking-wide">{{ proyecto.titulo }}</h3>
-                        <p class="text-xs text-black leading-relaxed font-medium line-clamp-3">{{ proyecto.descripcion_corta }}</p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 border-t border-[#e2e4e7]/60 mt-4 flex items-center justify-between text-[11px] font-semibold text-black">
-                    <span>📍 {{ proyecto.cliente_ubicacion }}</span>
-                    <a href="#visita-tecnica" class="text-xs font-bold text-black hover:underline">Consultar caso →</a>
-                </div>
-            </div>
-            {% empty %}
-            <!-- Casos default si no hay registros cargados -->
-            <div class="bg-white rounded-2xl p-8 border border-black/10 text-center col-span-full py-12">
-                <p class="text-sm text-black font-medium">Obras y proyectos en etapa de documentación fotográfica.</p>
-            </div>
-            {% endfor %}
+        <!-- Obra 2: Impermeabilización de Alto Desempeño -->
+        <div class="obra-slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none" data-obra="1">
+            <img src="{% static 'images/obras/mosaico_impermeabilizacion.jpg' %}" alt="Mosaico Obra Impermeabilización" class="w-full h-full object-cover object-center">
+        </div>
+
+        <!-- Obra 3: Control de Corrosión & Altura -->
+        <div class="obra-slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none" data-obra="2">
+            <img src="{% static 'images/obras/mosaico_corrosion.jpg' %}" alt="Mosaico Obra Control de Corrosión" class="w-full h-full object-cover object-center">
+        </div>
+
+        <!-- Obra 4: Protección Química & Tanques -->
+        <div class="obra-slide absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none" data-obra="3">
+            <img src="{% static 'images/obras/mosaico_quimica.jpg' %}" alt="Mosaico Obra Protección Química" class="w-full h-full object-cover object-center">
         </div>
 
     </div>
+
+    <!-- Contenido encima de la imagen de fondo (Estilo Portada directo sobre la foto, sin cajas borrosas que tapen las imágenes) -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-center">
+        
+        <!-- Pastillas / Selector de Categorías de Obras -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <button type="button" onclick="irAObra(0)" class="obra-pill px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-wider transition-all duration-300 shadow-md bg-[#000c1b] text-white cursor-pointer" data-pill="0">
+                Pisos Industriales & Epoxi
+            </button>
+            <button type="button" onclick="irAObra(1)" class="obra-pill px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-wider transition-all duration-300 shadow-md bg-white text-[#000c1b] hover:bg-stone-100 border border-black/20 cursor-pointer" data-pill="1">
+                Impermeabilización
+            </button>
+            <button type="button" onclick="irAObra(2)" class="obra-pill px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-wider transition-all duration-300 shadow-md bg-white text-[#000c1b] hover:bg-stone-100 border border-black/20 cursor-pointer" data-pill="2">
+                Control de Corrosión & Altura
+            </button>
+            <button type="button" onclick="irAObra(3)" class="obra-pill px-4 py-1.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-wider transition-all duration-300 shadow-md bg-white text-[#000c1b] hover:bg-stone-100 border border-black/20 cursor-pointer" data-pill="3">
+                Protección Química & Tanques
+            </button>
+        </div>
+
+        <!-- Textos Dinámicos de cada Obra directamente sobre la imagen (estilo Portada) -->
+        <div class="relative w-full flex items-center justify-center">
+            
+            <!-- Texto Obra 0 -->
+            <div class="obra-texto transition-all duration-700 ease-in-out block opacity-100 transform translate-y-0 w-full" data-texto="0">
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="flex items-center justify-center gap-2 flex-wrap">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold bg-[#e7b924] text-[#000c1b] uppercase tracking-wider shadow-sm">
+                            Obra Registrada • Pisos Epoxi
+                        </span>
+                        <span class="text-xs sm:text-sm text-[#000c1b] font-extrabold tracking-wide drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] bg-white/70 px-2.5 py-0.5 rounded-full">
+                            📍 Planta Embotelladora - Córdoba Capital
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b] drop-shadow-[0_2px_8px_rgba(255,255,255,0.95)]">
+                        Revestimiento Epoxi de 3.000 m² & Demarcación
+                    </h2>
+                    <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-bold leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] bg-white/60 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl">
+                        Aplicación de piso epoxi autonivelante de 3 mm en áreas de producción, embotellado y logística pesada. Superficie monolítica sin juntas, resistente a autoelevadores, aceites y lavado a alta presión.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] font-bold pt-1">
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ 3 mm Autonivelante</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Resistencia Mecánica</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Acabado Aséptico</span>
+                    </div>
+                    <!-- Botones de Acción (Estilo Portada) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Consultar por esta Solución
+                        </a>
+                        <a href="https://wa.me/5493512345678?text=Hola,%20quisiera%20asesoramiento%20t%C3%A9cnico%20sobre%20las%20obras%20industriales%20de%20Bauhaus" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Contactar Especialista
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto Obra 1 -->
+            <div class="obra-texto transition-all duration-700 ease-in-out hidden opacity-0 transform translate-y-4 w-full" data-texto="1">
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="flex items-center justify-center gap-2 flex-wrap">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold bg-[#e7b924] text-[#000c1b] uppercase tracking-wider shadow-sm">
+                            Obra Registrada • Impermeabilización
+                        </span>
+                        <span class="text-xs sm:text-sm text-[#000c1b] font-extrabold tracking-wide drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] bg-white/70 px-2.5 py-0.5 rounded-full">
+                            📍 Nave Logística - Ferreyra, Córdoba
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b] drop-shadow-[0_2px_8px_rgba(255,255,255,0.95)]">
+                        Membrana Continua de Poliurea Pura en Cubiertas
+                    </h2>
+                    <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-bold leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] bg-white/60 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl">
+                        Impermeabilización de 5.500 m² de techos metálicos y solapes con membrana de poliurea pura aplicada en caliente. Estanqueidad garantizada por 15 años sin uniones ni goteras.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] font-bold pt-1">
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Poliurea Pura en Caliente</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Cero Juntas y Solapes</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Alta Elongación</span>
+                    </div>
+                    <!-- Botones de Acción (Estilo Portada) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Consultar por esta Solución
+                        </a>
+                        <a href="https://wa.me/5493512345678?text=Hola,%20quisiera%20asesoramiento%20t%C3%A9cnico%20sobre%20las%20obras%20industriales%20de%20Bauhaus" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Contactar Especialista
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto Obra 2 -->
+            <div class="obra-texto transition-all duration-700 ease-in-out hidden opacity-0 transform translate-y-4 w-full" data-texto="2">
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="flex items-center justify-center gap-2 flex-wrap">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold bg-[#e7b924] text-[#000c1b] uppercase tracking-wider shadow-sm">
+                            Obra Registrada • Control de Corrosión
+                        </span>
+                        <span class="text-xs sm:text-sm text-[#000c1b] font-extrabold tracking-wide drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] bg-white/70 px-2.5 py-0.5 rounded-full">
+                            📍 Complejo Agroindustrial - Malagueño, Córdoba
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b] drop-shadow-[0_2px_8px_rgba(255,255,255,0.95)]">
+                        Protección Anticorrosiva Pesada en Silos & Altura
+                    </h2>
+                    <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-bold leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] bg-white/60 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl">
+                        Hidrolavado a alta presión, preparación de acero bajo normas SSPC/NACE y aplicación de esquema epoxi de altos sólidos con poliuretano alifático mediante cuadrillas de alpinismo industrial.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] font-bold pt-1">
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Alpinismo Industrial Certificado</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Normas ASTM / NACE</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Epoxi Altos Sólidos</span>
+                    </div>
+                    <!-- Botones de Acción (Estilo Portada) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Consultar por esta Solución
+                        </a>
+                        <a href="https://wa.me/5493512345678?text=Hola,%20quisiera%20asesoramiento%20t%C3%A9cnico%20sobre%20las%20obras%20industriales%20de%20Bauhaus" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Contactar Especialista
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texto Obra 3 -->
+            <div class="obra-texto transition-all duration-700 ease-in-out hidden opacity-0 transform translate-y-4 w-full" data-texto="3">
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="flex items-center justify-center gap-2 flex-wrap">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-xs font-extrabold bg-[#e7b924] text-[#000c1b] uppercase tracking-wider shadow-sm">
+                            Obra Registrada • Protección Química
+                        </span>
+                        <span class="text-xs sm:text-sm text-[#000c1b] font-extrabold tracking-wide drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)] bg-white/70 px-2.5 py-0.5 rounded-full">
+                            📍 Planta Petroquímica - Río Tercero, Córdoba
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b] drop-shadow-[0_2px_8px_rgba(255,255,255,0.95)]">
+                        Revestimiento de Tanques Confinados & Cubetos
+                    </h2>
+                    <p class="text-xs sm:text-sm md:text-base text-[#000c1b] font-bold leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(255,255,255,0.95)] bg-white/60 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-xl">
+                        Revestimiento interior monolítico de tanques en espacios confinados con resinas epoxi novolac y cubetos secundarios en viniléster reforzado con fibra de vidrio contra ácidos y solventes.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-2 text-[11px] font-bold pt-1">
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Resinas Epoxi Novolac</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Viniléster & PRFV</span>
+                        <span class="px-3 py-1 rounded-full bg-white/80 border border-black/15 text-[#000c1b] shadow-sm">✔ Espacios Confinados</span>
+                    </div>
+                    <!-- Botones de Acción (Estilo Portada) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                        <a href="#visita-tecnica" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Consultar por esta Solución
+                        </a>
+                        <a href="https://wa.me/5493512345678?text=Hola,%20quisiera%20asesoramiento%20t%C3%A9cnico%20sobre%20las%20obras%20industriales%20de%20Bauhaus" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-white text-[#000c1b] border-2 border-[#000c1b] text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#e2e4e7] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                            Contactar Especialista
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Flechas flotantes de Navegación Anterior / Siguiente -->
+    <button type="button" onclick="cambiarSlideObrasHero(-1)" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-[#000c1b] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xl hover:scale-110 border border-black/10" aria-label="Obra anterior">
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button type="button" onclick="cambiarSlideObrasHero(1)" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-[#000c1b] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-xl hover:scale-110 border border-black/10" aria-label="Siguiente obra">
+        <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <!-- Indicador de progreso (Dots) -->
+    <div class="absolute bottom-4 inset-x-0 z-20 flex items-center justify-center gap-2">
+        <button type="button" onclick="irAObra(0)" class="obra-dot w-7 h-2 rounded-full bg-[#000c1b] transition-all cursor-pointer" data-dot="0"></button>
+        <button type="button" onclick="irAObra(1)" class="obra-dot w-2 h-2 rounded-full bg-black/25 hover:bg-black/50 transition-all cursor-pointer" data-dot="1"></button>
+        <button type="button" onclick="irAObra(2)" class="obra-dot w-2 h-2 rounded-full bg-black/25 hover:bg-black/50 transition-all cursor-pointer" data-dot="2"></button>
+        <button type="button" onclick="irAObra(3)" class="obra-dot w-2 h-2 rounded-full bg-black/25 hover:bg-black/50 transition-all cursor-pointer" data-dot="3"></button>
+    </div>
+
+    <!-- Script del Carrusel de Obras al estilo Portada -->
+    <script>
+        (function() {
+            let activeObra = 0;
+            const totalObras = 4;
+            let obrasInterval = null;
+
+            window.irAObra = function(index) {
+                activeObra = (index + totalObras) % totalObras;
+                renderObras();
+                resetTimer();
+            };
+
+            window.cambiarSlideObrasHero = function(direction) {
+                irAObra(activeObra + direction);
+            };
+
+            function renderObras() {
+                // Slides de fondo con mosaico (Fade in/out + scale como la portada, fotos 100% nítidas)
+                const slides = document.querySelectorAll('.obra-slide');
+                slides.forEach((slide, idx) => {
+                    if (idx === activeObra) {
+                        slide.classList.remove('opacity-0', 'scale-105', 'pointer-events-none');
+                        slide.classList.add('opacity-100', 'scale-100');
+                    } else {
+                        slide.classList.remove('opacity-100', 'scale-100');
+                        slide.classList.add('opacity-0', 'scale-105', 'pointer-events-none');
+                    }
+                });
+
+                // Textos sobre la imagen
+                const textos = document.querySelectorAll('.obra-texto');
+                textos.forEach((txt, idx) => {
+                    if (idx === activeObra) {
+                        txt.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                        txt.classList.add('block', 'opacity-100', 'translate-y-0');
+                    } else {
+                        txt.classList.remove('block', 'opacity-100', 'translate-y-0');
+                        txt.classList.add('hidden', 'opacity-0', 'translate-y-4');
+                    }
+                });
+
+                // Botones / Pills de Categoría
+                const pills = document.querySelectorAll('.obra-pill');
+                pills.forEach((pill, idx) => {
+                    if (idx === activeObra) {
+                        pill.classList.remove('bg-white', 'text-[#000c1b]');
+                        pill.classList.add('bg-[#000c1b]', 'text-white');
+                    } else {
+                        pill.classList.remove('bg-[#000c1b]', 'text-white');
+                        pill.classList.add('bg-white', 'text-[#000c1b]');
+                    }
+                });
+
+                // Dots inferiores
+                const dots = document.querySelectorAll('.obra-dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === activeObra) {
+                        dot.classList.remove('bg-black/25', 'w-2');
+                        dot.classList.add('bg-[#000c1b]', 'w-7');
+                    } else {
+                        dot.classList.remove('bg-[#000c1b]', 'w-7');
+                        dot.classList.add('bg-black/25', 'w-2');
+                    }
+                });
+            }
+
+            function startTimer() {
+                if (obrasInterval) clearInterval(obrasInterval);
+                obrasInterval = setInterval(() => {
+                    irAObra(activeObra + 1);
+                }, 7500);
+            }
+
+            function resetTimer() {
+                startTimer();
+            }
+
+            const sec = document.getElementById('obras');
+            if (sec) {
+                sec.addEventListener('mouseenter', () => {
+                    if (obrasInterval) clearInterval(obrasInterval);
+                });
+                sec.addEventListener('mouseleave', () => {
+                    startTimer();
+                });
+            }
+
+            renderObras();
+            startTimer();
+        })();
+    </script>
 </section>
+
 
 <!-- 6. Bloque: Marcas que nos eligen / Diferenciales de obra - Fondo Blanco -->
 <section class="py-20 bg-white border-b border-[#e2e4e7] text-black">
@@ -341,7 +568,7 @@
         
         <div class="text-center max-w-2xl mx-auto space-y-3">
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
-                Marcas que nos eligen
+                Empresas que nos eligen
             </h2>
             <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
                 Grandes firmas y constructoras eligen nuestro asesoramiento técnico y calidad de materiales para sus obras críticas.
@@ -386,28 +613,24 @@
 <section id="visita-tecnica" class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b] scroll-mt-24">
     <div id="contacto" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
-        <!-- Frase para que nos contacten & texto explicativo -->
-        <div class="text-center space-y-3">
+        <!-- Frase para que nos contacten -->
+        <div class="text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
                 ¿Tenés un proyecto en mente? Contactanos
             </h2>
-            <p class="text-sm sm:text-base text-[#000c1b] max-w-2xl mx-auto font-medium leading-relaxed">
-                Dejanos tus datos o consultanos directamente y un asesor técnico responderá tu solicitud en menos de 24 hs para brindarte la mejor solución y cotización a medida.
-            </p>
         </div>
 
         <!-- Formulario Simplificado Directo a WhatsApp -->
         <div class="bg-white p-8 sm:p-10 rounded-3xl border border-black/10 shadow-xl max-w-2xl mx-auto">
-            <form id="whatsapp-form-industria" onsubmit="enviarWhatsAppIndustria(event)" class="space-y-6">
+            <form id="whatsapp-form-industria" onsubmit="event.preventDefault();" class="space-y-6">
                 <!-- Nombre -->
                 <div class="space-y-1.5">
                     <label for="wa-nombre-ind" class="block text-xs font-bold uppercase tracking-wider text-black">
-                        Tu Nombre *
+                        Tu Nombre
                     </label>
                     <input 
                         type="text" 
                         id="wa-nombre-ind" 
-                        required 
                         placeholder="Ej: Juan Pérez" 
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-[#f6f7f9] text-black text-sm"
                     >
@@ -443,56 +666,56 @@
                     ></textarea>
                 </div>
 
-                <!-- Botón Principal a WhatsApp -->
-                <button 
-                    type="submit" 
-                    class="w-full py-4 px-6 rounded-2xl bg-brandGreen text-white text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-emerald-600 hover:scale-[1.01] active:scale-95 transition-all duration-200 shadow-md"
-                >
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z"/>
-                    </svg>
-                    <span>Iniciar Consulta por WhatsApp →</span>
-                </button>
-            </form>
-
-            <!-- Asesores Directos -->
-            <div class="mt-8 pt-6 border-t border-[#e2e4e7] space-y-3">
-                <p class="text-xs font-bold uppercase tracking-wider text-black text-center">
-                    O comunicate directamente con nuestros asesores técnicos:
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    <a href="https://wa.me/5493516325978?text=Hola%20Sebastián,%20te%20contacto%20desde%20la%20página%20de%20Industria." target="_blank" class="p-3.5 bg-[#f6f7f9] rounded-xl border border-[#e2e4e7] hover:border-black transition flex items-center justify-between group">
-                        <div>
-                            <p class="text-xs font-bold text-black">Sebastián Affonso</p>
-                            <p class="text-[11px] text-gray-500 font-medium">+54 9 351 632 5978</p>
-                        </div>
-                        <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat →</span>
-                    </a>
-                    <a href="https://wa.me/5493518561179?text=Hola%20Juan,%20te%20contacto%20desde%20la%20página%20de%20Industria." target="_blank" class="p-3.5 bg-[#f6f7f9] rounded-xl border border-[#e2e4e7] hover:border-black transition flex items-center justify-between group">
-                        <div>
-                            <p class="text-xs font-bold text-black">Juan Cupertino</p>
-                            <p class="text-[11px] text-gray-500 font-medium">+54 9 351 856 1179</p>
-                        </div>
-                        <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat →</span>
-                    </a>
+                <!-- Asesores Directos -->
+                <div class="pt-4 border-t border-[#e2e4e7] space-y-3">
+                    <p class="text-xs font-bold uppercase tracking-wider text-black text-center">
+                        Comunicate directamente con nuestros asesores técnicos:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <a href="https://wa.me/5493516325978?text=Hola%20Sebasti%C3%A1n,%20te%20contacto%20desde%20la%20p%C3%A1gina%20de%20Industria." 
+                            onclick="contactarAsesorIndustria(event, '5493516325978', 'Sebastián')"
+                            target="_blank" 
+                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
+                            <div>
+                                <p class="text-sm font-bold text-black">Sebastián</p>
+                                <p class="text-xs text-gray-500 font-medium">+54 9 351 632 5978</p>
+                            </div>
+                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
+                        </a>
+                        <a href="https://wa.me/5493518561179?text=Hola%20Juan,%20te%20contacto%20desde%20la%20p%C3%A1gina%20de%20Industria." 
+                            onclick="contactarAsesorIndustria(event, '5493518561179', 'Juan')"
+                            target="_blank" 
+                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
+                            <div>
+                                <p class="text-sm font-bold text-black">Juan</p>
+                                <p class="text-xs text-gray-500 font-medium">+54 9 351 856 1179</p>
+                            </div>
+                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <script>
-            function enviarWhatsAppIndustria(e) {
-                e.preventDefault();
-                const nombre = document.getElementById('wa-nombre-ind').value.trim();
-                const tema = document.getElementById('wa-tema-ind').value;
-                const mensaje = document.getElementById('wa-mensaje-ind').value.trim();
+            function contactarAsesorIndustria(e, telefono, asesor) {
+                if (e) e.preventDefault();
+                const nombre = document.getElementById('wa-nombre-ind')?.value.trim();
+                const tema = document.getElementById('wa-tema-ind')?.value;
+                const mensaje = document.getElementById('wa-mensaje-ind')?.value.trim();
 
-                let texto = `Hola! Mi nombre es *${nombre}*.\n`;
-                texto += `Consulta de Industria sobre: *${tema}*.\n`;
+                let texto = `Hola ${asesor}, te contacto desde la página de Industria de Bauhaus.`;
+                if (nombre) {
+                    texto += `\nMi nombre es *${nombre}*.`;
+                }
+                if (tema) {
+                    texto += `\nConsulta sobre: *${tema}*.`;
+                }
                 if (mensaje) {
-                    texto += `Detalle: ${mensaje}\n`;
+                    texto += `\nDetalle: ${mensaje}`;
                 }
 
-                const url = `https://wa.me/5493516325978?text=${encodeURIComponent(texto)}`;
+                const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
                 window.open(url, '_blank');
             }
         </script>
