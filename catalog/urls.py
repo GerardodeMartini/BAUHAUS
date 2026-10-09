@@ -8,5 +8,6 @@ urlpatterns = [
     path("proximamente/", views.proximamente, name="proximamente"),
     path("inicio/", views.home_preview, name="home_preview"),
     path("aplicadores/", views.aplicadores, name="aplicadores"),
+    path("productos/", views.productos, name="productos"),
     path("industria/", views.industria, name="industria"),
 ]

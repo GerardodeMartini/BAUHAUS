@@ -20,7 +20,7 @@
 {% block content %}
 
 <!-- 2. Hero Section (Estructura Canva: Banner Aplicador) -->
-<section class="relative bg-white text-[#000c1b] py-24 md:py-32 border-b border-[#e2e4e7] overflow-hidden min-h-[520px] flex items-center justify-center">
+<section class="relative bg-white text-[#000c1b] py-24 md:py-32 border-b-2 border-[#000c1b]/20 overflow-hidden min-h-[520px] flex items-center justify-center">
     <!-- Carrusel de Portada de 3 Imágenes con Transición Automática cada 10s -->
     <div class="absolute inset-0 z-0 overflow-hidden" id="hero-carousel-ap">
         <!-- Slide 1 -->
@@ -74,7 +74,7 @@
 </section>
 
 <!-- 3. Bloque: Productos que comercializamos (4 Categorías con foto y descripción) - Fondo Amarillo Bauhaus -->
-<section id="productos" class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b] scroll-mt-24">
+<section id="productos" class="py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b] scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         <div class="text-center max-w-3xl mx-auto space-y-3">
@@ -194,7 +194,7 @@
 </section>
 
 <!-- 4. Bloque: Espacio para mostrar soluciones (Estructura Canva: espacio para mostrar soluciones) - Fondo Blanco -->
-<section class="py-20 bg-white border-b border-[#e2e4e7] text-black">
+<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         <div class="text-center max-w-2xl mx-auto space-y-3">
@@ -251,7 +251,7 @@
 </section>
 
 <!-- 5. Bloque: Por qué elegirnos (Envíos, Asesoramiento + Mapa Argentina con puntos de distribución) - Fondo Amarillo Bauhaus -->
-<section class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b]">
+<section class="py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         <!-- Layout 2 Columnas: 3 Diferenciales (Izq) + Mapa Argentina Puntos Distribución (Der) -->
@@ -358,7 +358,7 @@
 </section>
 
 <!-- 6. Bloque: Marcas que trabajamos (Estructura Canva: 4 marcas arriba, 3 abajo) - Fondo Blanco -->
-<section class="py-20 bg-white border-b border-[#e2e4e7] text-black">
+<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
         
         <div>
@@ -403,7 +403,7 @@
 </section>
 
 <!-- 7. Bloque: Formulario de Contacto Directo WhatsApp - Fondo Amarillo Bauhaus -->
-<section id="contacto-aplicador" class="py-20 bg-[#e7b924] border-b border-[#d6a81b] text-[#000c1b] scroll-mt-24">
+<section id="contacto-aplicador" class="py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b] scroll-mt-24">
     <div id="contacto" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         <!-- Frase para que nos contacten -->
@@ -416,99 +416,82 @@
         <!-- Formulario Simplificado Directo a WhatsApp -->
         <div class="bg-white p-8 sm:p-10 rounded-3xl border border-black/10 shadow-xl max-w-2xl mx-auto">
             <form id="whatsapp-form-aplicadores" onsubmit="event.preventDefault();" class="space-y-6">
-                <!-- Nombre -->
+                <!-- Nombre y Apellido -->
                 <div class="space-y-1.5">
                     <label for="wa-nombre-ap" class="block text-xs font-bold uppercase tracking-wider text-black">
-                        Tu Nombre
+                        Nombre y Apellido
                     </label>
                     <input 
                         type="text" 
                         id="wa-nombre-ap" 
                         placeholder="Ej: Juan Pérez" 
+                        required
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-[#f6f7f9] text-black text-base sm:text-sm"
                     >
                 </div>
 
-                <!-- Tipo de Consulta -->
+                <!-- Email -->
                 <div class="space-y-1.5">
-                    <label for="wa-tema-ap" class="block text-xs font-bold uppercase tracking-wider text-black">
-                        ¿Sobre qué producto o trabajo querés consultar?
+                    <label for="wa-email-ap" class="block text-xs font-bold uppercase tracking-wider text-black">
+                        Email
                     </label>
-                    <select 
-                        id="wa-tema-ap" 
+                    <input 
+                        type="email" 
+                        id="wa-email-ap" 
+                        placeholder="Ej: contacto@ejemplo.com" 
+                        required
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-[#f6f7f9] text-black text-base sm:text-sm"
                     >
-                        <option value="Precios por Mayor / Aplicadores">Precios por Mayor / Aplicadores</option>
-                        <option value="Pisos Epoxi / Industriales">Pisos Epoxi / Industriales</option>
-                        <option value="Impermeabilización / Membranas">Impermeabilización / Membranas</option>
-                        <option value="Anticorrosivos / Metales">Anticorrosivos / Metales</option>
-                        <option value="Consulta General">Otra consulta</option>
-                    </select>
                 </div>
 
                 <!-- Mensaje -->
                 <div class="space-y-1.5">
                     <label for="wa-mensaje-ap" class="block text-xs font-bold uppercase tracking-wider text-black">
-                        ¿En qué te podemos ayudar? (Opcional)
+                        Mensaje
                     </label>
                     <textarea 
                         id="wa-mensaje-ap" 
-                        rows="3" 
-                        placeholder="Contanos brevemente qué superficie querés pintar, metros cuadrados o qué producto buscás..." 
+                        rows="4" 
+                        placeholder="Escribí tu mensaje aquí..." 
                         class="w-full px-4 py-3.5 border border-[#e2e4e7] rounded-xl focus:outline-none focus:border-black transition duration-200 bg-[#f6f7f9] text-black text-base sm:text-sm resize-none"
                     ></textarea>
                 </div>
 
-                <!-- Asesores Directos -->
-                <div class="pt-4 border-t border-[#e2e4e7] space-y-3">
-                    <p class="text-xs font-bold uppercase tracking-wider text-black text-center">
-                        Comunicate directamente con nuestros asesores técnicos:
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                        <a href="https://wa.me/5493516325978?text=Hola%20Sebasti%C3%A1n,%20te%20contacto%20desde%20la%20p%C3%A1gina%20de%20Aplicadores." 
-                            onclick="contactarAsesorAplicadores(event, '5493516325978', 'Sebastián')"
-                            target="_blank" 
-                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
-                            <div>
-                                <p class="text-sm font-bold text-black">Sebastián</p>
-                                <p class="text-xs text-gray-500 font-medium">+54 9 351 632 5978</p>
-                            </div>
-                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
-                        </a>
-                        <a href="https://wa.me/5493518561179?text=Hola%20Juan,%20te%20contacto%20desde%20la%20p%C3%A1gina%20de%20Aplicadores." 
-                            onclick="contactarAsesorAplicadores(event, '5493518561179', 'Juan')"
-                            target="_blank" 
-                            class="p-4 bg-white rounded-2xl border border-[#e2e4e7] hover:border-black hover:shadow-md transition-all duration-200 flex items-center justify-between group">
-                            <div>
-                                <p class="text-sm font-bold text-black">Juan</p>
-                                <p class="text-xs text-gray-500 font-medium">+54 9 351 856 1179</p>
-                            </div>
-                            <span class="text-emerald-600 font-bold text-xs group-hover:underline">Chat WhatsApp →</span>
-                        </a>
-                    </div>
+                <!-- Botón Enviar Mensaje -->
+                <div class="pt-2">
+                    <button type="submit" onclick="enviarMensajeAplicadores(event)"
+                        class="w-full py-4 px-6 rounded-2xl bg-[#000c1b] text-white font-extrabold text-sm uppercase tracking-wider hover:bg-black hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 shadow-md flex items-center justify-center gap-3 cursor-pointer group">
+                        <svg class="w-5 h-5 fill-current text-[#25d366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z"/>
+                        </svg>
+                        <span>Enviar mensaje</span>
+                    </button>
                 </div>
             </form>
         </div>
 
         <script>
-            function contactarAsesorAplicadores(e, telefono, asesor) {
+            function enviarMensajeAplicadores(e) {
                 if (e) e.preventDefault();
                 const nombre = document.getElementById('wa-nombre-ap')?.value.trim();
-                const tema = document.getElementById('wa-tema-ap')?.value;
+                const email = document.getElementById('wa-email-ap')?.value.trim();
                 const mensaje = document.getElementById('wa-mensaje-ap')?.value.trim();
 
-                let texto = `Hola ${asesor}, te contacto desde la página de Aplicadores de Bauhaus.`;
-                if (nombre) {
-                    texto += `\nMi nombre es *${nombre}*.`;
+                if (!nombre) {
+                    alert('Por favor, ingresá tu Nombre y Apellido.');
+                    document.getElementById('wa-nombre-ap')?.focus();
+                    return;
                 }
-                if (tema) {
-                    texto += `\nConsulta sobre: *${tema}*.`;
-                }
-                if (mensaje) {
-                    texto += `\nDetalle: ${mensaje}`;
+                if (!email) {
+                    alert('Por favor, ingresá tu Email.');
+                    document.getElementById('wa-email-ap')?.focus();
+                    return;
                 }
 
-                const url = `https://wa.me/${telefono}?text=${encodeURIComponent(texto)}`;
+                let texto = `Hola soy ${nombre} me comunico desde la pagina por ${mensaje || 'una consulta técnica.'}`;
+                texto += `\nMi mail es: ${email}`;
+
+                const url = `https://wa.me/5493516325978?text=${encodeURIComponent(texto)}`;
                 window.open(url, '_blank');
             }
         </script>
@@ -518,7 +501,7 @@
 
 
 <!-- 8. Bloque: FOTO P/ APLICADOR (Banner fotográfico panorámico de aplicación, según Canva) -->
-<section class="relative h-72 sm:h-96 md:h-[460px] w-full overflow-hidden bg-black">
+<section class="relative h-72 sm:h-96 md:h-[460px] w-full overflow-hidden bg-black border-b-2 border-[#000c1b]">
     <img src="{% static 'media/servicios/6_aplicacion_recubrimientos.jpg' %}" onerror="this.src='/media/servicios/6_aplicacion_recubrimientos.jpg'" alt="Aplicadores Profesionales Bauhaus" class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent flex items-end">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white">

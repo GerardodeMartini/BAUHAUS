@@ -28,7 +28,7 @@ def _render_home(request):
     }
     return render(request, "home.html", context)
 
-def aplicadores(request):
+def productos(request):
     productos = Producto.objects.filter(mostrar_en_aplicadores=True, activo=True)
     proyectos = ProyectoObra.objects.filter(publicado=True)[:6]
     form = LicitacionContactoForm()
@@ -37,9 +37,12 @@ def aplicadores(request):
         "productos": productos,
         "proyectos": proyectos,
         "form": form,
-        "active_page": "aplicadores",
+        "active_page": "productos",
     }
-    return render(request, "aplicadores.html", context)
+    return render(request, "productos.html", context)
+
+# Alias para retrocompatibilidad
+aplicadores = productos
 
 def industria(request):
     productos = Producto.objects.filter(mostrar_en_industria=True, activo=True)
