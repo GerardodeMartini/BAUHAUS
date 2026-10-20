@@ -49,14 +49,14 @@
                 </p>
             </div>
 
-            <!-- Botones Principales (Ambos en Azul Técnico #4081c1) -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+            <!-- Botones Principales (Ambos en Azul Técnico #4081c1, lado a lado también en móvil) -->
+            <div class="flex flex-row items-center justify-center gap-2.5 sm:gap-4 pt-4 sm:pt-6">
                 <a href="{% url 'catalog:aplicadores' %}"
-                    class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                    class="px-5 sm:px-9 py-2.5 sm:py-3.5 rounded-full bg-[#4081c1] text-white text-[11px] sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center whitespace-nowrap">
                     Soy Aplicador
                 </a>
                 <a href="{% url 'catalog:industria' %}"
-                    class="w-full sm:w-auto px-9 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center">
+                    class="px-5 sm:px-9 py-2.5 sm:py-3.5 rounded-full bg-[#4081c1] text-white text-[11px] sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md text-center whitespace-nowrap">
                     Soy Industria
                 </a>
             </div>
@@ -80,37 +80,37 @@
     </script>
 </section>
 
-<!-- 2. Bloque: Quiénes Somos (50% Foto del Local / 50% Texto) - Fondo Gris Claro Neutro (#f6f7f9) -->
+<!-- 2. Bloque: Quiénes Somos (50% Foto del Local / 50% Texto en todas las pantallas) - Fondo Gris Claro Neutro (#f6f7f9) -->
 <section class="bg-[#f6f7f9] border-b-2 border-[#000c1b]/20 text-[#000c1b] overflow-hidden">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+    <div class="grid grid-cols-2 items-stretch">
 
         <!-- Columna Izquierda (50% del área): Foto del Local sin bordes redondeados ocupando toda la mitad -->
-        <div class="relative w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[540px]">
+        <div class="relative w-full h-full min-h-[180px] sm:min-h-[340px] lg:min-h-[540px]">
             <img src="{% static 'images/foto_local.png' %}"
                 alt="Showroom y Local Comercial Bauhaus - Av. Recta Martinolli 8197"
                 class="w-full h-full object-cover object-center">
             <!-- Marco rojo interno Bauhaus (#b11617) -->
-            <div class="absolute inset-4 sm:inset-6 lg:inset-8 border-2 sm:border-[3px] border-[#b11617] pointer-events-none z-10"></div>
+            <div class="absolute inset-2 sm:inset-4 lg:inset-8 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-10"></div>
         </div>
 
         <!-- Columna Derecha (50% del área): Quiénes Somos -->
-        <div class="p-8 sm:p-12 lg:p-16 xl:p-20 flex flex-col justify-center">
-            <div class="max-w-xl space-y-6">
-                <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
+        <div class="p-3 sm:p-8 lg:p-16 xl:p-20 flex flex-col justify-center">
+            <div class="max-w-xl space-y-2 sm:space-y-4 lg:space-y-6">
+                <h2 class="text-sm sm:text-2xl lg:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
                     Quiénes somos
                 </h2>
-                <div class="space-y-4 text-sm sm:text-base text-[#000c1b] font-medium leading-relaxed text-justify">
+                <div class="space-y-1.5 sm:space-y-3 lg:space-y-4 text-[10px] sm:text-xs md:text-sm lg:text-base text-[#000c1b] font-medium leading-snug sm:leading-relaxed text-justify">
                     <p>
                         En Bauhaus nos especializamos en soluciones de protección de superficies.
                         Trabajamos con pinturas y esquemas técnicos para pisos, estructuras metálicas, cubiertas y los más exigentes ambientes industriales, seleccionando cada producto según las condiciones reales de uso, el tipo de superficie y el resultado que se necesita obtener.
                     </p>
-                    <p>
+                    <p class="hidden sm:block">
                         Más que vender pintura, analizamos el requerimiento y proponemos el esquema adecuado para brindar la mejor protección.
                     </p>
                     <p>
                         Contamos con el respaldo de marcas líderes y, sobre todo, con experiencia técnica en obra y aplicación. Esto nos permite acompañar cada proyecto desde la elección del producto hasta su correcta aplicación, brindando asesoramiento para que cada inversión tenga el mejor resultado posible.
                     </p>
-                    <p>
+                    <p class="hidden md:block">
                         Trabajamos junto a industrias, aplicadores, profesionales y empresas que necesitan soluciones confiables perdurables en el tiempo, especificaciones claras y alguien que entienda lo que hay detrás de cada superficie que se quiere proteger.
                     </p>
                     <p class="font-bold text-[#000c1b]">
@@ -123,46 +123,46 @@
     </div>
 </section>
 
-<!-- 3. Bloque: Blog (50% Texto / 50% Foto) - Fondo Blanco -->
+<!-- 3. Bloque: Blog (50% Texto / 50% Foto en todas las pantallas) - Fondo Blanco -->
 <section class="bg-white border-b-2 border-[#000c1b]/20 text-[#000c1b] overflow-hidden">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+    <div class="grid grid-cols-2 items-stretch">
 
         <!-- Columna Izquierda (50% del área): Nota descriptiva del Blog -->
-        <div class="p-8 sm:p-12 lg:p-16 xl:p-20 flex flex-col justify-center order-2 lg:order-1">
-            <div class="max-w-xl space-y-6">
+        <div class="p-3 sm:p-8 lg:p-16 xl:p-20 flex flex-col justify-center">
+            <div class="max-w-xl space-y-2 sm:space-y-4 lg:space-y-6">
                 <h2
-                    class="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b] leading-tight">
+                    class="text-xs sm:text-xl lg:text-3xl xl:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b] leading-tight">
                     LA CORROSIÓN, EL DOLOR DE CABEZA DE LAS ESTRUCTURAS METÁLICAS
                 </h2>
-                <div class="space-y-3">
-                    <p class="text-lg sm:text-xl font-bold text-[#4081c1] uppercase tracking-wider">
+                <div class="space-y-1 sm:space-y-2.5">
+                    <p class="text-[10px] sm:text-sm md:text-lg font-bold text-[#4081c1] uppercase tracking-wider">
                         CÓMO SE GENERA LA CORROSIÓN EN LOS METALES
                     </p>
-                    <p class="text-sm sm:text-base text-[#000c1b] font-medium leading-relaxed text-justify">
+                    <p class="text-[10px] sm:text-xs md:text-sm lg:text-base text-[#000c1b] font-medium leading-snug sm:leading-relaxed text-justify">
                         La corrosión es un proceso natural de los metales, para volver a su condición primitiva. Es la simple interacción del metal con el medio que lo rodea, produciendo el consiguiente deterioro en sus propiedades tanto físicas como químicas.
                     </p>
-                    <p class="text-sm sm:text-base text-[#000c1b] font-medium leading-relaxed text-justify">
+                    <p class="hidden sm:block text-[10px] sm:text-xs md:text-sm lg:text-base text-[#000c1b] font-medium leading-relaxed text-justify">
                         La Oxidación es un efecto corrosivo, es una reacción electro-química, en la cual los electrones son liberados desde regiones anódica dirigiéndose a otras regiones catódicas.
                     </p>
                 </div>
-                <div class="pt-3">
+                <div class="pt-1 sm:pt-2">
                     <a href="https://lnkd.in/p/d5PPEDVf" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md group">
-                        <svg class="w-4 h-4 fill-current text-white group-hover:scale-110 transition-transform"
+                        class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-3 rounded-full bg-[#4081c1] text-white text-[9px] sm:text-xs md:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md group">
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-current text-white group-hover:scale-110 transition-transform"
                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
-                        <span>Leer nota completa →</span>
+                        <span>Leer nota →</span>
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Columna Derecha (50% del área): Carrusel de Fotos -->
-        <div class="relative w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[540px] order-1 lg:order-2 overflow-hidden bg-[#000c1b] group" id="blog-carousel">
+        <div class="relative w-full h-full min-h-[180px] sm:min-h-[340px] lg:min-h-[540px] overflow-hidden bg-[#000c1b] group" id="blog-carousel">
             <!-- Marco rojo interno Bauhaus (#b11617) -->
-            <div class="absolute inset-4 sm:inset-6 lg:inset-8 border-2 sm:border-[3px] border-[#b11617] pointer-events-none z-20"></div>
+            <div class="absolute inset-2 sm:inset-4 lg:inset-8 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-20"></div>
             
             <!-- Slide 1 -->
             <div id="blog-slide-0" class="blog-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 z-10">
@@ -179,9 +179,9 @@
             </div>
 
             <!-- Círculos / Puntos (Dots) flotantes para selección de imágenes -->
-            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5 bg-black/50 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/15 shadow-xl">
-                <button type="button" id="blog-dot-0" aria-label="Ver imagen 1" class="blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-[#e7b924] scale-125 cursor-pointer"></button>
-                <button type="button" id="blog-dot-1" aria-label="Ver imagen 2" class="blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer"></button>
+            <div class="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2.5 bg-black/50 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-2 rounded-full border border-white/15 shadow-xl">
+                <button type="button" id="blog-dot-0" aria-label="Ver imagen 1" class="blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-[#e7b924] scale-125 cursor-pointer"></button>
+                <button type="button" id="blog-dot-1" aria-label="Ver imagen 2" class="blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer"></button>
             </div>
         </div>
 
@@ -208,8 +208,8 @@
                         slide1.classList.add('opacity-0', 'pointer-events-none');
 
                         if (dot0 && dot1) {
-                            dot0.className = "blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-[#e7b924] scale-125 cursor-pointer";
-                            dot1.className = "blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer";
+                            dot0.className = "blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-[#e7b924] scale-125 cursor-pointer";
+                            dot1.className = "blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer";
                         }
                     } else {
                         slide1.classList.remove('opacity-0', 'pointer-events-none');
@@ -219,8 +219,8 @@
                         slide0.classList.add('opacity-0', 'pointer-events-none');
 
                         if (dot0 && dot1) {
-                            dot0.className = "blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer";
-                            dot1.className = "blog-dot w-3 h-3 rounded-full transition-all duration-300 bg-white scale-125 cursor-pointer";
+                            dot0.className = "blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-white/40 hover:bg-white/80 cursor-pointer";
+                            dot1.className = "blog-dot w-2 sm:w-3 h-2 sm:h-3 rounded-full transition-all duration-300 bg-white scale-125 cursor-pointer";
                         }
                     }
                 }
@@ -233,52 +233,52 @@
     </div>
 </section>
 
-<!-- 4. Bloque: Marcas que trabajamos (Estructura Canva: Banner / Encabezado + Grilla de Logos) - Fondo Amarillo Bauhaus -->
-<section class="py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
+<!-- 4. Bloque: Marcas que trabajamos (Estructura Canva: 4 marcas arriba, 3 abajo en todas las pantallas) - Fondo Amarillo Bauhaus -->
+<section class="py-10 sm:py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-6 sm:space-y-12 text-center">
 
         <!-- Encabezado con destaque oficial -->
         <div>
-            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
+            <h2 class="text-lg sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
                 Marcas que comercializamos
             </h2>
         </div>
 
-        <!-- Grilla de Logos de Marcas (Distribución 4 arriba y 3 abajo centrados con estilo marco-marca) -->
-        <div class="space-y-6 max-w-5xl mx-auto">
+        <!-- Grilla de Logos de Marcas (4 arriba y 3 abajo exactamente como en PC) -->
+        <div class="space-y-3 sm:space-y-6 max-w-5xl mx-auto">
             <!-- Fila 1: 4 marcas -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+            <div class="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 items-center">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
             </div>
 
             <!-- Fila 2: 3 marcas centradas -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center max-w-3xl mx-auto">
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 items-center max-w-3xl mx-auto">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
             </div>
         </div>
@@ -286,59 +286,59 @@
     </div>
 </section>
 
-<!-- 5. Bloque: Empresas que confían en nosotros (Estructura Canva: Encabezado + Grilla de Logos) -->
-<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
+<!-- 5. Bloque: Empresas que confían en nosotros (5 columnas x 2 filas igual a PC) -->
+<section class="py-10 sm:py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-6 sm:space-y-12 text-center">
 
         <!-- Encabezado -->
         <div>
-            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+            <h2 class="text-lg sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight text-black">
                 Empresas que nos eligen
             </h2>
         </div>
 
-        <!-- Grilla de Logos de Empresas (10 empresas con marco individual #d89f2a y esquina curva) -->
+        <!-- Grilla de Logos de Empresas (5 columnas en todas las pantallas como en PC) -->
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center">
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+            <div class="grid grid-cols-5 gap-1.5 sm:gap-3 md:gap-6 items-center">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/aguas cordobesas.png' %}" alt="Aguas Cordobesas"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/caminos_de_las_sierras.png' %}" alt="Caminos de las Sierras"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/grupoedisur.png' %}" alt="Grupo Edisur"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/porta.png' %}" alt="Porta Hnos"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/coca_cola.png' %}" alt="Coca-Cola"
-                        class="max-h-8 sm:max-h-9 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-5 sm:max-h-7 md:max-h-9 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/proyecta.png' %}" alt="Proyecta"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/quilmes.png' %}" alt="Cervecería Quilmes"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/tgs.png' %}" alt="TGS"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-4 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-3 md:p-4 group">
                     <img src="{% static 'images/empresas/cinco_hispanos.png' %}" alt="5 Hispanos"
-                        class="max-h-12 sm:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-6 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
-                <div class="marco-marca h-24 sm:h-28 flex items-center justify-center p-3.5 group">
+                <div class="marco-marca h-12 sm:h-20 md:h-28 flex items-center justify-center p-1 sm:p-2.5 md:p-3 group">
                     <img src="{% static 'images/empresas/grupo_cordeiro.png' %}" alt="Grupo Cordeiro"
-                        class="max-h-14 sm:max-h-[60px] w-auto object-contain transition-all duration-300 group-hover:scale-105">
+                        class="max-h-7 sm:max-h-11 md:max-h-[60px] w-auto object-contain transition-all duration-300 group-hover:scale-105">
                 </div>
             </div>
         </div>
@@ -346,65 +346,65 @@
     </div>
 </section>
 
-<!-- 6. Bloque: Formulario de Contacto (50% Foto / 50% Formulario, formato similar a Quiénes Somos) - Fondo Gris Claro #f6f7f9 -->
+<!-- 6. Bloque: Formulario de Contacto (50% Foto / 50% Formulario en todas las pantallas como en PC) - Fondo Gris Claro #f6f7f9 -->
 <section id="contacto" class="bg-[#f6f7f9] border-b-2 border-[#000c1b]/20 text-[#000c1b] overflow-hidden scroll-mt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+    <div class="grid grid-cols-2 items-stretch">
 
         <!-- Columna Izquierda (50% del área): Foto ocupando toda la mitad -->
-        <div class="relative w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[540px]">
+        <div class="relative w-full h-full min-h-[180px] sm:min-h-[340px] lg:min-h-[540px]">
             <img src="{% static 'images/foto_contacto.jpg' %}"
                 alt="Asesoramiento Técnico Bauhaus"
                 class="w-full h-full object-cover object-center">
             <!-- Marco rojo interno Bauhaus (#b11617) -->
-            <div class="absolute inset-4 sm:inset-6 lg:inset-8 border-2 sm:border-[3px] border-[#b11617] pointer-events-none z-10"></div>
+            <div class="absolute inset-2 sm:inset-4 lg:inset-8 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-10"></div>
         </div>
 
         <!-- Columna Derecha (50% del área): Formulario de Contacto Minimalista -->
-        <div class="p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col justify-center">
-            <div class="max-w-xl w-full mx-auto lg:mx-0 space-y-6 sm:space-y-7">
+        <div class="p-3 sm:p-8 lg:p-12 xl:p-14 flex flex-col justify-center">
+            <div class="max-w-xl w-full mx-auto lg:mx-0 space-y-2.5 sm:space-y-6">
                 <div>
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b] leading-tight">
+                    <h2 class="text-xs sm:text-2xl lg:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b] leading-tight">
                         COMUNICATE CON NOSOTROS
                     </h2>
-                    <p class="mt-2 text-sm sm:text-base font-bold uppercase tracking-wider text-[#000c1b]/70">
+                    <p class="mt-0.5 sm:mt-1.5 text-[9px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-[#000c1b]/70">
                         Completá el formulario para coordinar tu asesoramiento
                     </p>
                 </div>
 
-                <form id="whatsapp-form" onsubmit="event.preventDefault();" class="space-y-5">
+                <form id="whatsapp-form" onsubmit="event.preventDefault();" class="space-y-2 sm:space-y-4">
                     <!-- Nombre y Apellido -->
-                    <div class="space-y-1.5">
-                        <label for="wa-nombre" class="block text-sm font-bold uppercase tracking-wider text-[#000c1b]">
+                    <div class="space-y-0.5 sm:space-y-1">
+                        <label for="wa-nombre" class="block text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#000c1b]">
                             Nombre y Apellido
                         </label>
                         <input type="text" id="wa-nombre" placeholder="Ej: Juan Pérez" required
-                            class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-base sm:text-lg font-medium">
+                            class="w-full px-0 py-1 sm:py-2.5 bg-transparent border-0 border-b border-sm:border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-xs sm:text-base font-medium">
                     </div>
 
                     <!-- Email -->
-                    <div class="space-y-1.5">
-                        <label for="wa-email" class="block text-sm font-bold uppercase tracking-wider text-[#000c1b]">
+                    <div class="space-y-0.5 sm:space-y-1">
+                        <label for="wa-email" class="block text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#000c1b]">
                             Email
                         </label>
                         <input type="email" id="wa-email" placeholder="Ej: contacto@ejemplo.com" required
-                            class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-base sm:text-lg font-medium">
+                            class="w-full px-0 py-1 sm:py-2.5 bg-transparent border-0 border-b border-sm:border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-xs sm:text-base font-medium">
                     </div>
 
                     <!-- Mensaje -->
-                    <div class="space-y-1.5">
-                        <label for="wa-mensaje" class="block text-sm font-bold uppercase tracking-wider text-[#000c1b]">
+                    <div class="space-y-0.5 sm:space-y-1">
+                        <label for="wa-mensaje" class="block text-[9px] sm:text-xs font-bold uppercase tracking-wider text-[#000c1b]">
                             Mensaje
                         </label>
-                        <textarea id="wa-mensaje" rows="3"
+                        <textarea id="wa-mensaje" rows="2"
                             placeholder="¿En qué te podemos ayudar?"
-                            class="w-full px-0 py-3 bg-transparent border-0 border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-base sm:text-lg font-medium resize-none"></textarea>
+                            class="w-full px-0 py-1 sm:py-2 bg-transparent border-0 border-b border-sm:border-b-2 border-[#000c1b]/30 focus:border-[#000c1b] focus:ring-0 focus:outline-none transition-all duration-200 text-[#000c1b] placeholder:text-[#000c1b]/40 text-xs sm:text-base font-medium resize-none"></textarea>
                     </div>
 
                     <!-- Botón Enviar Mensaje (Azul Técnico #4081c1) -->
-                    <div class="pt-2">
+                    <div class="pt-1">
                         <button type="submit" onclick="enviarMensaje(event)"
-                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md cursor-pointer group">
-                            <svg class="w-4 h-4 fill-current text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-1.5 sm:py-2.5 rounded-full bg-[#4081c1] text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-md cursor-pointer group">
+                            <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-current text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z"/>
                             </svg>
                             <span>Enviar mensaje →</span>
@@ -444,12 +444,12 @@
 </section>
 
 <!-- 7. Bloque: FOTO (Banner panorámico antes del Footer, según Canva) -->
-<section class="relative h-72 sm:h-96 md:h-[450px] w-full overflow-hidden bg-black border-b-2 border-[#000c1b]">
+<section class="relative h-44 sm:h-72 md:h-[450px] w-full overflow-hidden bg-black border-b-2 border-[#000c1b]">
     <img src="{% static 'images/hero_bg_p1.jpg' %}" alt="Aplicaciones de Recubrimientos Técnicos Bauhaus"
         class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white text-center sm:text-left">
-            <p class="text-xl sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4 sm:pb-8 w-full text-white text-center sm:text-left">
+            <p class="text-sm sm:text-2xl md:text-4xl font-extrabold uppercase tracking-tight">
                 CADA SUPERFICIE TIENE UNA FUNCIÓN, CADA FUNCIÓN UNA PROTECCIÓN
             </p>
         </div>
