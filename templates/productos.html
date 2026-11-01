@@ -201,13 +201,13 @@
     </div>
 </section>
 
-<!-- 5. Bloque: Nuestro valor agregado (Estructura 50% Texto / 50% Foto igual al Blog del Home) - Fondo Blanco -->
+<!-- 5. Bloque: Nuestro valor agregado - Fondo Blanco Alineado -->
 <section class="bg-white border-b-2 border-gray-400 text-[#000c1b] overflow-hidden">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-stretch">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-        <!-- Columna Izquierda (50% del área): Texto de Valor Agregado -->
-        <div class="p-4 sm:p-8 lg:p-14 xl:p-16 flex flex-col justify-center">
-            <div class="max-w-xl space-y-3 sm:space-y-4 lg:space-y-5">
+            <!-- Columna Izquierda: Texto de Valor Agregado alineado con la guía izquierda -->
+            <div class="space-y-3 sm:space-y-4 lg:space-y-5">
                 
                 <!-- Pre-título con barra gris Bauhaus -->
                 <div>
@@ -221,13 +221,11 @@
                 </div>
 
                 <!-- Texto descriptivo -->
-                <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-[#000c1b] font-medium leading-relaxed text-justify">
+                <div class="space-y-2.5 text-xs sm:text-sm md:text-base text-[#000c1b] font-medium leading-relaxed">
                     <p>
                         Te acompañamos en todo el proceso. Asesoramiento técnico con el conocimiento de cada producto, la forma de aplicación correcta y una buena gestión de los tiempos para asegurar el éxito de tu proyecto.
                     </p>
                 </div>
-
-
 
                 <!-- Botones horizontales informativos (Pills oficiales Bauhaus) -->
                 <div class="pt-2 sm:pt-3">
@@ -248,28 +246,28 @@
                 </div>
 
             </div>
-        </div>
 
-        <!-- Columna Derecha (50% del área): Foto con margen arriba y abajo (igual a Quiénes Somos / Blog) -->
-        <div class="py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8 w-full h-full flex items-center justify-center">
-            <div class="relative w-full h-full min-h-[220px] sm:min-h-[300px] lg:min-h-[420px] overflow-hidden rounded-xl shadow-md">
-                <img src="{% static 'images/foto_valor_agregado_hd.jpg' %}"
-                    alt="Nuestro valor agregado - Asesoramiento técnico en obra Bauhaus"
-                    class="w-full h-full object-cover object-center">
-                <!-- Marco rojo interno Bauhaus (#b11617) -->
-                <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-10 rounded-lg"></div>
+            <!-- Columna Derecha: Foto con marco rojo interno -->
+            <div class="w-full h-full flex items-center justify-center">
+                <div class="relative w-full h-[220px] sm:h-[280px] lg:h-[360px] overflow-hidden rounded-xl shadow-md">
+                    <img src="{% static 'images/foto_valor_agregado_hd.jpg' %}"
+                        alt="Nuestro valor agregado - Asesoramiento técnico en obra Bauhaus"
+                        class="w-full h-full object-cover object-center">
+                    <!-- Marco rojo interno Bauhaus (#b11617) -->
+                    <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-10 rounded-lg"></div>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </section>
 
 <!-- 4. Bloque: Marcas que trabajamos (Distribuidores oficiales) - Fondo Gris Claro Neutro #f6f7f9 -->
 <section class="py-6 sm:py-9 bg-[#f6f7f9] border-b-2 border-gray-400 text-[#000c1b]">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
 
-        <!-- Encabezado con destaque oficial -->
-        <div class="max-w-5xl mx-auto text-left space-y-1 sm:space-y-1.5">
+        <!-- Encabezado alineado a la izquierda con el mismo margen de Nuestro valor agregado -->
+        <div class="text-left space-y-1 sm:space-y-1.5">
             <div class="flex items-center gap-2 sm:gap-3 text-gray-500 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider">
                 <span class="w-6 sm:w-10 h-[2px] bg-gray-400 inline-block"></span>
                 <span>Marcas que comercializamos</span>
@@ -483,106 +481,46 @@
             </div>
         </div>
 
-        <!-- Posteos de Instagram (Diseño Uniforme y Parejo 100% Alineado) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <!-- Posteos Oficiales de Instagram -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start justify-items-center">
             
             <!-- Post 1 -->
-            <a href="https://www.instagram.com/p/Dezo6i9CYUf/" target="_blank" rel="noopener noreferrer"
-                class="group bg-white rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-xl hover:border-black/30 transition-all duration-300 flex flex-col">
-                <div class="p-3 sm:p-3.5 flex items-center justify-between border-b border-gray-100 bg-white">
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[1.5px] flex-shrink-0">
-                            <div class="w-full h-full rounded-full bg-white p-[1.5px]">
-                                <img src="{% static 'images/favicon.png' %}" alt="Bauhaus" class="w-full h-full object-contain rounded-full">
-                            </div>
-                        </div>
-                        <div class="text-left">
-                            <span class="block text-xs font-bold text-[#000c1b] leading-tight">bauhauspinturerias</span>
-                            <span class="block text-[10px] text-gray-400 leading-tight">Instagram</span>
-                        </div>
+            <div class="w-full flex justify-center">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dezo6i9CYUf/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 2px 12px 0 rgba(0,0,0,0.07); margin: 0 auto; max-width:100%; min-width:280px; width:100%;">
+                    <div style="padding:16px; text-align:center;">
+                        <a href="https://www.instagram.com/p/Dezo6i9CYUf/" target="_blank" rel="noopener noreferrer" style="color:#000c1b; font-size:13px; font-weight:700; text-decoration:none;">
+                            Ver publicación en Instagram ↗
+                        </a>
                     </div>
-                    <svg class="w-4 h-4 fill-current text-[#E4405F]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.449-1.44z"/>
-                    </svg>
-                </div>
-                <div class="relative aspect-square w-full bg-stone-100 overflow-hidden">
-                    <img src="{% static 'images/instagram/post_1.jpg' %}" alt="Bauhaus en Instagram"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-3 sm:p-3.5 bg-white border-t border-gray-100 flex items-center justify-between mt-auto">
-                    <span class="text-xs font-bold text-[#000c1b] group-hover:text-[#4081c1] transition-colors flex items-center gap-1">
-                        Ver más en Instagram
-                        <span class="transform group-hover:translate-x-0.5 transition-transform">↗</span>
-                    </span>
-                    <span class="text-[10px] sm:text-[11px] font-semibold text-gray-400">@bauhauspinturerias</span>
-                </div>
-            </a>
+                </blockquote>
+            </div>
 
             <!-- Post 2 -->
-            <a href="https://www.instagram.com/p/DeSaBRYiWC9/" target="_blank" rel="noopener noreferrer"
-                class="group bg-white rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-xl hover:border-black/30 transition-all duration-300 flex flex-col">
-                <div class="p-3 sm:p-3.5 flex items-center justify-between border-b border-gray-100 bg-white">
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[1.5px] flex-shrink-0">
-                            <div class="w-full h-full rounded-full bg-white p-[1.5px]">
-                                <img src="{% static 'images/favicon.png' %}" alt="Bauhaus" class="w-full h-full object-contain rounded-full">
-                            </div>
-                        </div>
-                        <div class="text-left">
-                            <span class="block text-xs font-bold text-[#000c1b] leading-tight">bauhauspinturerias</span>
-                            <span class="block text-[10px] text-gray-400 leading-tight">Instagram</span>
-                        </div>
+            <div class="w-full flex justify-center">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeSaBRYiWC9/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 2px 12px 0 rgba(0,0,0,0.07); margin: 0 auto; max-width:100%; min-width:280px; width:100%;">
+                    <div style="padding:16px; text-align:center;">
+                        <a href="https://www.instagram.com/p/DeSaBRYiWC9/" target="_blank" rel="noopener noreferrer" style="color:#000c1b; font-size:13px; font-weight:700; text-decoration:none;">
+                            Ver publicación en Instagram ↗
+                        </a>
                     </div>
-                    <svg class="w-4 h-4 fill-current text-[#E4405F]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.449-1.44z"/>
-                    </svg>
-                </div>
-                <div class="relative aspect-square w-full bg-stone-100 overflow-hidden">
-                    <img src="{% static 'images/instagram/post_2.jpg' %}" alt="Bauhaus en Instagram"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-3 sm:p-3.5 bg-white border-t border-gray-100 flex items-center justify-between mt-auto">
-                    <span class="text-xs font-bold text-[#000c1b] group-hover:text-[#4081c1] transition-colors flex items-center gap-1">
-                        Ver más en Instagram
-                        <span class="transform group-hover:translate-x-0.5 transition-transform">↗</span>
-                    </span>
-                    <span class="text-[10px] sm:text-[11px] font-semibold text-gray-400">@bauhauspinturerias</span>
-                </div>
-            </a>
+                </blockquote>
+            </div>
 
             <!-- Post 3 -->
-            <a href="https://www.instagram.com/p/DexcITKiVuJ/" target="_blank" rel="noopener noreferrer"
-                class="group bg-white rounded-2xl border border-[#e2e4e7] overflow-hidden shadow-sm hover:shadow-xl hover:border-black/30 transition-all duration-300 flex flex-col">
-                <div class="p-3 sm:p-3.5 flex items-center justify-between border-b border-gray-100 bg-white">
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[1.5px] flex-shrink-0">
-                            <div class="w-full h-full rounded-full bg-white p-[1.5px]">
-                                <img src="{% static 'images/favicon.png' %}" alt="Bauhaus" class="w-full h-full object-contain rounded-full">
-                            </div>
-                        </div>
-                        <div class="text-left">
-                            <span class="block text-xs font-bold text-[#000c1b] leading-tight">bauhauspinturerias</span>
-                            <span class="block text-[10px] text-gray-400 leading-tight">Instagram</span>
-                        </div>
+            <div class="w-full flex justify-center">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DexcITKiVuJ/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:14px; box-shadow:0 2px 12px 0 rgba(0,0,0,0.07); margin: 0 auto; max-width:100%; min-width:280px; width:100%;">
+                    <div style="padding:16px; text-align:center;">
+                        <a href="https://www.instagram.com/p/DexcITKiVuJ/" target="_blank" rel="noopener noreferrer" style="color:#000c1b; font-size:13px; font-weight:700; text-decoration:none;">
+                            Ver publicación en Instagram ↗
+                        </a>
                     </div>
-                    <svg class="w-4 h-4 fill-current text-[#E4405F]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.449-1.44z"/>
-                    </svg>
-                </div>
-                <div class="relative aspect-square w-full bg-stone-100 overflow-hidden">
-                    <img src="{% static 'images/instagram/post_3.jpg' %}" alt="Bauhaus en Instagram"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-3 sm:p-3.5 bg-white border-t border-gray-100 flex items-center justify-between mt-auto">
-                    <span class="text-xs font-bold text-[#000c1b] group-hover:text-[#4081c1] transition-colors flex items-center gap-1">
-                        Ver más en Instagram
-                        <span class="transform group-hover:translate-x-0.5 transition-transform">↗</span>
-                    </span>
-                    <span class="text-[10px] sm:text-[11px] font-semibold text-gray-400">@bauhauspinturerias</span>
-                </div>
-            </a>
+                </blockquote>
+            </div>
 
         </div>
+
+        <!-- Script oficial de Meta / Instagram Embed -->
+        <script async src="//www.instagram.com/embed.js"></script>
     </div>
 </section>
 
