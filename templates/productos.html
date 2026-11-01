@@ -42,25 +42,12 @@
         style="background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 65%, rgba(0, 12, 27, 0.35) 100%); box-shadow: inset 0 0 100px rgba(0, 12, 27, 0.45);">
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div class="max-w-4xl mx-auto space-y-6">
-            <!-- Título Principal en Negro Bauhaus con sombra clara intensa y ampliada -->
-            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-tight text-[#000c1b]"
-                style="text-shadow: 0 0 12px #ffffff, 0 0 25px #ffffff, 0 0 50px rgba(255, 255, 255, 0.98), 0 0 90px rgba(255, 255, 255, 0.92), 0 0 140px rgba(255, 255, 255, 0.85), 0 0 200px rgba(255, 255, 255, 0.7), 0 0 260px rgba(255, 255, 255, 0.5); filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 70px rgba(255, 255, 255, 0.85));">
-                Especialistas en <br class="hidden sm:inline">
-                <span class="text-[#000c1b]">Recubrimientos Técnicos</span>
-            </h1>
-
-            <!-- Especialidades en Negro con sombra clara intensa y ampliada -->
-            <div class="space-y-2.5"
-                style="text-shadow: 0 0 10px #ffffff, 0 0 22px #ffffff, 0 0 45px rgba(255, 255, 255, 0.98), 0 0 80px rgba(255, 255, 255, 0.9), 0 0 125px rgba(255, 255, 255, 0.8), 0 0 180px rgba(255, 255, 255, 0.6); filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 55px rgba(255, 255, 255, 0.75));">
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-[#000c1b] font-extrabold tracking-wide">
-                    Control de Corrosión • Pisos Industriales
-                </p>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-[#000c1b] font-bold tracking-wide">
-                    Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
-                </p>
-            </div>
+    <!-- Frase en la parte inferior izquierda con cápsula de vidrio esmerilado compacta y armónica -->
+    <div class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-3 sm:left-6 md:left-10 z-10 pointer-events-none">
+        <div class="inline-block bg-black/40 backdrop-blur-md border border-white/20 shadow-sm rounded px-2 sm:px-3 py-0.5 sm:py-1">
+            <p class="text-[11px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-bold tracking-normal sm:tracking-wide whitespace-nowrap leading-none drop-shadow-md">
+                Cada producto tiene una aplicación, cada aplicación una especificación.
+            </p>
         </div>
     </div>
 
@@ -81,180 +68,136 @@
     </script>
 </section>
 
-<!-- 3. Bloque: Productos que comercializamos (4 Categorías con foto y descripción) - Fondo Amarillo Bauhaus -->
-<section id="productos" class="py-20 bg-[#e7b924] border-b-2 border-[#000c1b]/25 text-[#000c1b] scroll-mt-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+<!-- 3. Bloque: Línea de productos (Fondo Gris Claro Neutro #f6f7f9) -->
+<section id="productos" class="py-12 sm:py-16 md:py-20 bg-[#f6f7f9] border-b-2 border-gray-400 text-[#000c1b] scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         
-        <div class="text-center max-w-3xl mx-auto space-y-3">
-            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#000c1b]">
-                Productos que comercializamos
+        <!-- Encabezado estilo Home -->
+        <div class="text-left space-y-1.5 sm:space-y-2">
+            <div class="flex items-center gap-2 sm:gap-3 text-gray-500 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider">
+                <span class="w-6 sm:w-10 h-[2px] bg-gray-400 inline-block"></span>
+                <span>Línea de productos</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl md:text-4xl font-extrabold tracking-tight text-[#000c1b]">
+                Resistencia, durabilidad y rendimiento.
             </h2>
-            <p class="text-xs sm:text-sm text-[#000c1b] font-medium leading-relaxed">
-                Recubrimientos en presentaciones mayoristas diseñados para garantizar máximo rendimiento por m² y rentabilidad en cada proyecto.
+            <p class="text-xs sm:text-sm md:text-base text-gray-600 font-medium max-w-3xl leading-relaxed">
+                Especificamos productos y esquemas de protección para los requerimientos más exigentes.
             </p>
         </div>
 
-        <!-- 4 Columnas de Productos para Aplicadores (2x2 en móvil y 4 columnas en desktop) -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        <!-- 4 Contenedores Blancos con Botón Consultar Azul -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             
-            <!-- 1. Control de Corrosión -->
-            <div class="bg-white rounded-2xl border border-black/10 overflow-hidden shadow-md hover:shadow-xl hover:border-black transition-all flex flex-col justify-between group">
+            <!-- Contenedor 1: Pisos industriales -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
-                        <img src="{% static 'media/portfolio/tanque_industrial.jpg' %}" onerror="this.src='/media/portfolio/tanque_industrial.jpg'" alt="Control de Corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-black/80 text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider">
+                    <div class="aspect-[16/10] overflow-hidden bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_pisos.jpg' %}" onerror="this.src='/static/media/portfolio/piso_autonivelante.jpg'" alt="Pisos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-extrabold tracking-wider">
                             01
                         </span>
                     </div>
-                    <div class="p-3.5 sm:p-6 space-y-1.5 sm:space-y-3">
-                        <h3 class="text-xs sm:text-lg font-bold text-black uppercase tracking-wide leading-snug">
-                            Control de Corrosión
+                    <div class="p-5 sm:p-6 space-y-2.5">
+                        <h3 class="text-base sm:text-lg font-extrabold text-[#000c1b] tracking-tight leading-snug">
+                            Pisos industriales
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-black font-medium leading-relaxed line-clamp-3 sm:line-clamp-none">
-                            Convertidores de óxido rápidos, fondos anticorrosivos epoxi poliamida y esmaltes poliuretánicos alifáticos para estructuras, tinglados y rejas.
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                            Imprimantes. Epoxy sin solvente. Masillas y morteros epoxy. Antiabrasivos. Antideslizantes. Esmaltes reflectivos.
                         </p>
                     </div>
                 </div>
-                <div class="p-3.5 sm:p-6 pt-0 text-center">
-                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20anticorrosivos%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Pedir cotización →
+                <div class="p-5 sm:p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Pisos%20industriales." target="_blank" rel="noopener noreferrer"
+                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        Consultar
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
                 </div>
             </div>
 
-            <!-- 2. Pisos Industriales -->
-            <div class="bg-white rounded-2xl border border-black/10 overflow-hidden shadow-md hover:shadow-xl hover:border-black transition-all flex flex-col justify-between group">
+            <!-- Contenedor 2: Interior / Exterior -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
-                        <img src="{% static 'media/portfolio/piso_autonivelante.jpg' %}" onerror="this.src='/media/portfolio/piso_autonivelante.jpg'" alt="Pisos Industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-black/80 text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider">
+                    <div class="aspect-[16/10] overflow-hidden bg-gray-100 relative">
+                        <img src="{% static 'images/foto_local.png' %}" onerror="this.src='/static/media/portfolio/tanque_industrial.jpg'" alt="Interior / Exterior" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-extrabold tracking-wider">
                             02
                         </span>
                     </div>
-                    <div class="p-3.5 sm:p-6 space-y-1.5 sm:space-y-3">
-                        <h3 class="text-xs sm:text-lg font-bold text-black uppercase tracking-wide leading-snug">
-                            Pisos Industriales
+                    <div class="p-5 sm:p-6 space-y-2.5">
+                        <h3 class="text-base sm:text-lg font-extrabold text-[#000c1b] tracking-tight leading-snug">
+                            Interior / Exterior
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-black font-medium leading-relaxed line-clamp-3 sm:line-clamp-none">
-                            Pinturas epoxi de alto tránsito para talleres y cocheras, primers de anclaje, masillas epoxídicas para bacheo y morteros autonivelantes.
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                            Látex. Frentes y muros. Esmaltes poliuretánicos, epoxy, acrílicos y sintéticos. Selladores. Porcelanato líquido.
                         </p>
                     </div>
                 </div>
-                <div class="p-3.5 sm:p-6 pt-0 text-center">
-                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20pisos%20epoxi%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Pedir cotización →
+                <div class="p-5 sm:p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20productos%20para%20Interior/Exterior." target="_blank" rel="noopener noreferrer"
+                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        Consultar
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
                 </div>
             </div>
 
-            <!-- 3. Impermeabilización de alto desempeño -->
-            <div class="bg-white rounded-2xl border border-black/10 overflow-hidden shadow-md hover:shadow-xl hover:border-black transition-all flex flex-col justify-between group">
+            <!-- Contenedor 3: Cubiertas de alto desempeño -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
-                        <img src="{% static 'media/portfolio/despues/membrane_roof_obracompleta.png' %}" onerror="this.src='/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Impermeabilización de Alto Desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-black/80 text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider">
+                    <div class="aspect-[16/10] overflow-hidden bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_impermeabilizacion.jpg' %}" onerror="this.src='/static/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Cubiertas de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-extrabold tracking-wider">
                             03
                         </span>
                     </div>
-                    <div class="p-3.5 sm:p-6 space-y-1.5 sm:space-y-3">
-                        <h3 class="text-xs sm:text-lg font-bold text-black uppercase tracking-wide leading-snug">
-                            Impermeabilización de Alto Desempeño
+                    <div class="p-5 sm:p-6 space-y-2.5">
+                        <h3 class="text-base sm:text-lg font-extrabold text-[#000c1b] tracking-tight leading-snug">
+                            Cubiertas de alto desempeño
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-black font-medium leading-relaxed line-clamp-3 sm:line-clamp-none">
-                            Membranas líquidas de poliuretano, acrílicos fibrados transitables, vendas de refuerzo y selladores elásticos de poliuretano para juntas de dilatación.
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                            Membranas asfálticas y líquidas. PRFV/ERFV. Bituminosos. Poliureas. Selladores. PVC. TPO.
                         </p>
                     </div>
                 </div>
-                <div class="p-3.5 sm:p-6 pt-0 text-center">
-                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20membranas%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Pedir cotización →
+                <div class="p-5 sm:p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Cubiertas%20de%20alto%20desempeño." target="_blank" rel="noopener noreferrer"
+                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        Consultar
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
                 </div>
             </div>
 
-            <!-- 4. Protección contra agentes químicos -->
-            <div class="bg-white rounded-2xl border border-black/10 overflow-hidden shadow-md hover:shadow-xl hover:border-black transition-all flex flex-col justify-between group">
+            <!-- Contenedor 4: Aplicación náutica -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                    <div class="aspect-[16/11] overflow-hidden bg-gray-200 relative">
-                        <img src="{% static 'media/servicios/aplicacion_recubrimientos.jpg' %}" onerror="this.src='/media/servicios/aplicacion_recubrimientos.jpg'" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-black/80 text-white text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider">
+                    <div class="aspect-[16/10] overflow-hidden bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_quimica.jpg' %}" onerror="this.src='/static/media/servicios/aplicacion_recubrimientos.jpg'" alt="Aplicación náutica" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-extrabold tracking-wider">
                             04
                         </span>
                     </div>
-                    <div class="p-3.5 sm:p-6 space-y-1.5 sm:space-y-3">
-                        <h3 class="text-xs sm:text-lg font-bold text-black uppercase tracking-wide leading-snug">
-                            Protección contra agentes químicos
+                    <div class="p-5 sm:p-6 space-y-2.5">
+                        <h3 class="text-base sm:text-lg font-extrabold text-[#000c1b] tracking-tight leading-snug">
+                            Aplicación náutica
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-black font-medium leading-relaxed line-clamp-3 sm:line-clamp-none">
-                            Esmaltes epoxi sanitarios lavables para cocinas comerciales, laboratorios, clínicas y bateas de contención con resistencia a detergentes y desinfectantes.
+                        <p class="text-xs sm:text-sm text-gray-600 font-medium leading-relaxed">
+                            Bituminosos. Antifouling. Fondo cobre. Esmaltes. Masilla epoxy. Aceite para teca. Laca poliuretánica.
                         </p>
                     </div>
                 </div>
-                <div class="p-3.5 sm:p-6 pt-0 text-center">
-                    <a href="https://wa.me/5493516325978?text=Hola!%20Solicito%20precios%20de%20epoxis%20sanitarios%20para%20aplicadores." target="_blank" class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-black hover:underline">
-                        Pedir cotización →
+                <div class="p-5 sm:p-6 pt-0">
+                    <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20productos%20para%20Aplicación%20náutica." target="_blank" rel="noopener noreferrer"
+                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-extrabold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        Consultar
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
                 </div>
             </div>
 
         </div>
-    </div>
-</section>
-
-<!-- 4. Bloque: Espacio para mostrar soluciones (Estructura Canva: espacio para mostrar soluciones) - Fondo Blanco -->
-<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-        
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
-                Espacio para mostrar soluciones
-            </h2>
-            <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
-                Asesoramiento práctico para resolver las patologías más frecuentes en obra de manera ágil y definitiva.
-            </p>
-        </div>
-
-        <!-- 3 Soluciones Clave -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
-                <div class="w-12 h-12 rounded-xl bg-[#FEF9E7] border border-[#f4d574] flex items-center justify-center text-xl">
-                    🧹
-                </div>
-                <h3 class="text-base font-bold uppercase tracking-wide text-black">
-                    Preparación Mecánica de Superficies
-                </h3>
-                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
-                    Te asesoramos en el perfil de rugosidad óptimo (CSP), apertura de poro y tratamiento de humedad residual antes de la aplicación de epoxis.
-                </p>
-            </div>
-
-            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
-                <div class="w-12 h-12 rounded-xl bg-[#eef4fb] border border-[#4081c1]/30 flex items-center justify-center text-xl">
-                    📐
-                </div>
-                <h3 class="text-base font-bold uppercase tracking-wide text-black">
-                    Tratamiento de Juntas y Fisuras
-                </h3>
-                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
-                    Sellado elástico y duradero de juntas de dilatación con cordón de respaldo y masillas de poliuretano de alta adherencia y elasticidad.
-                </p>
-            </div>
-
-            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
-                <div class="w-12 h-12 rounded-xl bg-[#fae8e8] border border-[#b11617]/25 flex items-center justify-center text-xl">
-                    ⚡
-                </div>
-                <h3 class="text-base font-bold uppercase tracking-wide text-black">
-                    Sistemas de Rápida Puesta en Servicio
-                </h3>
-                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
-                    Esquemas de secado ultra rápido para locales comerciales, garajes y plantas que necesitan habilitar el tránsito en 24 horas.
-                </p>
-            </div>
-
-        </div>
-
     </div>
 </section>
 
@@ -365,46 +308,221 @@
     </div>
 </section>
 
-<!-- 6. Bloque: Marcas que trabajamos (Estructura Canva: 4 marcas arriba, 3 abajo) - Fondo Blanco -->
-<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
-        
-        <div>
-            <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
-                Marcas que comercializamos
+<!-- 4. Bloque: Marcas que trabajamos (Distribuidores oficiales) - Fondo Gris Claro Neutro #f6f7f9 -->
+<section class="py-6 sm:py-9 bg-[#f6f7f9] border-b-2 border-gray-400 text-[#000c1b]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
+
+        <!-- Encabezado con destaque oficial -->
+        <div class="max-w-5xl mx-auto text-left space-y-1 sm:space-y-1.5">
+            <div class="flex items-center gap-2 sm:gap-3 text-gray-500 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider">
+                <span class="w-6 sm:w-10 h-[2px] bg-gray-400 inline-block"></span>
+                <span>Marcas que comercializamos</span>
+            </div>
+            <h2 class="text-lg sm:text-2xl md:text-4xl font-extrabold tracking-tight text-[#000c1b]">
+                Distribuidores oficiales.
             </h2>
+            <p class="text-xs sm:text-sm md:text-base text-gray-600 font-medium max-w-2xl">
+                Productos de calidad comprobada, con nuestro asesoramiento técnico.
+            </p>
         </div>
 
-        <!-- Grilla de Logos de Marcas (4 arriba y 3 abajo exactamente como en PC) -->
-        <div class="space-y-3 sm:space-y-6 max-w-5xl mx-auto">
-            <!-- Fila 1: 4 marcas -->
-            <div class="grid grid-cols-4 gap-2 sm:gap-4 md:gap-6 items-center">
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+        <!-- Fila de Logos de Marcas en Carrusel Continuo (Movimiento de Izquierda a Derecha) -->
+        <div class="relative w-full overflow-hidden py-1.5 marquee-wrapper">
+            <!-- Degradé lateral suave para integración armónica sobre fondo gris -->
+            <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-r from-[#f6f7f9] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-l from-[#f6f7f9] to-transparent z-10 pointer-events-none"></div>
+
+            <div class="marquee-slider-ltr flex">
+                <!-- Bloque 1 de marcas -->
+                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0">
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
                 </div>
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+
+                <!-- Bloque 2 duplicado para bucle continuo infinito -->
+                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0 pl-3 sm:pl-6" aria-hidden="true">
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
+                            class="marca-logo-img logo-agrandado object-contain">
+                    </div>
                 </div>
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+            </div>
+        </div>
+
+        <style>
+            .marca-logo-img {
+                filter: grayscale(100%);
+                opacity: 0.75;
+                transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            }
+            .logo-agrandado {
+                height: 52px !important;
+                max-height: 52px !important;
+                width: auto !important;
+            }
+            .logo-empresa-medio {
+                height: 42px !important;
+                max-height: 42px !important;
+                width: auto !important;
+            }
+            .logo-empresa-chico {
+                height: 32px !important;
+                max-height: 32px !important;
+                width: auto !important;
+            }
+            @media (min-width: 640px) {
+                .logo-agrandado {
+                    height: 64px !important;
+                    max-height: 64px !important;
+                }
+                .logo-empresa-medio {
+                    height: 52px !important;
+                    max-height: 52px !important;
+                }
+                .logo-empresa-chico {
+                    height: 40px !important;
+                    max-height: 40px !important;
+                }
+            }
+            @media (min-width: 768px) {
+                .logo-agrandado {
+                    height: 76px !important;
+                    max-height: 76px !important;
+                }
+                .logo-empresa-medio {
+                    height: 60px !important;
+                    max-height: 60px !important;
+                }
+                .logo-empresa-chico {
+                    height: 46px !important;
+                    max-height: 46px !important;
+                }
+            }
+            .marco-marca:hover .marca-logo-img {
+                filter: grayscale(0%);
+                opacity: 1;
+                transform: scale(1.08);
+            }
+            .marquee-slider-ltr {
+                display: flex;
+                width: max-content;
+                animation: scroll-brands-ltr 28s linear infinite;
+            }
+            @keyframes scroll-brands-ltr {
+                0% {
+                    transform: translateX(-50%);
+                }
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+        </style>
+
+    </div>
+</section>
+
+<!-- 4. Bloque: Espacio para mostrar soluciones (Estructura Canva: espacio para mostrar soluciones) - Fondo Blanco -->
+<section class="py-20 bg-white border-b-2 border-[#000c1b]/20 text-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-black">
+                Espacio para mostrar soluciones
+            </h2>
+            <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                Asesoramiento práctico para resolver las patologías más frecuentes en obra de manera ágil y definitiva.
+            </p>
+        </div>
+
+        <!-- 3 Soluciones Clave -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#FEF9E7] border border-[#f4d574] flex items-center justify-center text-xl">
+                    🧹
                 </div>
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
-                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Preparación Mecánica de Superficies
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Te asesoramos en el perfil de rugosidad óptimo (CSP), apertura de poro y tratamiento de humedad residual antes de la aplicación de epoxis.
+                </p>
             </div>
 
-            <!-- Fila 2: 3 marcas centradas -->
-            <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 items-center max-w-3xl mx-auto">
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/sika.png' %}" alt="Sika" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
+            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#eef4fb] border border-[#4081c1]/30 flex items-center justify-center text-xl">
+                    📐
                 </div>
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
-                </div>
-                <div class="marco-marca h-14 sm:h-20 md:h-28 flex items-center justify-center p-1.5 sm:p-3 md:p-4 group">
-                    <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol" class="max-h-7 sm:max-h-10 md:max-h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105">
-                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Tratamiento de Juntas y Fisuras
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Sellado elástico y duradero de juntas de dilatación con cordón de respaldo y masillas de poliuretano de alta adherencia y elasticidad.
+                </p>
             </div>
+
+            <div class="bg-[#f6f7f9] p-8 rounded-2xl border border-[#e2e4e7] shadow-sm hover:shadow-md transition space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-[#fae8e8] border border-[#b11617]/25 flex items-center justify-center text-xl">
+                    ⚡
+                </div>
+                <h3 class="text-base font-bold uppercase tracking-wide text-black">
+                    Sistemas de Rápida Puesta en Servicio
+                </h3>
+                <p class="text-xs sm:text-sm text-black font-medium leading-relaxed">
+                    Esquemas de secado ultra rápido para locales comerciales, garajes y plantas que necesitan habilitar el tránsito en 24 horas.
+                </p>
+            </div>
+
         </div>
 
     </div>
