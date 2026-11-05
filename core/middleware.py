@@ -35,13 +35,35 @@ class ModoProximamenteMiddleware:
             # Desbloqueo rápido mediante parámetro en URL (ej: https://bauhaus.ar/?clave=Bauhaus@2026)
             clave_url = request.GET.get('clave') or request.GET.get('key')
             if clave_url and secrets.compare_digest(clave_url.strip(), clave_configurada):
-                request.session['preview_autorizado'] = True
-                request.session['intentos_fallidos'] = 0
-                clean_path = request.path
-                return redirect(clean_path)
+                try:
+                    request.session['preview_autorizado'] = True
+                    request.session['intentos_fallidos'] = 0
+                except Exception:
+                    pass
+                response = redirect(request.path)
+                response.set_signed_cookie('preview_autorizado', '1', max_age=86400*30, httponly=True, samesite='Lax')
+                return response
 
-            # Si la sesión ya fue autorizada con la clave, permitir acceso completo
-            if request.session.get('preview_autorizado', False):
+            # Verificar autorización por sesión o por cookie firmada
+            autorizado = False
+            try:
+                if request.session.get('preview_autorizado', False):
+                    autorizado = True
+            except Exception:
+                pass
+
+            if not autorizado:
+                try:
+                    if request.get_signed_cookie('preview_autorizado', default=None) == '1':
+                        autorizado = True
+                        try:
+                            request.session['preview_autorizado'] = True
+                        except Exception:
+                            pass
+                except Exception:
+                    pass
+
+            if autorizado:
                 response = self.get_response(request)
                 response['X-Robots-Tag'] = 'noindex, nofollow'
                 response['Cache-Control'] = 'private, no-cache, no-store, must-revalidate'

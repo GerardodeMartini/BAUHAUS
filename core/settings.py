@@ -121,8 +121,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Session Config: Utilizar cookies firmadas para no depender de tablas de base de datos
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = 'Lax'
+
 # CSRF Config
-CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost:8000,http://127.0.0.1:8000').split(',') if origin.strip()]
+default_origins = 'http://localhost:8000,http://127.0.0.1:8000,https://bauhaus.ar,http://bauhaus.ar,https://*.bauhaus.ar'
+CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.getenv('CSRF_TRUSTED_ORIGINS', default_origins).split(',') if origin.strip()]
 
 # Email Config (Resend con fallback a consola si no está la API Key)
 RESEND_API_KEY = os.getenv('RESEND_API_KEY')
