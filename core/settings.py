@@ -14,8 +14,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-fallback-key-for-local-dev
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-# Modo Próximamente (Landing temporal para Instagram y lanzamiento)
+# Modo Próximamente (Landing temporal para Instagram y lanzamiento con acceso restringido)
 MODO_PROXIMAMENTE = os.getenv('MODO_PROXIMAMENTE', 'True') == 'True'
+CLAVE_ACCESO_PREVIA = os.getenv('CLAVE_ACCESO_PREVIA', 'Bauhaus@2026')
 
 ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost,0.0.0.0').split(',') if host.strip()]
 
@@ -40,13 +41,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # Para servir estáticos en producción
-    'core.middleware.ModoProximamenteMiddleware',  # Intercepta y muestra Próximamente en todas las rutas
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middleware.ModoProximamenteMiddleware',  # Intercepta y muestra Próximamente si no está autenticado
 ]
 
 ROOT_URLCONF = 'core.urls'

@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bauhaus — Acceso Privado a Vista Previa</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    
+    <!-- Google Fonts: Rethink Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Rethink Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#000c1b',
+                        brandYellow: '#e7b924',
+                        brandBlue: '#4081c1',
+                        brandRed: '#b11617',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-[#f6f7f9] text-[#000c1b] font-sans flex flex-col justify-between items-center p-4 sm:p-6">
+
+    <!-- Header mínimo con logo -->
+    <header class="w-full max-w-md pt-4 sm:pt-8 flex justify-center">
+        <a href="{% url 'catalog:proximamente' %}">
+            <img src="{% static 'images/logo_circular_bauhaus.png' %}" alt="Bauhaus Logo" class="h-16 sm:h-20 w-auto object-contain hover:scale-105 transition-transform duration-200">
+        </a>
+    </header>
+
+    <!-- Tarjeta de Acceso -->
+    <main class="w-full max-w-md my-auto">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 sm:p-8 space-y-6">
+            
+            <div class="text-center space-y-2">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#f6f7f9] border border-gray-200 text-[#000c1b] mb-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                </div>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-[#000c1b]">
+                    Acceso a Vista Previa
+                </h1>
+                <p class="text-xs sm:text-sm text-gray-500 font-normal">
+                    Ingresá la contraseña para ver el sitio web completo de Bauhaus.
+                </p>
+            </div>
+
+            {% if error %}
+            <div class="bg-red-50 border border-red-200 text-[#b11617] px-4 py-3 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2">
+                <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                <span>{{ error }}</span>
+            </div>
+            {% endif %}
+
+            <form method="POST" action="{% url 'catalog:acceso_preview' %}" class="space-y-4">
+                {% csrf_token %}
+                <div class="space-y-1.5">
+                    <label for="clave" class="block text-xs font-bold uppercase tracking-wider text-gray-600">
+                        Contraseña
+                    </label>
+                    <div class="relative">
+                        <input 
+                            type="password" 
+                            id="clave" 
+                            name="clave" 
+                            {% if not bloqueado %}required autofocus{% else %}disabled{% endif %}
+                            placeholder="{% if not bloqueado %}Ingresá la clave de acceso{% else %}Acceso temporalmente bloqueado{% endif %}" 
+                            class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-300 focus:border-[#4081c1] focus:ring-2 focus:ring-[#4081c1]/20 focus:bg-white text-sm text-[#000c1b] placeholder:text-gray-400 transition outline-none {% if bloqueado %}opacity-50 cursor-not-allowed bg-gray-200{% endif %}"
+                        >
+                    </div>
+                </div>
+
+                <button 
+                    type="submit" 
+                    {% if bloqueado %}disabled{% endif %}
+                    class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#4081c1] hover:bg-[#326ca6] text-white text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-md {% if not bloqueado %}hover:scale-[1.02] cursor-pointer{% else %}opacity-50 cursor-not-allowed{% endif %}"
+                >
+                    <span>Ingresar al sitio</span>
+                    <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="pt-2 text-center">
+                <a href="{% url 'catalog:proximamente' %}" class="text-xs text-gray-400 hover:text-gray-700 hover:underline transition">
+                    ← Volver a la página principal
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer discreto -->
+    <footer class="w-full max-w-md pb-4 text-center text-xs text-gray-400">
+        <p>&copy; 2026 Bauhaus Pinturería Técnica Industrial</p>
+    </footer>
+
+</body>
+</html>
+
