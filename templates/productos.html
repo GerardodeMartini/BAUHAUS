@@ -217,7 +217,7 @@
 <!-- 5. Bloque: Nuestro valor agregado - Fondo Amarillo Bauhaus #e7b924 -->
 <section class="bg-[#e7b924] text-[#000c1b] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-14">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-stretch">
+        <div class="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-stretch">
 
             <!-- Columna Izquierda: Texto alineado arriba y pastillas alineadas abajo con la foto -->
             <div class="flex flex-col justify-between h-full py-0.5 sm:py-1 space-y-4 md:space-y-0">
@@ -229,12 +229,12 @@
                         <span class="w-6 sm:w-10 h-[2px] bg-[#000c1b]/40 inline-block"></span>
                         <span>Tu necesidad, nuestra prioridad.</span>
                     </div>
-                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-[#000c1b] leading-tight">
+                    <h2 class="text-xs sm:text-xl lg:text-3xl xl:text-4xl font-bold tracking-tight text-[#000c1b] leading-tight">
                         Nuestro valor agregado.
                     </h2>
 
                     <!-- Texto descriptivo -->
-                    <div class="mt-2.5 sm:mt-3.5 text-xs sm:text-sm md:text-base text-[#000c1b] font-normal leading-relaxed text-justify">
+                    <div class="mt-1.5 sm:mt-3 text-[10px] sm:text-xs md:text-sm lg:text-base text-[#000c1b] font-normal leading-snug sm:leading-relaxed text-justify">
                         <p>
                             Te acompañamos en todo el proceso. Asesoramiento técnico con el conocimiento de cada producto, la forma de aplicación correcta y una buena gestión de los tiempos para asegurar el éxito de tu proyecto.
                         </p>
@@ -242,18 +242,18 @@
                 </div>
 
                 <!-- Botones horizontales informativos (Pills oficiales alineadas a la parte inferior de la foto) -->
-                <div class="pt-3 sm:pt-4">
-                    <div class="flex flex-wrap gap-2 sm:gap-2.5">
-                        <span class="inline-flex items-center px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white text-[#000c1b] text-[11px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
+                <div class="pt-2 sm:pt-4">
+                    <div class="flex flex-wrap gap-1 sm:gap-2 lg:gap-2.5">
+                        <span class="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 rounded-full bg-white text-[#000c1b] text-[9px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
                             Respaldo técnico
                         </span>
-                        <span class="inline-flex items-center px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white text-[#000c1b] text-[11px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
+                        <span class="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 rounded-full bg-white text-[#000c1b] text-[9px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
                             Stock
                         </span>
-                        <span class="inline-flex items-center px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white text-[#000c1b] text-[11px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
+                        <span class="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 rounded-full bg-white text-[#000c1b] text-[9px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
                             Plazos de entrega
                         </span>
-                        <span class="inline-flex items-center px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white text-[#000c1b] text-[11px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
+                        <span class="inline-flex items-center px-2 py-0.5 sm:px-3 sm:py-1.5 lg:px-4 lg:py-2 rounded-full bg-white text-[#000c1b] text-[9px] sm:text-xs md:text-sm font-bold border border-[#000c1b]/20 shadow-sm cursor-default select-none hover:border-[#000c1b] transition-colors">
                             Logística
                         </span>
                     </div>
@@ -263,10 +263,10 @@
 
             <!-- Columna Derecha: Foto con marco rojo interno -->
             <div class="w-full h-full flex items-center justify-center">
-                <div class="relative w-full h-[220px] sm:h-[280px] lg:h-[360px] overflow-hidden rounded-none shadow-md">
+                <div class="relative w-full h-[160px] sm:h-[300px] lg:h-[440px] overflow-hidden rounded-none shadow-md group">
                     <img src="{% static 'images/foto_valor_agregado.jpg' %}"
                         alt="Nuestro valor agregado - Asesoramiento técnico en obra Bauhaus"
-                        class="w-full h-full object-cover object-center">
+                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
                     <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-10 rounded-none"></div>
                 </div>
@@ -536,7 +536,7 @@
 
             <!-- Columna Izquierda (50% del área): Foto con mismas dimensiones que Quiénes somos -->
             <div class="w-full h-full flex items-center justify-center">
-                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-sm">
+                <div class="relative w-full h-[160px] sm:h-[300px] lg:h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-md">
                     <img src="{% static 'images/foto_formulario_aplicadores.jpg' %}"
                         alt="Asesoramiento Técnico Bauhaus"
                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -550,7 +550,7 @@
                 <div class="max-w-xl w-full mx-auto lg:mx-0 space-y-2.5 sm:space-y-6">
                 <div>
                     <h2 class="text-xs sm:text-2xl lg:text-4xl font-bold tracking-tight text-[#000c1b] leading-tight">
-                        Comunicate con nosotros
+                        Comunicate con nosotros.
                     </h2>
                     <p class="mt-0.5 sm:mt-1.5 text-xs sm:text-sm md:text-base font-normal text-[#000c1b]/70">
                         Completá el formulario para coordinar tu asesoramiento
