@@ -7,23 +7,31 @@
 <!-- 1. Hero Section (Estructura Canva: Banner Principal con Título, Subtítulo y Botones) -->
 <section
     class="relative bg-white text-[#000c1b] py-12 md:py-16 overflow-hidden min-h-[calc(100dvh-128px)] md:min-h-[calc(100dvh-140px)] flex items-center justify-center">
-    <!-- Carrusel de Portada de 3 Imágenes con Transición Automática cada 10s -->
+    <!-- Carrusel de Portada de 5 Imágenes con Transición Automática cada 10s -->
     <div class="absolute inset-0 z-0 overflow-hidden" id="hero-carousel-home">
         <!-- Slide 1 -->
         <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100">
-            <img src="{% static 'images/hero/hero_1.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 1"
+            <img src="{% static 'images/hero/home_1.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 1"
                 class="w-full h-full object-cover object-center">
         </div>
         <!-- Slide 2 -->
-        <div
-            class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
-            <img src="{% static 'images/hero/hero_2.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 2"
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/home_2.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 2"
                 class="w-full h-full object-cover object-center">
         </div>
         <!-- Slide 3 -->
-        <div
-            class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
-            <img src="{% static 'images/hero/hero_3.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 3"
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/home_3.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 3"
+                class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 4 -->
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/home_4.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 4"
+                class="w-full h-full object-cover object-center">
+        </div>
+        <!-- Slide 5 -->
+        <div class="hero-slide-home absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105 pointer-events-none">
+            <img src="{% static 'images/hero/home_5.jpg' %}" alt="Bauhaus Recubrimientos Técnicos - Portada 5"
                 class="w-full h-full object-cover object-center">
         </div>
     </div>
@@ -84,8 +92,8 @@
 
             <!-- Columna Izquierda (50% del área): Foto con mismas dimensiones que el Blog -->
             <div class="w-full h-full flex items-center justify-center">
-                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-lg sm:rounded-xl overflow-hidden bg-[#000c1b] group shadow-sm">
-                    <img src="{% static 'images/foto_local.png' %}"
+                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-sm">
+                    <img src="{% static 'images/foto_quienes_somos.jpg' %}"
                         alt="Showroom y Local Comercial Bauhaus - Av. Recta Martinolli 8197"
                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
@@ -175,7 +183,7 @@
 
             <!-- Columna Derecha (50% del área): Carrusel de Fotos con margen arriba y abajo -->
             <div class="w-full h-full flex items-center justify-center">
-                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-lg sm:rounded-xl overflow-hidden bg-[#000c1b] group shadow-sm" id="blog-carousel">
+                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-sm" id="blog-carousel">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
                     <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-20"></div>
                     
@@ -552,8 +560,8 @@
 
             <!-- Columna Izquierda (50% del área): Foto con mismas dimensiones que Quiénes somos -->
             <div class="w-full h-full flex items-center justify-center">
-                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-lg sm:rounded-xl overflow-hidden bg-[#000c1b] group shadow-sm">
-                    <img src="{% static 'images/foto_contacto.jpg' %}"
+                <div class="relative w-full h-full min-h-[160px] sm:min-h-[300px] lg:min-h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-sm">
+                    <img src="{% static 'images/foto_formulario_home.jpg' %}"
                         alt="Asesoramiento Técnico Bauhaus"
                         class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
@@ -648,11 +656,11 @@
 
 <!-- 7. Bloque: FOTO (Banner panorámico antes del Footer, según Canva) -->
 <section class="relative h-72 sm:h-96 md:h-[460px] w-full overflow-hidden bg-black">
-    <img src="{% static 'images/hero_bg_p1.jpg' %}" alt="Aplicaciones de Recubrimientos Técnicos Bauhaus"
+    <img src="{% static 'images/foto_pie_home.jpg' %}" alt="Aplicaciones de Recubrimientos Técnicos Bauhaus"
         class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white text-center sm:text-left">
-            <p class="text-sm sm:text-2xl md:text-4xl font-bold tracking-tight drop-shadow-lg">
+            <p class="text-sm sm:text-2xl md:text-4xl font-bold tracking-tight">
                 <span class="text-[#e7b924]">Bauhaus.</span> Cada superficie tiene una función, cada función una protección.
             </p>
         </div>
