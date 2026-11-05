@@ -44,8 +44,8 @@
 
     <!-- Frase en la parte inferior izquierda con cápsula de vidrio esmerilado compacta y armónica -->
     <div class="absolute bottom-4 sm:bottom-6 md:bottom-8 left-3 sm:left-6 md:left-10 z-10 pointer-events-none">
-        <div class="inline-block bg-black/40 backdrop-blur-md border border-white/20 shadow-sm rounded px-2 sm:px-3 py-0.5 sm:py-1">
-            <p class="text-[11px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-bold tracking-normal sm:tracking-wide whitespace-nowrap leading-none drop-shadow-md">
+        <div class="inline-block bg-white/25 backdrop-blur-lg border border-white/40 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2">
+            <p class="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-[#000c1b] font-bold tracking-normal sm:tracking-wide whitespace-normal sm:whitespace-nowrap leading-snug sm:leading-none">
                 Cada superficie tiene una función, cada función una protección.
             </p>
         </div>
@@ -69,7 +69,7 @@
 </section>
 
 <!-- 3. Bloque: Pinturas técnicas para la industria (Fondo Gris Claro Neutro #f6f7f9) -->
-<section id="especialidades" class="py-12 sm:py-16 md:py-20 bg-[#f6f7f9] text-[#000c1b] scroll-mt-24">
+<section id="especialidades" class="py-6 sm:py-10 lg:py-14 bg-[#f6f7f9] text-[#000c1b] scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         
         <!-- Encabezado estilo Home / Productos con guía izquierda -->
@@ -86,26 +86,28 @@
             </p>
         </div>
 
-        <!-- 4 Contenedores Blancos con imagen con margen y Botón Consultar Azul -->
+        <!-- 4 Contenedores Blancos con imagen con margen rectos y Botón Consultar Azul -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             
             <!-- Contenedor 1: Pisos industriales -->
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
+            <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
                 <div>
-                    <!-- Imagen con margen dentro del contenedor -->
-                    <div class="aspect-[16/10] overflow-hidden rounded-xl bg-gray-100 relative">
-                        <img src="{% static 'images/obras/mosaico_pisos.jpg' %}" onerror="this.src='/media/portfolio/piso_autonivelante.jpg'" alt="Pisos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold tracking-wider">
-                            01
-                        </span>
+                    <!-- Imagen con bordes rectos y margen dentro del contenedor -->
+                    <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_pisos.jpg' %}" onerror="this.src='/media/portfolio/piso_autonivelante.jpg'" alt="Pisos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
                         <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
                             Pisos industriales
                         </h3>
-                        <p class="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            Imprimantes. Epoxy sin solvente. Masillas y morteros epoxy. Antiabrasivos. Antideslizantes. Esmaltes reflectivos.
-                        </p>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
+                            <li>Imprimantes.</li>
+                            <li>Epoxy sin solvente.</li>
+                            <li>Masillas y morteros epoxy.</li>
+                            <li>Antiabrasivos.</li>
+                            <li>Antideslizantes.</li>
+                            <li>Esmaltes reflectivos.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pt-2">
@@ -118,22 +120,23 @@
             </div>
 
             <!-- Contenedor 2: Control de corrosión -->
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
+            <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
                 <div>
-                    <!-- Imagen con margen dentro del contenedor -->
-                    <div class="aspect-[16/10] overflow-hidden rounded-xl bg-gray-100 relative">
-                        <img src="{% static 'images/obras/mosaico_corrosion.jpg' %}" onerror="this.src='/media/portfolio/tanque_industrial.jpg'" alt="Control de corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold tracking-wider">
-                            02
-                        </span>
+                    <!-- Imagen con bordes rectos y margen dentro del contenedor -->
+                    <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_corrosion.jpg' %}" onerror="this.src='/media/portfolio/tanque_industrial.jpg'" alt="Control de corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
                         <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
                             Control de corrosión
                         </h3>
-                        <p class="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            Látex. Frentes y muros. Esmaltes poliuretánicos, epoxy, acrílicos y sintéticos. Selladores. Porcelanato líquido.
-                        </p>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
+                            <li>Látex.</li>
+                            <li>Frentes y muros.</li>
+                            <li>Esmaltes poliuretánicos, epoxy, acrílicos y sintéticos.</li>
+                            <li>Selladores.</li>
+                            <li>Porcelanato líquido.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pt-2">
@@ -146,22 +149,25 @@
             </div>
 
             <!-- Contenedor 3: Cubiertas de alto desempeño -->
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
+            <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
                 <div>
-                    <!-- Imagen con margen dentro del contenedor -->
-                    <div class="aspect-[16/10] overflow-hidden rounded-xl bg-gray-100 relative">
-                        <img src="{% static 'images/obras/mosaico_impermeabilizacion.jpg' %}" onerror="this.src='/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Cubiertas de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold tracking-wider">
-                            03
-                        </span>
+                    <!-- Imagen con bordes rectos y margen dentro del contenedor -->
+                    <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_impermeabilizacion.jpg' %}" onerror="this.src='/media/portfolio/despues/membrane_roof_obracompleta.png'" alt="Cubiertas de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
                         <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
                             Cubiertas de alto desempeño
                         </h3>
-                        <p class="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            Membranas asfálticas y líquidas. PRFV/ERFV. Bituminosos. Poliureas. Selladores. PVC. TPO.
-                        </p>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
+                            <li>Membranas asfálticas y líquidas.</li>
+                            <li>PRFV / ERFV.</li>
+                            <li>Bituminosos.</li>
+                            <li>Poliureas.</li>
+                            <li>Selladores.</li>
+                            <li>PVC.</li>
+                            <li>TPO.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pt-2">
@@ -174,22 +180,25 @@
             </div>
 
             <!-- Contenedor 4: Protección contra agentes químicos. -->
-            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
+            <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
                 <div>
-                    <!-- Imagen con margen dentro del contenedor -->
-                    <div class="aspect-[16/10] overflow-hidden rounded-xl bg-gray-100 relative">
-                        <img src="{% static 'images/obras/mosaico_quimica.jpg' %}" onerror="this.src='/media/servicios/aplicacion_recubrimientos.jpg'" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
-                        <span class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-[#000c1b]/80 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold tracking-wider">
-                            04
-                        </span>
+                    <!-- Imagen con bordes rectos y margen dentro del contenedor -->
+                    <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
+                        <img src="{% static 'images/obras/mosaico_quimica.jpg' %}" onerror="this.src='/media/servicios/aplicacion_recubrimientos.jpg'" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
                         <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
                             Protección contra agentes químicos.
                         </h3>
-                        <p class="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            Bituminosos. Antifouling. Fondo cobre. Esmaltes. Masilla epoxy. Aceite para teca. Laca poliuretánica.
-                        </p>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
+                            <li>Bituminosos.</li>
+                            <li>Antifouling.</li>
+                            <li>Fondo cobre.</li>
+                            <li>Esmaltes.</li>
+                            <li>Masilla epoxy.</li>
+                            <li>Aceite para teca.</li>
+                            <li>Laca poliuretánica.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="pt-2">
@@ -200,14 +209,13 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 <!-- 4. Bloque: Respaldo Técnico / Servicio de Aplicación (50% Texto / 50% Foto) - Fondo Azul #4081c1 -->
 <section class="bg-[#4081c1] text-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-14">
         <div class="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-stretch">
 
             <!-- Columna Izquierda (50% del área): Texto de Respaldo Técnico -->
@@ -252,7 +260,7 @@
 </section>
 
 <!-- 5. Bloque: Galería de Aplicaciones (Experiencia en obra) - Fondo Gris Claro Neutro #f6f7f9 -->
-<section id="obras" class="py-12 sm:py-16 md:py-20 bg-[#f6f7f9] text-[#000c1b] scroll-mt-24">
+<section id="obras" class="py-6 sm:py-10 lg:py-14 bg-[#f6f7f9] text-[#000c1b] scroll-mt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         <!-- Encabezado estilo Home / Productos con guía izquierda -->
@@ -499,7 +507,7 @@
 </section>
 
 <!-- 6. Bloque: Empresas que nos eligen y vuelven a elegirnos (Carrusel continuo infinito igual al Home) -->
-<section class="py-6 sm:py-9 bg-white text-black">
+<section class="py-6 sm:py-10 lg:py-14 bg-white text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
 
         <!-- Encabezado con destaque oficial -->
@@ -703,7 +711,7 @@
                     <h2 class="text-xs sm:text-2xl lg:text-4xl font-bold tracking-tight text-[#000c1b] leading-tight">
                         Comunicate con nosotros
                     </h2>
-                    <p class="mt-0.5 sm:mt-1.5 text-[9px] sm:text-xs md:text-sm font-normal text-[#000c1b]/70">
+                    <p class="mt-0.5 sm:mt-1.5 text-xs sm:text-sm md:text-base font-normal text-[#000c1b]/70">
                         Completá el formulario para coordinar tu asesoramiento
                     </p>
                 </div>
