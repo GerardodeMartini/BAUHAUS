@@ -256,15 +256,6 @@
         </div>
     </footer>
 
-    {% if request.session.preview_autorizado or request.COOKIES.preview_autorizado %}
-    <!-- Badge flotante de Vista Previa -->
-    <aside aria-label="Indicador de vista previa" class="fixed bottom-4 right-4 z-50 bg-[#000c1b] text-white text-xs px-3.5 py-2 rounded-full shadow-2xl border-2 border-[#e7b924] flex items-center gap-2.5 backdrop-blur-md">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-bold tracking-tight">Vista previa activa</span>
-        <span class="text-white/30">|</span>
-        <a href="{% url 'catalog:salir_preview' %}" class="text-[#e7b924] hover:underline font-semibold text-[11px]" title="Cerrar vista previa y volver a Próximamente">Salir</a>
-    </aside>
-    {% endif %}
 
     <!-- Alineación dinámica del separador desde borde izquierdo de pantalla hasta exactamente 3/4 del mapa -->
     <script>
