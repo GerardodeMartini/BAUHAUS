@@ -62,8 +62,8 @@
     </div>
 
     <!-- Especialidades en una sola línea bien abajo de la foto de portada -->
-    <div id="hero-subtitles" class="absolute bottom-4 sm:bottom-6 inset-x-0 z-10 text-center px-4 transition-all duration-300">
-        <p id="hero-sub-1" class="text-[11px] sm:text-xs md:text-sm lg:text-base text-white/95 font-bold tracking-normal sm:tracking-wide drop-shadow-md md:whitespace-nowrap">
+    <div id="hero-subtitles" class="absolute bottom-14 sm:bottom-20 md:bottom-28 inset-x-0 z-10 text-center px-4 transition-all duration-300">
+        <p id="hero-sub-1" class="text-xs sm:text-sm md:text-lg text-white/95 font-bold tracking-normal sm:tracking-wide drop-shadow-md md:whitespace-nowrap">
             Control de Corrosión • Pisos Industriales • Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
         </p>
     </div>
@@ -80,7 +80,7 @@
                 current = (current + 1) % slides.length;
                 slides[current].classList.remove('opacity-0', 'scale-105', 'pointer-events-none');
                 slides[current].classList.add('opacity-100', 'scale-100');
-            }, 10000);
+            }, 7000);
         })();
     </script>
 </section>
@@ -138,8 +138,190 @@
     </div>
 </section>
 
-<!-- 3. Bloque: Blog (50% Texto / 50% Foto) - Fondo Blanco -->
-<section class="bg-white text-[#000c1b] overflow-hidden">
+<!-- 3. Bloque: Marcas que trabajamos (Distribuidores oficiales) - Fondo Blanco -->
+<section class="py-6 sm:py-10 lg:py-14 bg-white text-[#000c1b]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
+
+        <!-- Encabezado con destaque oficial -->
+        <div class="text-left space-y-1 sm:space-y-1.5">
+            <div class="flex items-center gap-2 sm:gap-3 text-gray-500 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider">
+                <span class="w-6 sm:w-10 h-[2px] bg-gray-400 inline-block"></span>
+                <span>Marcas que comercializamos</span>
+            </div>
+            <h2 class="text-lg sm:text-2xl md:text-4xl font-bold tracking-tight text-[#000c1b]">
+                Distribuidores oficiales.
+            </h2>
+            <p class="text-xs sm:text-sm md:text-base text-gray-600 font-normal max-w-2xl">
+                Productos de calidad comprobada, con nuestro asesoramiento técnico.
+            </p>
+        </div>
+
+        <!-- Fila de Logos de Marcas en Carrusel Continuo (Movimiento de Izquierda a Derecha) -->
+        <div class="relative w-full overflow-hidden py-1.5 marquee-wrapper">
+            <!-- Degradé lateral suave para integración armónica sobre fondo blanco -->
+            <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+            <div class="marquee-slider-ltr flex">
+                <!-- Bloque 1 de marcas -->
+                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0">
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 sm:p-1.5 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
+                            class="marca-logo-img logo-revesta object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
+                            class="marca-logo-img logo-sinteplast object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
+                            class="marca-logo-img object-contain">
+                    </div>
+                </div>
+
+                <!-- Bloque 2 duplicado para bucle continuo infinito -->
+                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0 pl-3 sm:pl-6" aria-hidden="true">
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 sm:p-1.5 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
+                            class="marca-logo-img logo-revesta object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
+                            class="marca-logo-img object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
+                            class="marca-logo-img logo-sinteplast object-contain">
+                    </div>
+                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
+                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
+                            class="marca-logo-img object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .marca-logo-img {
+                filter: none;
+                opacity: 1;
+                transition: transform 0.3s ease;
+                max-height: 48px;
+                max-width: 85%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+            }
+            .logo-sinteplast {
+                max-height: 34px !important;
+                max-width: 70% !important;
+            }
+            .logo-revesta {
+                max-height: 52px !important;
+                max-width: 88% !important;
+            }
+            .logo-empresa-medio {
+                height: 42px !important;
+                max-height: 42px !important;
+                width: auto !important;
+            }
+            .logo-empresa-chico {
+                height: 32px !important;
+                max-height: 32px !important;
+                width: auto !important;
+            }
+            @media (min-width: 640px) {
+                .marca-logo-img {
+                    max-height: 60px;
+                }
+                .logo-sinteplast {
+                    max-height: 42px !important;
+                }
+                .logo-revesta {
+                    max-height: 65px !important;
+                }
+                .logo-empresa-medio {
+                    height: 52px !important;
+                    max-height: 52px !important;
+                }
+                .logo-empresa-chico {
+                    height: 40px !important;
+                    max-height: 40px !important;
+                }
+            }
+            @media (min-width: 768px) {
+                .marca-logo-img {
+                    max-height: 72px;
+                    max-width: 85%;
+                }
+                .logo-sinteplast {
+                    max-height: 50px !important;
+                    max-width: 72% !important;
+                }
+                .logo-revesta {
+                    max-height: 77px !important;
+                    max-width: 88% !important;
+                }
+                .logo-empresa-medio {
+                    height: 60px !important;
+                    max-height: 60px !important;
+                }
+                .logo-empresa-chico {
+                    height: 46px !important;
+                    max-height: 46px !important;
+                }
+            }
+            .marco-marca:hover .marca-logo-img {
+                transform: scale(1.08);
+            }
+            .marquee-slider-ltr {
+                display: flex;
+                width: max-content;
+                animation: scroll-brands-ltr 28s linear infinite;
+            }
+            @keyframes scroll-brands-ltr {
+                0% {
+                    transform: translateX(-50%);
+                }
+                100% {
+                    transform: translateX(0%);
+                }
+            }
+        </style>
+
+    </div>
+</section>
+
+<!-- 4. Bloque: Blog (50% Texto / 50% Foto) - Fondo Gris Claro Neutro #f6f7f9 -->
+<section class="bg-[#f6f7f9] text-[#000c1b] overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-14">
         <div class="grid grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-stretch">
 
@@ -191,14 +373,14 @@
                     <div id="blog-slide-0" class="blog-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 z-10">
                         <img src="{% static 'images/blog_corrosion_antes.jpg' %}"
                             alt="Estructura tratada - Foto 1"
-                            class="w-full h-full object-cover object-center">
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                     </div>
 
                     <!-- Slide 2 -->
                     <div id="blog-slide-1" class="blog-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none z-10">
                         <img src="{% static 'images/blog_corrosion_despues.jpg' %}"
                             alt="Estructura tratada - Foto 2"
-                            class="w-full h-full object-cover object-center">
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                     </div>
 
                     <!-- Círculos / Puntos (Dots) flotantes para selección de imágenes -->
@@ -258,167 +440,6 @@
     </script>
 </section>
 
-<!-- 4. Bloque: Marcas que trabajamos (Distribuidores oficiales) - Fondo Gris Claro Neutro #f6f7f9 -->
-<section class="py-6 sm:py-10 lg:py-14 bg-[#f6f7f9] text-[#000c1b]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
-
-        <!-- Encabezado con destaque oficial -->
-        <div class="text-left space-y-1 sm:space-y-1.5">
-            <div class="flex items-center gap-2 sm:gap-3 text-gray-500 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider">
-                <span class="w-6 sm:w-10 h-[2px] bg-gray-400 inline-block"></span>
-                <span>Marcas que comercializamos</span>
-            </div>
-            <h2 class="text-lg sm:text-2xl md:text-4xl font-bold tracking-tight text-[#000c1b]">
-                Distribuidores oficiales.
-            </h2>
-            <p class="text-xs sm:text-sm md:text-base text-gray-600 font-normal max-w-2xl">
-                Productos de calidad comprobada, con nuestro asesoramiento técnico.
-            </p>
-        </div>
-
-        <!-- Fila de Logos de Marcas en Carrusel Continuo (Movimiento de Izquierda a Derecha) -->
-        <div class="relative w-full overflow-hidden py-1.5 marquee-wrapper">
-            <!-- Degradé lateral suave para integración armónica sobre fondo gris -->
-            <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-r from-[#f6f7f9] to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-24 bg-gradient-to-l from-[#f6f7f9] to-transparent z-10 pointer-events-none"></div>
-
-            <div class="marquee-slider-ltr flex">
-                <!-- Bloque 1 de marcas -->
-                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0">
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                </div>
-
-                <!-- Bloque 2 duplicado para bucle continuo infinito -->
-                <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0 pl-3 sm:pl-6" aria-hidden="true">
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
-                    </div>
-                    <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 group cursor-pointer flex-shrink-0">
-                        <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
-                            class="marca-logo-img logo-agrandado object-contain">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <style>
-            .marca-logo-img {
-                filter: none;
-                opacity: 1;
-                transition: transform 0.3s ease;
-            }
-            .logo-agrandado {
-                height: 52px !important;
-                max-height: 52px !important;
-                width: auto !important;
-            }
-            .logo-empresa-medio {
-                height: 42px !important;
-                max-height: 42px !important;
-                width: auto !important;
-            }
-            .logo-empresa-chico {
-                height: 32px !important;
-                max-height: 32px !important;
-                width: auto !important;
-            }
-            @media (min-width: 640px) {
-                .logo-agrandado {
-                    height: 64px !important;
-                    max-height: 64px !important;
-                }
-                .logo-empresa-medio {
-                    height: 52px !important;
-                    max-height: 52px !important;
-                }
-                .logo-empresa-chico {
-                    height: 40px !important;
-                    max-height: 40px !important;
-                }
-            }
-            @media (min-width: 768px) {
-                .logo-agrandado {
-                    height: 76px !important;
-                    max-height: 76px !important;
-                }
-                .logo-empresa-medio {
-                    height: 60px !important;
-                    max-height: 60px !important;
-                }
-                .logo-empresa-chico {
-                    height: 46px !important;
-                    max-height: 46px !important;
-                }
-            }
-            .marco-marca:hover .marca-logo-img {
-                transform: scale(1.08);
-            }
-            .marquee-slider-ltr {
-                display: flex;
-                width: max-content;
-                animation: scroll-brands-ltr 28s linear infinite;
-            }
-            @keyframes scroll-brands-ltr {
-                0% {
-                    transform: translateX(-50%);
-                }
-                100% {
-                    transform: translateX(0%);
-                }
-            }
-        </style>
-
-    </div>
-</section>
-
 <!-- 5. Bloque: Empresas que confían en nosotros (5 columnas x 2 filas igual a PC) -->
 <section class="py-6 sm:py-10 lg:py-14 bg-white text-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-6 text-center">
@@ -476,7 +497,7 @@
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/tgs.png' %}" alt="TGS"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/cinco_hispanos.png' %}" alt="5 Hispanos"
@@ -520,7 +541,7 @@
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/tgs.png' %}" alt="TGS"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/cinco_hispanos.png' %}" alt="5 Hispanos"
@@ -660,7 +681,7 @@
         class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white text-center sm:text-left">
-            <p class="text-sm sm:text-2xl md:text-4xl font-bold tracking-tight">
+            <p class="text-sm sm:text-2xl md:text-4xl font-bold italic tracking-tight">
                 <span class="text-[#e7b924]">Bauhaus.</span> Cada superficie tiene una función, cada función una protección.
             </p>
         </div>

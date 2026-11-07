@@ -59,6 +59,17 @@
                 display: none !important;
             }
         }
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 22s linear infinite;
+        }
     </style>
     {% block extra_head %}{% endblock %}
 </head>
@@ -152,31 +163,40 @@
     <footer class="bg-[#f6f7f9] text-black py-8">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
             <div class="grid grid-cols-2 md:flex md:flex-row justify-between items-start gap-x-4 gap-y-6 sm:gap-8 md:gap-6 mb-8">
-                <!-- 1. Info Corporativa (Logo) -->
+                <!-- 1. Info Corporativa (Logo con B central fija y Anillo de texto giratorio) -->
                 <div class="flex-shrink-0 flex flex-col items-start justify-start text-left">
-                    <img src="{% static 'images/logo_circular_bauhaus.png' %}" alt="Bauhaus Pinturas Industriales Logo" class="h-20 sm:h-32 md:h-48 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                    <div class="relative w-20 h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 group cursor-pointer">
+                        <!-- Anillo exterior con texto que gira continuamente -->
+                        <img src="{% static 'images/logo_texto_anillo.png' %}"
+                            alt="Pinturería Técnica Industrial"
+                            class="absolute inset-0 w-full h-full object-contain animate-spin-slow pointer-events-none">
+                        <!-- B de colores fija en el centro -->
+                        <img src="{% static 'images/logo_centro_b.png' %}"
+                            alt="Bauhaus Logo"
+                            class="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
                 </div>
 
                 <!-- 2. Botones de Navegación (Alineados a la misma altura superior) -->
                 <div class="flex-shrink-0 flex flex-col items-start text-left">
-                    <ul class="space-y-2.5 sm:space-y-5 md:space-y-7 text-xs sm:text-[15px] font-bold">
+                    <ul class="space-y-2.5 sm:space-y-5 md:space-y-7 text-sm sm:text-base md:text-lg lg:text-xl font-bold">
                         <li class="leading-none">
-                            <a href="{% url 'catalog:home' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black uppercase hover:underline decoration-2 underline-offset-4 transition-all duration-200">
+                            <a href="{% url 'catalog:home' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black hover:underline decoration-2 underline-offset-4 transition-all duration-200">
                                 Home
                             </a>
                         </li>
                         <li class="leading-none">
-                            <a href="{% url 'catalog:productos' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black uppercase hover:underline decoration-2 underline-offset-4 transition-all duration-200">
+                            <a href="{% url 'catalog:productos' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black hover:underline decoration-2 underline-offset-4 transition-all duration-200">
                                 Productos
                             </a>
                         </li>
                         <li class="leading-none">
-                            <a href="{% url 'catalog:industria' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black uppercase hover:underline decoration-2 underline-offset-4 transition-all duration-200">
+                            <a href="{% url 'catalog:industria' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black hover:underline decoration-2 underline-offset-4 transition-all duration-200">
                                 Industria
                             </a>
                         </li>
                         <li class="leading-none">
-                            <a href="{% url 'catalog:home' %}#contacto" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black uppercase hover:underline decoration-2 underline-offset-4 transition-all duration-200">
+                            <a href="{% url 'catalog:home' %}#contacto" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black hover:underline decoration-2 underline-offset-4 transition-all duration-200">
                                 Contacto
                             </a>
                         </li>
@@ -201,8 +221,8 @@
                         </li>
                     </ul>
 
-                    <!-- Redes Sociales centradas respecto al mail -->
-                    <div class="pt-2 w-full max-w-[185px] sm:max-w-[215px] flex items-center justify-center gap-4 sm:gap-5">
+                    <!-- Redes Sociales alineadas a la izquierda -->
+                    <div class="pt-2 flex items-center justify-start gap-4 sm:gap-5">
                         <a href="https://www.facebook.com/bauhauspinturerias" target="_blank" rel="noopener noreferrer" class="text-black hover:text-[#1877F2] transition-all duration-300 transform hover:scale-110" aria-label="Facebook Bauhaus">
                             <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
