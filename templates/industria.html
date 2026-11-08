@@ -3,6 +3,7 @@
 
 {% block title %}Industria{% endblock %}
 
+
 {% block top_banner %}
 <!-- Banner Industria (Brand Book Pág. 8: Gris fondos/contenedores #e2e4e7, Negro textos #000c1b, Amarillo destacados #e7b924) -->
 <aside class="bg-[#e2e4e7] border-b border-[#d1d5db] text-[#000c1b] py-3 px-4 text-center">
@@ -42,10 +43,10 @@
         style="background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 65%, rgba(0, 12, 27, 0.35) 100%); box-shadow: inset 0 0 100px rgba(0, 12, 27, 0.45);">
     </div>
 
-    <!-- Frase en la parte inferior izquierda con cápsula de vidrio esmerilado compacta y armónica -->
-    <div class="absolute bottom-8 sm:bottom-12 md:bottom-16 left-4 sm:left-8 md:left-12 z-10 pointer-events-none">
-        <div class="inline-block bg-white/25 backdrop-blur-lg border border-white/40 rounded-lg px-3.5 sm:px-5 py-2 sm:py-2.5">
-            <p class="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl text-[#000c1b] font-bold tracking-normal sm:tracking-wide whitespace-normal sm:whitespace-nowrap leading-snug sm:leading-none">
+    <!-- Frase en la parte inferior izquierda con cápsula compacta y armónica -->
+    <div class="absolute bottom-6 sm:bottom-10 md:bottom-12 left-4 sm:left-8 md:left-12 z-10 pointer-events-none">
+        <div class="inline-block bg-black/45 backdrop-blur-md border border-white/20 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 shadow-md">
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-white font-bold italic tracking-tight whitespace-normal sm:whitespace-nowrap leading-snug sm:leading-none drop-shadow-sm">
                 Cada superficie tiene una función, cada función una protección.
             </p>
         </div>
@@ -82,7 +83,7 @@
                 Un esquema para cada superficie.
             </h2>
             <p class="text-xs sm:text-sm md:text-base text-gray-600 font-normal max-w-3xl leading-relaxed">
-                Un esquema para cada superficie.
+                Especificamos productos y esquemas de protección para los requerimientos más exigentes de la industria.
             </p>
         </div>
 
@@ -91,28 +92,32 @@
             
             <!-- Contenedor 1: Pisos industriales -->
             <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
-                <div>
+                <div class="flex-1 flex flex-col">
                     <!-- Imagen con bordes rectos y margen dentro del contenedor -->
                     <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
                         <img src="{% static 'images/industria/linea/pisos_industriales.jpg' %}" alt="Pisos industriales" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
-                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5 flex-1 flex flex-col justify-start">
+                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug min-h-[2.5rem] sm:min-h-[3.25rem] flex items-start">
                             Pisos industriales
                         </h3>
-                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            <li>Imprimantes.</li>
-                            <li>Epoxy sin solvente.</li>
-                            <li>Masillas y morteros epoxy.</li>
-                            <li>Antiabrasivos.</li>
-                            <li>Antideslizantes.</li>
-                            <li>Esmaltes reflectivos.</li>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed min-h-[6.5rem] sm:min-h-[7.5rem]">
+                            <li class="w-full">Masillas y morteros epoxy.</li>
+                            <li class="w-full">Esmaltes reflectivos.</li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Epoxy sin solvente.</span>
+                                <span>Imprimantes.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Antideslizantes.</span>
+                                <span>Antiabrasivos.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="pt-2">
+                <div class="pt-3 flex justify-center">
                     <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Pisos%20industriales." target="_blank" rel="noopener noreferrer"
-                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-sm text-center">
                         Consultar
                         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
@@ -121,27 +126,32 @@
 
             <!-- Contenedor 2: Control de corrosión -->
             <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
-                <div>
+                <div class="flex-1 flex flex-col">
                     <!-- Imagen con bordes rectos y margen dentro del contenedor -->
                     <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
                         <img src="{% static 'images/industria/linea/control_corrosion.jpg' %}" alt="Control de corrosión" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
-                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5 flex-1 flex flex-col justify-start">
+                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug min-h-[2.5rem] sm:min-h-[3.25rem] flex items-start">
                             Control de corrosión
                         </h3>
-                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            <li>Látex.</li>
-                            <li>Frentes y muros.</li>
-                            <li>Esmaltes poliuretánicos, epoxy, acrílicos y sintéticos.</li>
-                            <li>Selladores.</li>
-                            <li>Porcelanato líquido.</li>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed min-h-[6.5rem] sm:min-h-[7.5rem]">
+                            <li class="w-full">Esmaltes poliuretánicos y epoxy.</li>
+                            <li class="w-full">Esmaltes acrílicos y sintéticos.</li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Porcelanato líquido.</span>
+                                <span>Frentes y muros.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Selladores.</span>
+                                <span>Látex.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="pt-2">
+                <div class="pt-3 flex justify-center">
                     <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Control%20de%20corrosión." target="_blank" rel="noopener noreferrer"
-                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-sm text-center">
                         Consultar
                         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
@@ -150,60 +160,72 @@
 
             <!-- Contenedor 3: Cubiertas de alto desempeño -->
             <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
-                <div>
+                <div class="flex-1 flex flex-col">
                     <!-- Imagen con bordes rectos y margen dentro del contenedor -->
                     <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
                         <img src="{% static 'images/industria/linea/cubiertas_desempeno.jpg' %}" alt="Cubiertas de alto desempeño" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
-                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5 flex-1 flex flex-col justify-start">
+                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug min-h-[2.5rem] sm:min-h-[3.25rem] flex items-start">
                             Cubiertas de alto desempeño
                         </h3>
-                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            <li>Membranas asfálticas y líquidas.</li>
-                            <li>PRFV / ERFV.</li>
-                            <li>Bituminosos.</li>
-                            <li>Poliureas.</li>
-                            <li>Selladores.</li>
-                            <li>PVC.</li>
-                            <li>TPO.</li>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed min-h-[6.5rem] sm:min-h-[7.5rem]">
+                            <li class="w-full">Membranas asfálticas y líquidas.</li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Bituminosos.</span>
+                                <span>PRFV / ERFV.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Poliureas.</span>
+                                <span>Selladores.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>PVC.</span>
+                                <span>TPO.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="pt-2">
+                <div class="pt-3 flex justify-center">
                     <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Cubiertas%20de%20alto%20desempeño." target="_blank" rel="noopener noreferrer"
-                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-sm text-center">
                         Consultar
                         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
                 </div>
             </div>
 
-            <!-- Contenedor 4: Protección contra agentes químicos. -->
+            <!-- Contenedor 4: Protección contra agentes químicos -->
             <div class="bg-white rounded-none border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group p-3.5 sm:p-4">
-                <div>
+                <div class="flex-1 flex flex-col">
                     <!-- Imagen con bordes rectos y margen dentro del contenedor -->
                     <div class="aspect-[16/10] overflow-hidden rounded-none bg-gray-100 relative">
                         <img src="{% static 'images/industria/linea/proteccion_quimica.jpg' %}" alt="Protección contra agentes químicos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-none">
                     </div>
-                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5">
-                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug">
-                            Protección contra agentes químicos.
+                    <div class="pt-4 sm:pt-5 pb-3 sm:pb-4 space-y-2.5 flex-1 flex flex-col justify-start">
+                        <h3 class="text-base sm:text-lg font-bold text-[#000c1b] tracking-tight leading-snug min-h-[2.5rem] sm:min-h-[3.25rem] flex items-start">
+                            Protección contra agentes químicos
                         </h3>
-                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
-                            <li>Bituminosos.</li>
-                            <li>Antifouling.</li>
-                            <li>Fondo cobre.</li>
-                            <li>Esmaltes.</li>
-                            <li>Masilla epoxy.</li>
-                            <li>Aceite para teca.</li>
-                            <li>Laca poliuretánica.</li>
+                        <ul class="space-y-1 sm:space-y-1.5 text-xs sm:text-sm text-gray-600 font-normal leading-relaxed min-h-[6.5rem] sm:min-h-[7.5rem]">
+                            <li class="w-full">Laca poliuretánica.</li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Aceite para teca.</span>
+                                <span>Masilla epoxy.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Antifouling.</span>
+                                <span>Fondo cobre.</span>
+                            </li>
+                            <li class="w-full flex flex-wrap items-center gap-x-2.5 sm:gap-x-3">
+                                <span>Bituminosos.</span>
+                                <span>Esmaltes.</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="pt-2">
+                <div class="pt-3 flex justify-center">
                     <a href="https://wa.me/5493516325978?text=Hola!%20Quisiera%20consultar%20por%20Protección%20contra%20agentes%20químicos." target="_blank" rel="noopener noreferrer"
-                        class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-102 transition-all duration-200 shadow-sm text-center">
+                        class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-full bg-[#4081c1] text-white text-xs sm:text-sm font-bold uppercase tracking-wider hover:bg-[#326ca6] hover:scale-105 transition-all duration-200 shadow-sm text-center">
                         Consultar
                         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
                     </a>
@@ -274,21 +296,20 @@
             </h2>
             
             <!-- Fila de Proyecto con Título dinámico y Flechas selectoras en la misma fila -->
-            <div class="pt-2 flex items-center justify-between flex-wrap gap-3">
-                <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-[#4081c1] text-white uppercase tracking-wider shadow-sm">
-                        Proyecto:
-                    </span>
-                    <h3 id="obra-titulo-dinamico" class="text-base sm:text-xl md:text-2xl font-bold text-[#000c1b] tracking-tight transition-all duration-500">
-                        Pisos Industriales & Epoxi
-                    </h3>
-                    <span id="obra-subtitulo-dinamico" class="text-xs sm:text-sm font-normal text-gray-500 hidden sm:inline transition-all duration-500">
-                        — Planta Embotelladora, Córdoba
-                    </span>
+            <div class="pt-2 flex items-start justify-between gap-3 sm:gap-4">
+                <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        <h3 id="obra-titulo-dinamico" class="text-base sm:text-lg md:text-xl font-bold text-[#000c1b] tracking-tight transition-opacity duration-300">
+                            Proyecto: Porta Hnos.
+                        </h3>
+                        <p id="obra-subtitulo-dinamico" class="text-xs sm:text-sm md:text-base text-gray-600 font-normal leading-relaxed transition-opacity duration-300">
+                            Aplicación de protección anticorrosiva en planta industrial. Sup: +5.500 m2.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Flechas selectoras de obra en la misma fila que Proyecto -->
-                <div class="flex items-center gap-2 flex-shrink-0">
+                <div class="flex items-center gap-2 flex-shrink-0 pt-0.5">
                     <button type="button" onclick="cambiarObraCollage(-1)" aria-label="Obra anterior" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white hover:bg-gray-100 text-[#000c1b] border border-gray-300 flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105 active:scale-95">
                         <svg class="w-4 h-4 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                     </button>
@@ -298,110 +319,263 @@
                 </div>
             </div>
         </div>
-
-                <!-- Contenedor Dinámico: Collages de Fotos Rotativos (Fotos 100% limpias) -->
+        <!-- Contenedor Dinámico: Collages de Fotos Rotativos (Fotos 100% limpias y homogéneas) -->
         <div class="relative w-full overflow-hidden" id="obras-collage-container">
             
-            <!-- Collage 0: Proyecto 1 (Diseño A: Grande a la izquierda) -->
+            <!-- Collage 0: Proyecto 1 (Porta Hnos. - Bento Grid 4 fotos) -->
             <div class="obra-collage-slide transition-opacity duration-700 ease-in-out block opacity-100" data-collage="0">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                    <!-- Foto 1 (Principal): 2 columnas x 2 filas en PC -->
-                    <div class="col-span-2 md:col-span-2 row-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_1/p1_1.jpg' %}" alt="Proyecto 1 - Foto Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-1.5 sm:gap-2 md:gap-2.5 md:h-[480px] lg:h-[520px]">
+                    <!-- Foto 1 (Hero Principal 2x2: Detalle de protección en altura - Anterior Foto 3) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 row-span-1 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 h-[240px] sm:h-[300px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_1/p1_3.jpg' %}" alt="Porta Hnos. - Detalle de protección en altura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 2 -->
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_1/p1_2.jpg' %}" alt="Proyecto 1 - Detalle 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 2 (Vertical Alto 1x2) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_1/p1_2.jpg' %}" alt="Porta Hnos. - Estructura y columnas verticales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 3 -->
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_1/p1_3.jpg' %}" alt="Proyecto 1 - Detalle 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 3 (Normal Superior 1x1: Protección anticorrosiva en planta industrial - Anterior Foto 1) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-2 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_1/p1_1.jpg' %}" alt="Porta Hnos. - Protección anticorrosiva en planta industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 4 (Ancha inferior derecha) -->
-                    <div class="col-span-2 md:col-span-2 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_1/p1_4.jpg' %}" alt="Proyecto 1 - Vista General" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 4 (Normal Inferior 1x1) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 md:col-start-4 md:col-end-5 md:row-start-2 md:row-end-3 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_1/p1_4.jpg' %}" alt="Porta Hnos. - Vista de nave y pasarelas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Collage 1: Proyecto 2 (Diseño B: Alternado, Grande a la derecha en PC) -->
+            <!-- Collage 1: Proyecto 2 (Ciudad GAMA - Bento Grid 4 fotos) -->
             <div class="obra-collage-slide transition-opacity duration-700 ease-in-out hidden opacity-0" data-collage="1">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                    <!-- Foto 1 (Principal): a la derecha en PC, arriba en mobile -->
-                    <div class="order-1 md:order-2 col-span-2 md:col-span-2 md:col-start-3 md:row-start-1 md:row-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_2/p2_1.jpg' %}" alt="Proyecto 2 - Foto Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-1.5 sm:gap-2 md:gap-2.5 md:h-[480px] lg:h-[520px]">
+                    <!-- Foto 1 (Hero Principal 2x2: Impermeabilización final de cubierta - Anterior Foto 4) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 row-span-1 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 h-[240px] sm:h-[300px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_2/p2_4.jpg' %}" alt="Ciudad GAMA - Impermeabilización final de cubierta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 2: arriba izquierda 1 -->
-                    <div class="order-2 md:order-1 col-span-1 md:col-span-1 md:col-start-1 md:row-start-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_2/p2_2.jpg' %}" alt="Proyecto 2 - Detalle 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 2 (Vertical Alto 1x2: Membrana con geotextil en detalle - Anterior Foto 3) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_2/p2_2.jpg' %}" alt="Ciudad GAMA - Membrana con geotextil en detalle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 3: arriba izquierda 2 -->
-                    <div class="order-3 md:order-1 col-span-1 md:col-span-1 md:col-start-2 md:row-start-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_2/p2_3.jpg' %}" alt="Proyecto 2 - Detalle 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 3 (Normal Superior 1x1: Detalle vertical de terminación y juntas - Anterior Foto 2) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-2 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_2/p2_3.jpg' %}" alt="Ciudad GAMA - Detalle vertical de terminación y juntas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Foto 4: ancha inferior izquierda -->
-                    <div class="order-4 md:order-1 col-span-2 md:col-span-2 md:col-start-1 md:row-start-2 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_2/p2_4.jpg' %}" alt="Proyecto 2 - Vista General" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 4 (Normal Inferior 1x1: Prueba hidráulica en azotea - Anterior Foto 1) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 md:col-start-4 md:col-end-5 md:row-start-2 md:row-end-3 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_2/p2_1.jpg' %}" alt="Ciudad GAMA - Prueba hidráulica en azotea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Collage 2: Proyecto 3 (Diseño A: Grande a la izquierda) -->
+            <!-- Collage 2: Proyecto 3 (Porta - Bento Grid 4 fotos en orden solicitado) -->
             <div class="obra-collage-slide transition-opacity duration-700 ease-in-out hidden opacity-0" data-collage="2">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                    <div class="col-span-2 md:col-span-2 row-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_3/p3_1.jpg' %}" alt="Proyecto 3 - Foto Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-1.5 sm:gap-2 md:gap-2.5 md:h-[480px] lg:h-[520px]">
+                    <!-- Foto 1 (Hero Principal 2x2: Reparación estructural interna en PRFV - Anterior Foto 2) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 row-span-1 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 h-[240px] sm:h-[300px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_3/p3_2.jpg' %}" alt="Porta - Reparación estructural interna en PRFV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_3/p3_2.jpg' %}" alt="Proyecto 3 - Detalle 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 2 (Vertical Alto 1x2: Terminación exterior de torre - Anterior Foto 4 / Última) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_3/p3_4.jpg' %}" alt="Porta - Terminación exterior de torre de enfriamiento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_3/p3_3.jpg' %}" alt="Proyecto 3 - Detalle 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 3 (Normal Superior 1x1: Torre de enfriamiento PRFV - Anterior Foto 1) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-2 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_3/p3_1.jpg' %}" alt="Porta - Torre de enfriamiento en PRFV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-2 md:col-span-2 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_3/p3_4.jpg' %}" alt="Proyecto 3 - Vista General" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 4 (Normal Inferior 1x1: Pintura interior e impermeabilización - Anterior Foto 3) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 md:col-start-4 md:col-end-5 md:row-start-2 md:row-end-3 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_3/p3_3.jpg' %}" alt="Porta - Pintura interior e impermeabilización" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Collage 3: Proyecto 4 (Diseño B: Alternado, Grande a la derecha en PC) -->
+            <!-- Collage 3: Proyecto 4 (Coca-Cola - Bento Grid 4 fotos) -->
             <div class="obra-collage-slide transition-opacity duration-700 ease-in-out hidden opacity-0" data-collage="3">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                    <div class="order-1 md:order-2 col-span-2 md:col-span-2 md:col-start-3 md:row-start-1 md:row-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_4/p4_1.jpg' %}" alt="Proyecto 4 - Foto Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-1.5 sm:gap-2 md:gap-2.5 md:h-[480px] lg:h-[520px]">
+                    <!-- Foto 1 (Hero Principal 2x2: Cúpula y protección) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 row-span-1 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 h-[240px] sm:h-[300px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_4/p4_3.jpg' %}" alt="Coca-Cola - Cúpula y protección anticorrosiva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="order-2 md:order-1 col-span-1 md:col-span-1 md:col-start-1 md:row-start-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_4/p4_2.jpg' %}" alt="Proyecto 4 - Detalle 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 2 (Vertical Alto 1x2: Base y anclajes - Anterior Última) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_4/p4_4.jpg' %}" alt="Coca-Cola - Base y anclajes de red de incendio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="order-3 md:order-1 col-span-1 md:col-span-1 md:col-start-2 md:row-start-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_4/p4_3.jpg' %}" alt="Proyecto 4 - Detalle 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 3 (Normal Superior 1x1: Tanque 15m - Anterior Primera) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-2 h-[200px] sm:h-[240px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_4/p4_1.jpg' %}" alt="Coca-Cola - Tanque de red de incendio 15m de altura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="order-4 md:order-1 col-span-2 md:col-span-2 md:col-start-1 md:row-start-2 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_4/p4_4.jpg' %}" alt="Proyecto 4 - Vista General" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 4 (Normal Inferior 1x1: Escalera y estructura - Anterior Segunda) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 md:col-start-4 md:col-end-5 md:row-start-2 md:row-end-3 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_4/p4_2.jpg' %}" alt="Coca-Cola - Escalera y estructura de tanque de incendio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Collage 4: Proyecto 5 (Diseño A: Grande a la izquierda) -->
+            <!-- Collage 4: Proyecto 5 (Pisos industria alimenticia - Bento Grid 6 fotos) -->
             <div class="obra-collage-slide transition-opacity duration-700 ease-in-out hidden opacity-0" data-collage="4">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                    <div class="col-span-2 md:col-span-2 row-span-2 relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_5/p5_1.jpg' %}" alt="Proyecto 5 - Foto Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-3 gap-1.5 sm:gap-2 md:gap-2.5 md:h-[640px] lg:h-[680px]">
+                    <!-- Foto 1 (Hero Principal 2x2: Pasillo en perspectiva y zócalos sanitarios - Anterior Foto 4) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 row-span-1 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 h-[240px] sm:h-[280px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_4.jpg' %}" alt="Pisos industria alimenticia - Pasillo en perspectiva y zócalos sanitarios" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_5/p5_2.jpg' %}" alt="Proyecto 5 - Detalle 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 2 (Normal Superior 1x1: Superficie autonivelante de alto brillo - Anterior Foto 3) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_2.jpg' %}" alt="Pisos industria alimenticia - Superficie autonivelante de alto brillo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-1 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_5/p5_3.jpg' %}" alt="Proyecto 5 - Detalle 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 3 (Normal Medio 1x1: Reparación y mortero epoxy - Anterior Foto 2) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 row-span-1 md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-3 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_1.jpg' %}" alt="Pisos industria alimenticia - Reparación y mortero epoxy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-2 md:col-span-2 relative w-full h-[120px] sm:h-[145px] md:h-[188px] rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100">
-                        <img src="{% static 'images/industria/obras/proyecto_5/p5_6.jpg' %}" alt="Proyecto 5 - Vista General" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <!-- Foto 4 (Vertical Alto 1x2: Tratamiento de juntas sanitarias - Anterior Foto 6) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-2 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-3 h-[220px] sm:h-[260px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_5.jpg' %}" alt="Pisos industria alimenticia - Tratamiento de juntas sanitarias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Foto 5 (Horizontal Ancho 2x1: Demarcación vial y sendas) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-4 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_3.jpg' %}" alt="Pisos industria alimenticia - Demarcación vial y sendas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Foto 6 (Horizontal Ancho 2x1: Gran vista de planta terminada - Anterior Foto 4) -->
+                    <div onclick="abrirLightboxPorElemento(this.querySelector('img'))" class="col-span-1 md:col-start-3 md:col-end-5 md:row-start-3 md:row-end-4 h-[180px] sm:h-[220px] md:h-full relative w-full rounded-none overflow-hidden shadow-sm border border-gray-200/90 group hover:shadow-md transition-all bg-gray-100 cursor-pointer">
+                        <img src="{% static 'images/industria/obras/proyecto_5/p5_6.jpg' %}" alt="Pisos industria alimenticia - Gran vista de planta terminada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 block rounded-none">
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 pointer-events-none flex items-center justify-center">
+                            <div class="opacity-0 group-hover:opacity-100 transition-all duration-300 p-2 sm:p-2.5 rounded-none bg-white/90 backdrop-blur-sm text-[#000c1b] shadow-lg transform scale-75 group-hover:scale-100">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
 
+    <!-- Modal Lightbox para ver fotos en tamaño original -->
+    <div id="obra-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 backdrop-blur-md transition-opacity duration-300 opacity-0 select-none p-2 sm:p-4 md:p-6" role="dialog" aria-modal="true">
+        <!-- Botón Cerrar -->
+        <button type="button" onclick="cerrarLightbox()" aria-label="Cerrar vista completa" class="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 p-2 sm:p-2.5 rounded-full bg-white/10 hover:bg-white/25 text-white transition-all cursor-pointer hover:scale-110 active:scale-95 border border-white/20 shadow-lg">
+            <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <!-- Flecha Anterior -->
+        <button type="button" onclick="navegarLightbox(-1)" aria-label="Foto anterior" class="absolute left-2 sm:left-6 z-50 p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-all cursor-pointer hover:scale-110 active:scale-95 border border-white/20 shadow-lg">
+            <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+
+        <!-- Flecha Siguiente -->
+        <button type="button" onclick="navegarLightbox(1)" aria-label="Siguiente foto" class="absolute right-2 sm:right-6 z-50 p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-all cursor-pointer hover:scale-110 active:scale-95 border border-white/20 shadow-lg">
+            <svg class="w-6 h-6 stroke-current" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <!-- Contenedor de la Imagen y Epígrafe -->
+        <div class="relative max-w-[95vw] max-h-[92vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] sm:max-h-[82vh] object-contain rounded-none shadow-2xl transition-all duration-300">
+            <div class="mt-3 px-4 py-1.5 rounded-full bg-black/70 border border-white/15 backdrop-blur-md text-center max-w-xl">
+                <p id="lightbox-caption" class="text-xs sm:text-sm text-white/95 font-medium tracking-wide"></p>
+            </div>
+        </div>
     </div>
 
     <!-- Script de Rotación Dinámica de Obras y Collages -->
@@ -409,24 +583,24 @@
         (function() {
             const obrasData = [
                 {
-                    titulo: "Proyecto 1",
-                    subtitulo: ""
+                    titulo: "Proyecto: Porta Hnos.",
+                    subtitulo: "Aplicación de protección anticorrosiva en planta industrial. Sup: +5.500 m2."
                 },
                 {
-                    titulo: "Proyecto 2",
-                    subtitulo: ""
+                    titulo: "Proyecto: Ciudad GAMA.",
+                    subtitulo: "Impermeabilizacion con membrana alfáltica, membrana con geotextil, prueba hidráulica. Sup: +3000 m2."
                 },
                 {
-                    titulo: "Proyecto 3",
-                    subtitulo: ""
+                    titulo: "Proyecto: Porta.",
+                    subtitulo: "Reparación de torres de enfriamiento en prfv, impermeabilización exterior y pintura interior."
                 },
                 {
-                    titulo: "Proyecto 4",
-                    subtitulo: ""
+                    titulo: "Proyecto: Coca-Cola.",
+                    subtitulo: "Protección anticorrosiva en tanques de agua de red de incendio. Sup: 15m de altura / 6m de diámetro."
                 },
                 {
-                    titulo: "Proyecto 5",
-                    subtitulo: ""
+                    titulo: "Proyecto: Pisos industria alimenticia.",
+                    subtitulo: "Reparaciones de superficies, morteros epoxy, demarcaciones viales."
                 }
             ];
 
@@ -498,7 +672,93 @@
                     if (timer) clearInterval(timer);
                 });
                 container.addEventListener('mouseleave', () => {
+                    if (!lightboxModal || lightboxModal.classList.contains('hidden')) {
+                        startTimer();
+                    }
+                });
+            }
+
+            // ==========================================
+            // Lightbox: Ver fotos en tamaño original
+            // ==========================================
+            let lightboxImgs = [];
+            let currentLbIdx = 0;
+            const lightboxModal = document.getElementById('obra-lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            const lbCaption = document.getElementById('lightbox-caption');
+
+            window.abrirLightboxPorElemento = function(imgEl) {
+                if (!imgEl) return;
+                const currentSlide = document.querySelector('.obra-collage-slide:not(.hidden)');
+                if (!currentSlide) return;
+                const imgsInSlide = Array.from(currentSlide.querySelectorAll('img:not([aria-hidden="true"])'));
+                lightboxImgs = imgsInSlide.map(img => ({
+                    src: img.src,
+                    alt: img.alt || ''
+                }));
+                const foundIdx = imgsInSlide.indexOf(imgEl);
+                currentLbIdx = foundIdx !== -1 ? foundIdx : 0;
+                actualizarContenidoLightbox();
+                abrirLightboxModal();
+            };
+
+            function actualizarContenidoLightbox() {
+                if (!lightboxImgs.length) return;
+                const item = lightboxImgs[currentLbIdx];
+                lbImg.style.opacity = '0';
+                lbImg.style.transform = 'scale(0.97)';
+                setTimeout(() => {
+                    lbImg.src = item.src;
+                    lbImg.alt = item.alt;
+                    lbCaption.textContent = `${currentLbIdx + 1} de ${lightboxImgs.length} — ${item.alt}`;
+                    lbImg.onload = () => {
+                        lbImg.style.opacity = '1';
+                        lbImg.style.transform = 'scale(1)';
+                    };
+                }, 100);
+            }
+
+            function abrirLightboxModal() {
+                if (!lightboxModal) return;
+                if (timer) clearInterval(timer);
+                lightboxModal.classList.remove('hidden');
+                lightboxModal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                setTimeout(() => {
+                    lightboxModal.classList.remove('opacity-0');
+                    lightboxModal.classList.add('opacity-100');
+                }, 10);
+            }
+
+            window.cerrarLightbox = function() {
+                if (!lightboxModal) return;
+                lightboxModal.classList.remove('opacity-100');
+                lightboxModal.classList.add('opacity-0');
+                document.body.classList.remove('overflow-hidden');
+                setTimeout(() => {
+                    lightboxModal.classList.remove('flex');
+                    lightboxModal.classList.add('hidden');
+                    lbImg.src = '';
                     startTimer();
+                }, 300);
+            };
+
+            window.navegarLightbox = function(dir) {
+                if (!lightboxImgs.length) return;
+                currentLbIdx = (currentLbIdx + dir + lightboxImgs.length) % lightboxImgs.length;
+                actualizarContenidoLightbox();
+            };
+
+            window.addEventListener('keydown', function(e) {
+                if (!lightboxModal || lightboxModal.classList.contains('hidden')) return;
+                if (e.key === 'Escape') cerrarLightbox();
+                if (e.key === 'ArrowLeft') navegarLightbox(-1);
+                if (e.key === 'ArrowRight') navegarLightbox(1);
+            });
+
+            if (lightboxModal) {
+                lightboxModal.addEventListener('click', function(e) {
+                    if (e.target === lightboxModal) cerrarLightbox();
                 });
             }
 
@@ -624,52 +884,77 @@
         </div>
 
         <style>
-            .marco-marca {
-                background: #ffffff;
-                border-radius: 0.5rem;
-                border: 1px solid #e5e7eb;
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-                transition: all 0.3s ease;
-            }
-            .marco-marca:hover {
-                border-color: #9ca3af;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            }
             .marca-logo-img {
                 filter: none;
                 opacity: 1;
                 transition: transform 0.3s ease;
+                max-height: 48px;
+                max-width: 85%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
             }
-            .marco-marca:hover .marca-logo-img {
-                transform: scale(1.08);
+            .logo-sinteplast {
+                max-height: 34px !important;
+                max-width: 70% !important;
+            }
+            .logo-revesta {
+                max-height: 52px !important;
+                max-width: 88% !important;
             }
             .logo-empresa-medio {
-                height: 38px;
-                max-height: 38px;
+                height: 42px !important;
+                max-height: 42px !important;
+                width: auto !important;
             }
             .logo-empresa-chico {
-                height: 28px;
-                max-height: 28px;
+                height: 32px !important;
+                max-height: 32px !important;
+                width: auto !important;
             }
             @media (min-width: 640px) {
+                .marca-logo-img {
+                    max-height: 60px;
+                }
+                .logo-sinteplast {
+                    max-height: 42px !important;
+                }
+                .logo-revesta {
+                    max-height: 65px !important;
+                }
                 .logo-empresa-medio {
-                    height: 52px;
-                    max-height: 52px;
+                    height: 52px !important;
+                    max-height: 52px !important;
                 }
                 .logo-empresa-chico {
-                    height: 40px;
-                    max-height: 40px;
+                    height: 40px !important;
+                    max-height: 40px !important;
                 }
             }
             @media (min-width: 768px) {
+                .marca-logo-img {
+                    max-height: 72px;
+                    max-width: 85%;
+                }
+                .logo-sinteplast {
+                    max-height: 50px !important;
+                    max-width: 72% !important;
+                }
+                .logo-revesta {
+                    max-height: 77px !important;
+                    max-width: 88% !important;
+                }
                 .logo-empresa-medio {
-                    height: 60px;
-                    max-height: 60px;
+                    height: 60px !important;
+                    max-height: 60px !important;
                 }
                 .logo-empresa-chico {
-                    height: 46px;
-                    max-height: 46px;
+                    height: 46px !important;
+                    max-height: 46px !important;
                 }
+            }
+            .marco-marca:hover .marca-logo-img {
+                transform: scale(1.08);
             }
             .marquee-slider-empresas {
                 display: flex;
@@ -797,7 +1082,7 @@
     <img src="{% static 'images/foto_pie_industria.jpg' %}" onerror="this.src='/media/portfolio/hero_industrial.jpg'" alt="Ingeniería de Recubrimientos Bauhaus" class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
     <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent flex items-end">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white">
-            <p class="text-sm sm:text-2xl md:text-4xl font-bold italic tracking-tight">
+            <p class="text-xs sm:text-lg md:text-2xl font-bold italic tracking-tight">
                 <span class="text-[#e7b924]">Bauhaus.</span> Protejamos hoy lo que debe durar.
             </p>
         </div>
