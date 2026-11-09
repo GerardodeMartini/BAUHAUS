@@ -95,7 +95,7 @@
                 <div class="relative w-full h-[160px] sm:h-[300px] lg:h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-md">
                     <img src="{% static 'images/foto_quienes_somos.jpg' %}"
                         alt="Showroom y Local Comercial Bauhaus - Av. Recta Martinolli 8197"
-                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform transform-gpu [backface-visibility:hidden]">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
                     <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-20"></div>
                 </div>
@@ -163,31 +163,31 @@
                 <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0">
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 sm:p-1.5 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
-                            class="marca-logo-img logo-revesta object-contain">
+                            class="marca-logo-img logo-revesta object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
-                            class="marca-logo-img logo-sinteplast object-contain">
+                            class="marca-logo-img logo-sinteplast object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                 </div>
 
@@ -195,31 +195,31 @@
                 <div class="marquee-group-ltr flex items-center gap-3 sm:gap-6 flex-shrink-0 pl-3 sm:pl-6" aria-hidden="true">
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/casablanca.png' %}" alt="Casablanca"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/hempel.png' %}" alt="Hempel"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-1 sm:p-1.5 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/revesta.png' %}" alt="Revesta"
-                            class="marca-logo-img logo-revesta object-contain">
+                            class="marca-logo-img logo-revesta object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sherrywilliams.png' %}" alt="Sherwin Williams"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sika.png' %}" alt="Sika"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/sinteplast.png' %}" alt="Sinteplast"
-                            class="marca-logo-img logo-sinteplast object-contain">
+                            class="marca-logo-img logo-sinteplast object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/marcas/tecnopol.png' %}" alt="Tecnopol"
-                            class="marca-logo-img object-contain">
+                            class="marca-logo-img object-contain" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -369,14 +369,14 @@
                     <div id="blog-slide-0" class="blog-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 z-10">
                         <img src="{% static 'images/blog_corrosion_antes.jpg' %}"
                             alt="Estructura tratada - Foto 1"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     </div>
 
                     <!-- Slide 2 -->
                     <div id="blog-slide-1" class="blog-slide absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none z-10">
                         <img src="{% static 'images/blog_corrosion_despues.jpg' %}"
                             alt="Estructura tratada - Foto 2"
-                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     </div>
 
                     <!-- Círculos / Puntos (Dots) flotantes para selección de imágenes -->
@@ -465,43 +465,43 @@
                 <div class="flex items-center gap-3 sm:gap-6 flex-shrink-0">
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/aguas cordobesas.png' %}" alt="Aguas Cordobesas"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/caminos_de_las_sierras.png' %}" alt="Caminos de las Sierras"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/grupoedisur.png' %}" alt="Grupo Edisur"
-                            class="marca-logo-img logo-empresa-chico object-contain">
+                            class="marca-logo-img logo-empresa-chico object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/porta.png' %}" alt="Porta Hnos"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/coca_cola.png' %}" alt="Coca-Cola"
-                            class="marca-logo-img logo-empresa-chico object-contain">
+                            class="marca-logo-img logo-empresa-chico object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/proyecta.png' %}" alt="Proyecta"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/quilmes.png' %}" alt="Cervecería Quilmes"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/tgs.png' %}" alt="TGS"
-                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain">
+                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/cinco_hispanos.png' %}" alt="5 Hispanos"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/grupo_cordeiro.png' %}" alt="Grupo Cordeiro"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                 </div>
 
@@ -509,43 +509,43 @@
                 <div class="flex items-center gap-3 sm:gap-6 flex-shrink-0 pl-3 sm:pl-6" aria-hidden="true">
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/aguas cordobesas.png' %}" alt="Aguas Cordobesas"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/caminos_de_las_sierras.png' %}" alt="Caminos de las Sierras"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/grupoedisur.png' %}" alt="Grupo Edisur"
-                            class="marca-logo-img logo-empresa-chico object-contain">
+                            class="marca-logo-img logo-empresa-chico object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/porta.png' %}" alt="Porta Hnos"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/coca_cola.png' %}" alt="Coca-Cola"
-                            class="marca-logo-img logo-empresa-chico object-contain">
+                            class="marca-logo-img logo-empresa-chico object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/proyecta.png' %}" alt="Proyecta"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-3 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/quilmes.png' %}" alt="Cervecería Quilmes"
-                            class="marca-logo-img logo-empresa-medio object-contain">
+                            class="marca-logo-img logo-empresa-medio object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/tgs.png' %}" alt="TGS"
-                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain">
+                            class="marca-logo-img max-h-6 sm:max-h-8 md:max-h-10 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/cinco_hispanos.png' %}" alt="5 Hispanos"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                     <div class="marco-marca w-36 sm:w-52 md:w-60 h-16 sm:h-20 md:h-24 flex items-center justify-center p-2 sm:p-4 group cursor-pointer flex-shrink-0">
                         <img src="{% static 'images/empresas/grupo_cordeiro.png' %}" alt="Grupo Cordeiro"
-                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain">
+                            class="marca-logo-img max-h-8 sm:max-h-11 md:max-h-13 w-auto object-contain" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -580,7 +580,7 @@
                 <div class="relative w-full h-[160px] sm:h-[300px] lg:h-[440px] rounded-none overflow-hidden bg-[#000c1b] group shadow-md">
                     <img src="{% static 'images/foto_formulario_home.jpg' %}"
                         alt="Asesoramiento Técnico Bauhaus"
-                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform transform-gpu [backface-visibility:hidden]">
                     <!-- Marco rojo interno Bauhaus (#b11617) -->
                     <div class="absolute inset-2 sm:inset-4 lg:inset-6 border sm:border-2 lg:border-[3px] border-[#b11617] pointer-events-none z-20"></div>
                 </div>
@@ -674,7 +674,7 @@
 <!-- 7. Bloque: FOTO (Banner panorámico antes del Footer, según Canva) -->
 <section class="relative h-72 sm:h-96 md:h-[460px] w-full overflow-hidden bg-black">
     <img src="{% static 'images/foto_pie_home.jpg' %}" alt="Aplicaciones de Recubrimientos Técnicos Bauhaus"
-        class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700">
+        class="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-all duration-700" loading="lazy">
     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full text-white text-center sm:text-left">
             <p class="text-xs sm:text-lg md:text-2xl font-bold italic tracking-tight">
