@@ -160,12 +160,12 @@
     </main>
 
     <!-- Footer Oficial Bauhaus: Todos los textos en negro (Estructura Canva: Info | Botones | Redes & Dirección | Maps) -->
-    <footer class="bg-[#f6f7f9] text-black py-3.5 sm:py-4 md:py-5">
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
-            <div class="grid grid-cols-2 md:flex md:flex-row justify-between items-start gap-x-4 gap-y-4 sm:gap-5 md:gap-4 mb-4 sm:mb-4.5">
-                <!-- 1. Info Corporativa (Logo con B central fija y Anillo de texto giratorio) -->
+    <footer class="bg-[#f6f7f9] text-black py-4 sm:py-5 md:py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:flex md:flex-row justify-between items-start gap-x-4 gap-y-4 sm:gap-6 md:gap-5 mb-4 sm:mb-5">
+                <!-- 1. Info Corporativa (Logo con B central fija y Anillo de texto giratorio - Alineado a la izquierda de la página) -->
                 <div class="flex-shrink-0 flex flex-col items-start justify-start text-left">
-                    <div class="relative w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 group cursor-pointer">
+                    <div class="relative w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 group cursor-pointer">
                         <!-- Anillo exterior con texto que gira continuamente -->
                         <img src="{% static 'images/logo_texto_anillo.png' %}"
                             alt="Pinturería Técnica Industrial"
@@ -177,8 +177,8 @@
                     </div>
                 </div>
 
-                <!-- 2. Botones de Navegación (Alineados a la misma altura superior) -->
-                <div class="flex-shrink-0 flex flex-col items-start text-left">
+                <!-- 2. Botones de Navegación (Bajados un poco para alinearse armónicamente con el logo) -->
+                <div class="flex-shrink-0 flex flex-col items-start text-left pt-1.5 sm:pt-3 md:pt-4">
                     <ul class="space-y-1.5 sm:space-y-2 md:space-y-2.5 text-xs sm:text-sm md:text-[15px] font-bold">
                         <li class="leading-none">
                             <a href="{% url 'catalog:home' %}" class="inline-block transform hover:scale-105 hover:-translate-y-0.5 text-black hover:underline decoration-2 underline-offset-4 transition-all duration-200">
@@ -257,9 +257,9 @@
             </div>
         </div>
 
-        <!-- Separador Bauhaus Rojo (#E52424) desde el borde izquierdo completo de la pantalla hasta 3/4 del mapa -->
-        <div class="pt-0.5 pb-2.5 sm:pb-3 overflow-hidden w-full">
-            <div id="footer-bauhaus-separator" class="flex items-stretch h-3 sm:h-4 md:h-4.5 transition-all duration-150" style="width: 85%;">
+        <!-- Separador Bauhaus Rojo (#E52424) desde el borde izquierdo completo de la pantalla hasta el final del mapa -->
+        <div class="pt-1 pb-3 sm:pb-3.5 overflow-hidden w-full">
+            <div id="footer-bauhaus-separator" class="flex items-stretch h-5 sm:h-6 md:h-8 lg:h-9 transition-all duration-150" style="width: 85%;">
                 <!-- Trazado recto que va de izquierda a derecha -->
                 <div class="bg-[#E52424] flex-grow h-full"></div>
                 <!-- Remate con cuarto de círculo que cae hacia la derecha -->
@@ -269,7 +269,7 @@
             </div>
         </div>
 
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center text-[10px] sm:text-[11px] text-black font-normal">
                 <p>&copy; 2026 Bauhaus Pinturería Técnica Industrial. Todos los derechos reservados. &bull; Hecho por <a href="https://gdemar.com.ar/" target="_blank" rel="noopener noreferrer" class="font-bold text-black hover:underline hover:text-[#4081c1] transition-colors duration-200">Gdmar</a></p>
             </div>
@@ -277,7 +277,7 @@
     </footer>
 
 
-    <!-- Alineación dinámica del separador desde borde izquierdo de pantalla hasta exactamente 3/4 del mapa -->
+    <!-- Alineación dinámica del separador desde borde izquierdo de pantalla hasta el final del mapa -->
     <script>
         function alignFooterSeparator() {
             const mapCol = document.getElementById('footer-map-col');
@@ -285,8 +285,8 @@
             if (!mapCol || !sep) return;
 
             const mapRect = mapCol.getBoundingClientRect();
-            // Distancia exacta desde el borde izquierdo absoluto de la pantalla hasta 3/4 del mapa
-            const targetRight = mapRect.left + (mapRect.width * 0.75);
+            // Distancia exacta desde el borde izquierdo absoluto de la pantalla hasta el borde derecho del mapa
+            const targetRight = mapRect.right;
             sep.style.width = Math.min(window.innerWidth - 10, Math.max(120, targetRight)) + 'px';
         }
         window.addEventListener('resize', alignFooterSeparator);
