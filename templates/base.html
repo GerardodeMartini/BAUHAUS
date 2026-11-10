@@ -70,6 +70,41 @@
         .animate-spin-slow {
             animation: spin-slow 22s linear infinite;
         }
+
+        /* Animación Vibración / Llamada WhatsApp cada 10 segundos */
+        @keyframes whatsapp-call {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+            1.5%, 5.5% {
+                transform: rotate(-12deg) scale(1.08);
+                box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.35), 0 0 0 8px rgba(37, 211, 102, 0.5);
+            }
+            3.5%, 7.5% {
+                transform: rotate(12deg) scale(1.08);
+                box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.35), 0 0 0 12px rgba(37, 211, 102, 0.3);
+            }
+            9% {
+                transform: rotate(-6deg) scale(1.04);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+            10.5% {
+                transform: rotate(3deg) scale(1.02);
+            }
+            12% {
+                transform: rotate(0deg) scale(1);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        .whatsapp-float-btn {
+            animation: whatsapp-call 10s ease-in-out infinite;
+            transform-origin: center;
+        }
+        .whatsapp-float-btn:hover {
+            animation: none !important;
+            transform: scale(1.12) !important;
+        }
     </style>
     {% block extra_head %}{% endblock %}
 </head>
@@ -295,8 +330,7 @@
     </script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5493516325978?text=Hola!%20Necesito%20asesoramiento%20técnico%20sobre%20recubrimientos." target="_blank" class="fixed z-50 bg-brandGreen text-white p-3.5 sm:p-4 rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group" style="bottom: max(1rem, calc(env(safe-area-inset-bottom) + 0.5rem)); right: max(1rem, calc(env(safe-area-inset-right) + 0.5rem));" aria-label="Contacto WhatsApp">
-        <span class="pointer-events-none absolute right-full mr-3 bg-slate-800 text-white text-xs font-bold py-1.5 px-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">¿Consultas técnicas? Escríbenos</span>
+    <a href="https://wa.me/5493516325978?text=Hola!%20Necesito%20asesoramiento%20técnico%20sobre%20recubrimientos." target="_blank" class="fixed z-50 bg-brandGreen text-white p-3.5 sm:p-4 rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center whatsapp-float-btn" style="bottom: max(1rem, calc(env(safe-area-inset-bottom) + 0.5rem)); right: max(1rem, calc(env(safe-area-inset-right) + 0.5rem));" aria-label="Contacto WhatsApp">
         <svg class="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 fill-current aspect-square" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.012 0C5.384 0 0 5.384 0 12.012c0 2.116.551 4.179 1.6 5.99L.05 24l6.155-1.614A11.96 11.96 0 0 0 12.012 24c6.628 0 12.012-5.384 12.012-12.012S18.64 0 12.012 0zm0 21.986c-1.802 0-3.567-.482-5.11-1.393l-.367-.218-3.794.995 1.012-3.698-.24-.381A9.972 9.972 0 0 1 2.028 12.01c0-5.505 4.48-9.985 9.984-9.985 5.505 0 9.985 4.48 9.985 9.985 0 5.504-4.48 9.986-9.985 9.986zm5.474-7.482c-.3-.15-1.776-.876-2.052-.976-.276-.1-.476-.15-.676.15-.2.3-.776.976-.951 1.176-.175.2-.351.225-.651.075-.3-.15-1.266-.467-2.41-1.488-.891-.795-1.492-1.777-1.667-2.077-.175-.3-.019-.462.13-.611.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.63-.926-2.232-.244-.585-.494-.505-.676-.514-.175-.008-.376-.01-.576-.01s-.525.075-.801.375c-.275.3-1.05 1.026-1.05 2.502 0 1.476 1.075 2.901 1.225 3.101.15.2 2.115 3.23 5.126 4.53 1.25.54 1.77.63 2.428.525.75-.12 1.776-.726 2.026-1.426.25-.7.25-1.301.175-1.426-.075-.125-.275-.2-.575-.35z"/>
         </svg>

@@ -3,10 +3,12 @@
 
 {% block title %}Home{% endblock %}
 
+{% block top_banner %}{% endblock %}
+
 {% block content %}
 <!-- 1. Hero Section (Estructura Canva: Banner Principal con Título, Subtítulo y Botones) -->
 <section
-    class="relative bg-white text-[#000c1b] py-12 md:py-16 overflow-hidden min-h-[calc(100dvh-128px)] md:min-h-[calc(100dvh-140px)] flex items-center justify-center">
+    class="relative bg-white text-[#000c1b] py-12 md:py-16 overflow-hidden min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-96px)] flex items-center justify-center">
     <!-- Carrusel de Portada de 5 Imágenes con Transición Automática cada 10s -->
     <div class="absolute inset-0 z-0 overflow-hidden" id="hero-carousel-home">
         <!-- Slide 1 -->
@@ -61,11 +63,91 @@
         </div>
     </div>
 
-    <!-- Especialidades en una sola línea arriba del todo con pequeño margen -->
-    <div id="hero-subtitles" class="absolute top-4 sm:top-6 md:top-8 inset-x-0 z-10 text-center px-4 transition-all duration-300">
-        <p id="hero-sub-1" class="text-xs sm:text-sm md:text-lg text-white/95 font-bold tracking-normal sm:tracking-wide drop-shadow-md md:whitespace-nowrap">
-            Control de Corrosión • Pisos Industriales • Impermeabilización de Alto Desempeño • Protección Contra Agentes Químicos
-        </p>
+    <!-- Especialidades en marquesina continua hacia la izquierda arriba del todo -->
+    <div id="hero-subtitles" class="absolute top-4 sm:top-6 md:top-8 inset-x-0 z-10 overflow-hidden w-full select-none pointer-events-none">
+        <style>
+            @keyframes hero-phrase-ticker {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+            .hero-phrase-marquee {
+                display: flex;
+                width: max-content;
+                animation: hero-phrase-ticker 48s linear infinite;
+                will-change: transform;
+            }
+        </style>
+        <div class="hero-phrase-marquee flex items-center">
+            <!-- MITAD 1 (Ciclo completo de 12 puntos: Rojo, Amarillo, Azul x 4) -->
+            <div class="flex items-center text-xs sm:text-sm md:text-lg text-white/95 font-bold tracking-normal sm:tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-nowrap">
+                <!-- Ronda 1 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+
+                <!-- Ronda 2 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+
+                <!-- Ronda 3 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+            </div>
+
+            <!-- MITAD 2 (Duplicado idéntico para continuidad perfecta e infinita) -->
+            <div class="flex items-center text-xs sm:text-sm md:text-lg text-white/95 font-bold tracking-normal sm:tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-nowrap" aria-hidden="true">
+                <!-- Ronda 1 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+
+                <!-- Ronda 2 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+
+                <!-- Ronda 3 -->
+                <span>Control de Corrosión</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Pisos Industriales</span>
+                <span class="text-[#b11617] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Impermeabilización de Alto Desempeño</span>
+                <span class="text-[#e7b924] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+                <span>Protección Contra Agentes Químicos</span>
+                <span class="text-[#4081c1] px-2.5 sm:px-3.5 text-sm sm:text-base md:text-xl font-black drop-shadow-none">•</span>
+            </div>
+        </div>
     </div>
 
     <!-- Script del Carrusel Principal -->

@@ -43,13 +43,25 @@
         style="background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 65%, rgba(0, 12, 27, 0.35) 100%); box-shadow: inset 0 0 100px rgba(0, 12, 27, 0.45);">
     </div>
 
-    <!-- Frase en la parte inferior izquierda alineada con los márgenes generales de las secciones -->
+    <!-- Frase en la parte inferior izquierda sobre franja Bauhaus Amarilla (#e7b924) que viene desde el borde izquierdo de la pantalla -->
     <div class="absolute bottom-6 sm:bottom-10 md:bottom-12 inset-x-0 z-10 pointer-events-none">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="inline-block bg-black/45 backdrop-blur-md border border-white/20 rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 shadow-md">
-                <p class="text-xs sm:text-sm md:text-base lg:text-lg text-white font-bold italic tracking-tight whitespace-normal sm:whitespace-nowrap leading-snug sm:leading-none drop-shadow-sm">
-                    Cada producto tiene una aplicación, cada aplicación una especificación.
-                </p>
+            <div class="inline-flex items-stretch relative">
+                <!-- Bloque recto del texto + extensión izquierda al borde de pantalla -->
+                <div class="relative bg-[#e7b924] flex items-center py-2 sm:py-2.5 pl-0 pr-3 sm:pr-4">
+                    <!-- Extensión hacia el borde izquierdo de la pantalla (termina exactamente con el texto) -->
+                    <div class="absolute -left-[100vw] right-0 inset-y-0 bg-[#e7b924] pointer-events-none"></div>
+                    <p class="relative z-10 text-xs sm:text-sm md:text-base lg:text-lg text-[#000c1b] font-bold italic tracking-tight whitespace-normal sm:whitespace-nowrap leading-snug sm:leading-none">
+                        Cada producto tiene una aplicación, cada aplicación una especificación.
+                    </p>
+                </div>
+
+                <!-- Remate curvo idéntico al separador del pie de página (cuarto de círculo cayendo a la derecha) -->
+                <div class="flex items-stretch flex-shrink-0 -ml-[1px]">
+                    <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-7 sm:w-10 md:w-12 flex-shrink-0" preserveAspectRatio="none">
+                        <path d="M-2 0 C45 0 80 25 80 60 H-2 Z" fill="#e7b924" />
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
