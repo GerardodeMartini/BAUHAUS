@@ -529,11 +529,55 @@
             </div>
         </div>
 
+        <!-- Estilos para rotador móvil sutil (deslizamiento lateral suave, sin zoom ni saltos) -->
+        <style>
+            @media (max-width: 639px) {
+                .insta-post-card {
+                    display: none;
+                }
+                .insta-post-card.active-mobile-post {
+                    display: flex !important;
+                    animation: subtleSlideNext 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+                .insta-post-card.active-mobile-post.slide-prev {
+                    animation: subtleSlidePrev 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+            }
+            @media (min-width: 640px) {
+                .insta-post-card {
+                    display: flex !important;
+                    animation: none !important;
+                    opacity: 1 !important;
+                    transform: none !important;
+                }
+            }
+            @keyframes subtleSlideNext {
+                0% {
+                    opacity: 0;
+                    transform: translateX(25px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            @keyframes subtleSlidePrev {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-25px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+
         <!-- Feed Nativo de Instagram: Formato de Post Bauhaus compacto y completo (4 Columnas) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-6 max-w-5xl lg:max-w-[1080px] mx-auto items-stretch justify-items-center">
+        <div id="insta-posts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-6 lg:gap-6 max-w-5xl lg:max-w-[1080px] mx-auto items-stretch justify-items-center">
             
             <!-- Post 1 -->
-            <div class="w-full max-w-[225px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            <div id="insta-card-0" class="insta-post-card active-mobile-post w-full max-w-[260px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
                 <!-- Cabecera del Post -->
                 <div class="px-3 py-2 flex items-center justify-between border-b border-gray-100 bg-white">
                     <a href="https://www.instagram.com/p/Dezo6i9CYUf/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group/author">
@@ -611,7 +655,7 @@
             </div>
 
             <!-- Post 2 -->
-            <div class="w-full max-w-[225px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            <div id="insta-card-1" class="insta-post-card w-full max-w-[260px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
                 <!-- Cabecera del Post -->
                 <div class="px-3 py-2 flex items-center justify-between border-b border-gray-100 bg-white">
                     <a href="https://www.instagram.com/p/DeSaBRYiWC9/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group/author">
@@ -689,7 +733,7 @@
             </div>
 
             <!-- Post 3 -->
-            <div class="w-full max-w-[225px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            <div id="insta-card-2" class="insta-post-card w-full max-w-[260px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
                 <!-- Cabecera del Post -->
                 <div class="px-3 py-2 flex items-center justify-between border-b border-gray-100 bg-white">
                     <a href="https://www.instagram.com/p/DexcITKiVuJ/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group/author">
@@ -767,7 +811,7 @@
             </div>
 
             <!-- Post 4 -->
-            <div class="w-full max-w-[225px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            <div id="insta-card-3" class="insta-post-card w-full max-w-[260px] sm:max-w-[235px] bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
                 <!-- Cabecera del Post -->
                 <div class="px-3 py-2 flex items-center justify-between border-b border-gray-100 bg-white">
                     <a href="https://www.instagram.com/p/DfAI2_VEYo4/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group/author">
@@ -845,6 +889,132 @@
             </div>
 
         </div>
+
+        <!-- Controles táctiles y navegación en celulares (Ocultos en Tablet y PC: sm:hidden) -->
+        <div class="sm:hidden flex items-center justify-center gap-4 mt-6 select-none" id="insta-mobile-controls">
+            <!-- Flecha Anterior -->
+            <button type="button" onclick="cambiarInstaPost(-1)" aria-label="Posteo anterior"
+                class="w-9 h-9 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-700 active:scale-90 transition">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+
+            <!-- Dots indicadores de 4 posts -->
+            <div class="flex items-center gap-2">
+                <button type="button" onclick="irAInstaPost(0)" aria-label="Ver post 1" id="insta-dot-0"
+                    class="insta-dot w-2.5 h-2.5 rounded-full transition-all duration-300 bg-[#4081c1] scale-110"></button>
+                <button type="button" onclick="irAInstaPost(1)" aria-label="Ver post 2" id="insta-dot-1"
+                    class="insta-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300"></button>
+                <button type="button" onclick="irAInstaPost(2)" aria-label="Ver post 3" id="insta-dot-2"
+                    class="insta-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300"></button>
+                <button type="button" onclick="irAInstaPost(3)" aria-label="Ver post 4" id="insta-dot-3"
+                    class="insta-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300"></button>
+            </div>
+
+            <!-- Flecha Siguiente -->
+            <button type="button" onclick="cambiarInstaPost(1)" aria-label="Siguiente posteo"
+                class="w-9 h-9 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-700 active:scale-90 transition">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+        </div>
+
+        <!-- Script de rotación automática y control táctil exclusivo para móviles -->
+        <script>
+            (function() {
+                const posts = [
+                    document.getElementById('insta-card-0'),
+                    document.getElementById('insta-card-1'),
+                    document.getElementById('insta-card-2'),
+                    document.getElementById('insta-card-3')
+                ];
+                const dots = [
+                    document.getElementById('insta-dot-0'),
+                    document.getElementById('insta-dot-1'),
+                    document.getElementById('insta-dot-2'),
+                    document.getElementById('insta-dot-3')
+                ];
+                
+                let currentIndex = 0;
+                let timer = null;
+                let isPaused = false;
+
+                function updateMobilePost(index, direction = 1) {
+                    if (window.innerWidth >= 640) return;
+                    currentIndex = (index + posts.length) % posts.length;
+                    
+                    posts.forEach((p, idx) => {
+                        if (!p) return;
+                        p.classList.remove('active-mobile-post', 'slide-prev');
+                        if (idx === currentIndex) {
+                            if (direction < 0) {
+                                p.classList.add('slide-prev');
+                            }
+                            p.classList.add('active-mobile-post');
+                        }
+                    });
+
+                    dots.forEach((d, idx) => {
+                        if (!d) return;
+                        if (idx === currentIndex) {
+                            d.className = 'insta-dot w-2.5 h-2.5 rounded-full transition-all duration-300 bg-[#4081c1] scale-110';
+                        } else {
+                            d.className = 'insta-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300';
+                        }
+                    });
+                }
+
+                window.cambiarInstaPost = function(direction) {
+                    updateMobilePost(currentIndex + direction, direction);
+                    reiniciarTimer();
+                };
+
+                window.irAInstaPost = function(index) {
+                    const dir = index >= currentIndex ? 1 : -1;
+                    updateMobilePost(index, dir);
+                    reiniciarTimer();
+                };
+
+                function siguienteAutomatico() {
+                    if (!isPaused && window.innerWidth < 640) {
+                        updateMobilePost(currentIndex + 1, 1);
+                    }
+                }
+
+                function reiniciarTimer() {
+                    if (timer) clearInterval(timer);
+                    timer = setInterval(siguienteAutomatico, 4500);
+                }
+
+                reiniciarTimer();
+
+                // Pausar si el usuario toca o mantiene presionado
+                const container = document.getElementById('insta-posts-container');
+                if (container) {
+                    container.addEventListener('mouseenter', () => { isPaused = true; });
+                    container.addEventListener('mouseleave', () => { isPaused = false; });
+                    container.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+                    container.addEventListener('touchend', () => { 
+                        setTimeout(() => { isPaused = false; }, 2500); 
+                    }, { passive: true });
+
+                    // Soporte táctil swipe
+                    let touchStartX = 0;
+                    container.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+                    container.addEventListener('touchend', (e) => {
+                        const touchEndX = e.changedTouches[0].screenX;
+                        const diff = touchStartX - touchEndX;
+                        if (Math.abs(diff) > 40) {
+                            if (diff > 0) {
+                                cambiarInstaPost(1);
+                            } else {
+                                cambiarInstaPost(-1);
+                            }
+                        }
+                    }, { passive: true });
+                }
+            })();
+        </script>
 
     </div>
 </section>
