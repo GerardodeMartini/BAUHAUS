@@ -14,8 +14,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-fallback-key-for-local-dev
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-# Modo Próximamente (Landing temporal para Instagram y lanzamiento con acceso restringido)
-MODO_PROXIMAMENTE = os.getenv('MODO_PROXIMAMENTE', 'True') == 'True'
+# Modo Próximamente (Landing temporal opcional, False por defecto para sitio completo online)
+MODO_PROXIMAMENTE = os.getenv('MODO_PROXIMAMENTE', 'False') == 'True'
 CLAVE_ACCESO_PREVIA = os.getenv('CLAVE_ACCESO_PREVIA', 'Bauhaus@2026')
 
 ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost,0.0.0.0').split(',') if host.strip()]

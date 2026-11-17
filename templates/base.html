@@ -54,11 +54,6 @@
             border-color: #000c1b;
             box-shadow: 0 10px 25px -5px rgba(0, 12, 27, 0.1);
         }
-        @media (max-width: 767px) {
-            #dev-back-proximamente {
-                display: none !important;
-            }
-        }
         @keyframes spin-slow {
             from {
                 transform: rotate(0deg);
@@ -344,21 +339,6 @@
             menu.classList.toggle('hidden');
         });
     </script>
-
-    <!-- Botón Flotante SOLO PARA HOST LOCAL (oculto en móviles para no obstruir pantalla) -->
-    <div id="dev-back-proximamente" class="hidden md:flex fixed bottom-6 left-6 z-50">
-        <a href="/proximamente/" class="bg-[#000c1b] text-white border-2 border-[#e7b924] py-2 px-3.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-xl hover:bg-[#e7b924] hover:text-black transition">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>← Ver Próximamente</span>
-        </a>
-    </div>
-    <script>
-        if (window.innerWidth >= 768 && (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')) {
-            const devBack = document.getElementById('dev-back-proximamente');
-            if (devBack) devBack.classList.remove('hidden');
-        }
-    </script>
-
 
 </body>
 </html>
