@@ -10,6 +10,9 @@ venv/
 *.sqlite3
 _backup_*/
 scratch/
+scratch_*
+media/extracted_pdf_assets/
+restaurar_fotos.py
 static/images/empresas/_original/
 *.log
 *.pdf
