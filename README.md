@@ -78,7 +78,7 @@ El frontend implementa fielmente el **Brand Book oficial de Bauhaus**, combinand
 * **Footer Corporativo en 4 Columnas:**
   1. **Sello Bauhaus Animado:** Logo central fijo + anillo de texto giratorio.
   2. **Navegación Rápida:** Enlaces directos a todas las secciones.
-  3. **Contacto y Redes:** Dirección física, enlaces directos a WhatsApp de los asesores técnicos (*Sebastián* y *Juan*), correo electrónico (`bauhaustecnico@gmail.com`) e íconos vectoriales a Facebook, Instagram y LinkedIn.
+  3. **Contacto y Redes:** Dirección física, enlaces directos a WhatsApp de los asesores técnicos (*Sebastián* y *Juan*), correo electrónico (`bauhauscentrotecnico@gmail.com`) e íconos vectoriales a Facebook, Instagram y LinkedIn.
   4. **Mapa de Ubicación Optimizado:** `<iframe>` conectado directamente al endpoint `www.google.com/maps/embed` de la ficha verificada **BAUHAUS Pintura Epoxi** (evitando redirecciones `301` con bloqueo `X-Frame-Options: SAMEORIGIN` en navegadores móviles).
 * **Separador Rojo Dinámico:** Script de alineación (`alignFooterSeparator`) que calcula en tiempo real la coordenada `right` de la columna del mapa para que el remate curvo rojo del footer termine exactamente alineado con el borde derecho del mapa en cualquier resolución de pantalla.
 
@@ -309,7 +309,7 @@ pintureria-BAUHAUS/
 | `DATABASE_URL` | URI de conexión a PostgreSQL (si se deja vacío utiliza `db.sqlite3`). | `postgres://user:pass@db:5432/bauhaus` |
 | `RESEND_API_KEY` | API Key de Resend para envío de correos de formularios. | `re_xxxxxxxxx` |
 | `EMAIL_SENDER` | Dirección remitente verificada en Resend. | `notificaciones@bauhaus.ar` |
-| `EMAIL_RECEIVER` | Casilla donde Bauhaus recibe las consultas y pliegos. | `bauhaustecnico@gmail.com` |
+| `EMAIL_RECEIVER` | Casilla donde Bauhaus recibe las consultas y pliegos. | `bauhauscentrotecnico@gmail.com` |
 
 ---
 
