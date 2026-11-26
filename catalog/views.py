@@ -9,8 +9,9 @@ from portfolio.models import ProyectoObra
 from contacts.forms import LicitacionContactoForm
 
 BOT_KEYWORDS = (
-    "bot", "spider", "crawler", "slurp", "curl", "python-urllib",
-    "headless", "lighthouse", "uptime", "facebookexternalhit", "whatsapp"
+    "googlebot", "bingbot", "yandexbot", "baiduspider", "duckduckbot",
+    "slurp", "curl/", "python-urllib", "headlesschrome", "lighthouse",
+    "uptimerobot", "facebookexternalhit"
 )
 MOBILE_KEYWORDS = ("mobile", "android", "iphone", "ipad", "ipod")
 

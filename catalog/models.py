@@ -99,6 +99,11 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.nombre)
+        super().save(*args, **kwargs)
+
 
 class EstadisticaVisita(models.Model):
     PAGINA_CHOICES = [
@@ -126,9 +131,3 @@ class EstadisticaVisita(models.Model):
 
     def __str__(self):
         return f"{self.fecha} - {self.get_pagina_display()}: {self.visitas_totales} visitas"
-
-
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.nombre)
-        super().save(*args, **kwargs)
