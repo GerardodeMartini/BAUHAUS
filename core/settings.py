@@ -70,17 +70,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Database config (Postgres si hay DATABASE_URL, sino sqlite3 para dev local)
+# Database config (Postgres si hay DATABASE_URL, sino sqlite3 en volumen persistente /app/data si existe o local)
 DATABASE_URL = os.getenv('DATABASE_URL')
 if DATABASE_URL:
     DATABASES = {
         'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
     }
 else:
+    SQLITE_DIR = Path('/app/data') if Path('/app/data').exists() else BASE_DIR
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': SQLITE_DIR / 'db.sqlite3',
         }
     }
 
