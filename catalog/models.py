@@ -99,6 +99,35 @@ class Producto(models.Model):
     def __str__(self):
         return self.nombre
 
+
+class EstadisticaVisita(models.Model):
+    PAGINA_CHOICES = [
+        ("home", "Home (Portada)"),
+        ("productos", "Productos"),
+        ("industria", "Industria"),
+    ]
+
+    fecha = models.DateField(verbose_name="Fecha", db_index=True)
+    pagina = models.CharField(
+        max_length=30,
+        choices=PAGINA_CHOICES,
+        verbose_name="Página / Sección",
+        db_index=True,
+    )
+    visitas_totales = models.PositiveIntegerField(default=0, verbose_name="Visitas Totales")
+    visitas_movil = models.PositiveIntegerField(default=0, verbose_name="Desde Celular")
+    visitas_pc = models.PositiveIntegerField(default=0, verbose_name="Desde PC / Tablet")
+
+    class Meta:
+        verbose_name = "Estadística de Visita (Marketing)"
+        verbose_name_plural = "Estadísticas de Visitas (Marketing)"
+        ordering = ["-fecha", "pagina"]
+        unique_together = ("fecha", "pagina")
+
+    def __str__(self):
+        return f"{self.fecha} - {self.get_pagina_display()}: {self.visitas_totales} visitas"
+
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.nombre)

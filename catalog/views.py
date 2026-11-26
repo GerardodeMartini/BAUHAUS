@@ -1,10 +1,39 @@
 import secrets
 import time
 from django.conf import settings
+from django.db.models import F
 from django.shortcuts import render, redirect
-from .models import Categoria, Producto
+from django.utils import timezone
+from .models import Categoria, Producto, EstadisticaVisita
 from portfolio.models import ProyectoObra
 from contacts.forms import LicitacionContactoForm
+
+BOT_KEYWORDS = (
+    "bot", "spider", "crawler", "slurp", "curl", "python-urllib",
+    "headless", "lighthouse", "uptime", "facebookexternalhit", "whatsapp"
+)
+MOBILE_KEYWORDS = ("mobile", "android", "iphone", "ipad", "ipod")
+
+def _registrar_visita(request, pagina: str):
+    try:
+        ua = (request.META.get("HTTP_USER_AGENT") or "").lower()
+        if not ua or any(b in ua for b in BOT_KEYWORDS):
+            return
+        es_movil = any(m in ua for m in MOBILE_KEYWORDS)
+        hoy = timezone.localdate()
+        registro, _ = EstadisticaVisita.objects.get_or_create(fecha=hoy, pagina=pagina)
+        if es_movil:
+            EstadisticaVisita.objects.filter(pk=registro.pk).update(
+                visitas_totales=F("visitas_totales") + 1,
+                visitas_movil=F("visitas_movil") + 1,
+            )
+        else:
+            EstadisticaVisita.objects.filter(pk=registro.pk).update(
+                visitas_totales=F("visitas_totales") + 1,
+                visitas_pc=F("visitas_pc") + 1,
+            )
+    except Exception:
+        pass
 
 def proximamente(request):
     return render(request, "proximamente.html")
@@ -106,13 +135,16 @@ def home_preview(request):
     return _render_home(request)
 
 def _render_home(request):
+    _registrar_visita(request, "home")
     return render(request, "home.html", {"active_page": "home"})
 
 def productos(request):
+    _registrar_visita(request, "productos")
     return render(request, "productos.html", {"active_page": "productos"})
 
 # Alias para retrocompatibilidad
 aplicadores = productos
 
 def industria(request):
+    _registrar_visita(request, "industria")
     return render(request, "industria.html", {"active_page": "industria"})

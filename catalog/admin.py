@@ -1,5 +1,35 @@
 from django.contrib import admin
-from .models import Categoria, Producto
+from django.db.models import Sum
+from .models import Categoria, Producto, EstadisticaVisita
+
+admin.site.site_header = "Bauhaus — Panel de Administración & Marketing"
+admin.site.site_title = "Bauhaus Admin"
+admin.site.index_title = "Estadísticas de Visitas y Gestión del Sitio"
+
+
+@admin.register(EstadisticaVisita)
+class EstadisticaVisitaAdmin(admin.ModelAdmin):
+    list_display = (
+        "fecha",
+        "pagina",
+        "visitas_totales",
+        "visitas_movil",
+        "visitas_pc",
+        "porcentaje_movil",
+    )
+    list_filter = ("pagina", "fecha")
+    date_hierarchy = "fecha"
+    ordering = ("-fecha", "pagina")
+    readonly_fields = ("fecha", "pagina", "visitas_totales", "visitas_movil", "visitas_pc")
+
+    @admin.display(description="% Celular vs PC")
+    def porcentaje_movil(self, obj):
+        if not obj.visitas_totales:
+            return "0% Celular / 0% PC"
+        pct_mov = round((obj.visitas_movil / obj.visitas_totales) * 100)
+        pct_pc = 100 - pct_mov
+        return f"📱 {pct_mov}% Celular  |  💻 {pct_pc}% PC"
+
 
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
