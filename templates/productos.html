@@ -3,6 +3,10 @@
 
 {% block title %}Aplicadores{% endblock %}
 
+{% block extra_head %}
+<link rel="preload" as="image" href="{% static 'images/hero/aplicadores_1.jpg' %}" fetchpriority="high">
+{% endblock %}
+
 {% block top_banner %}{% endblock %}
 
 {% block content %}
@@ -404,6 +408,7 @@
                 display: flex;
                 width: max-content;
                 animation: scroll-brands-ltr 28s linear infinite;
+                will-change: transform;
             }
             @keyframes scroll-brands-ltr {
                 0% {

@@ -106,70 +106,13 @@ def home_preview(request):
     return _render_home(request)
 
 def _render_home(request):
-    try:
-        categorias = list(Categoria.objects.all())
-        productos_destacados = list(Producto.objects.filter(destacado_home=True, activo=True)[:6])
-        proyectos_destacados = list(ProyectoObra.objects.filter(publicado=True)[:3])
-    except Exception:
-        categorias = []
-        productos_destacados = []
-        proyectos_destacados = []
-        
-    try:
-        form = LicitacionContactoForm()
-    except Exception:
-        form = None
-    
-    context = {
-        "categorias": categorias,
-        "productos_destacados": productos_destacados,
-        "proyectos_destacados": proyectos_destacados,
-        "form": form,
-        "active_page": "home",
-    }
-    return render(request, "home.html", context)
+    return render(request, "home.html", {"active_page": "home"})
 
 def productos(request):
-    try:
-        productos = list(Producto.objects.filter(mostrar_en_aplicadores=True, activo=True))
-        proyectos = list(ProyectoObra.objects.filter(publicado=True)[:6])
-    except Exception:
-        productos = []
-        proyectos = []
-        
-    try:
-        form = LicitacionContactoForm()
-    except Exception:
-        form = None
-    
-    context = {
-        "productos": productos,
-        "proyectos": proyectos,
-        "form": form,
-        "active_page": "productos",
-    }
-    return render(request, "productos.html", context)
+    return render(request, "productos.html", {"active_page": "productos"})
 
 # Alias para retrocompatibilidad
 aplicadores = productos
 
 def industria(request):
-    try:
-        productos = list(Producto.objects.filter(mostrar_en_industria=True, activo=True))
-        proyectos = list(ProyectoObra.objects.filter(publicado=True))
-    except Exception:
-        productos = []
-        proyectos = []
-        
-    try:
-        form = LicitacionContactoForm()
-    except Exception:
-        form = None
-    
-    context = {
-        "productos": productos,
-        "proyectos": proyectos,
-        "form": form,
-        "active_page": "industria",
-    }
-    return render(request, "industria.html", context)
+    return render(request, "industria.html", {"active_page": "industria"})
