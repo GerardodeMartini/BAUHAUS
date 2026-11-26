@@ -111,8 +111,16 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# Configuración de WhiteNoise para producción
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Configuración de WhiteNoise para producción (Django 5 STORAGES + Caché de 1 año en CDN Cloudflare)
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
+WHITENOISE_MAX_AGE = 31536000  # 1 año (365 días) para caché permanente en el nodo de Cloudflare Argentina
 
 # Media files (Fichas técnicas en PDF, imágenes de producto, etc.)
 MEDIA_URL = 'media/'
